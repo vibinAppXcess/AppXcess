@@ -43,3 +43,19 @@ export interface SocialLink {
   url: string;
   icon: string;
 }
+
+export interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  type: 'webinar' | 'conference' | 'workshop' | 'meetup';
+  category: 'tech' | 'business' | 'innovation' | 'networking';
+  attendees: number;
+  featured: boolean;
+  image: string;
+  tags: string[];
+  registrationLink: string;
+}

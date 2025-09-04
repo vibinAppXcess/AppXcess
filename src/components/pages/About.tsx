@@ -101,14 +101,6 @@ const About: React.FC = () => {
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Transforming businesses through innovative technology solutions
             </p>
-            <div className="pt-8">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 group shadow-lg">
-                <span className="flex items-center space-x-2">
-                  <span>Explore Our Work</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button>
-            </div>
           </div>
         </div>
       </section>

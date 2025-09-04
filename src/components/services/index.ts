@@ -1,4 +1,5 @@
-export { default as ESG } from './ESG';
+
+export { default as AIAgents } from './AIAgents';
 export { default as EdTech } from './EdTech';
 export { default as Ecommerce } from './Ecommerce';
 export { default as DevOps } from './DevOps';
@@ -18,7 +19,14 @@ export { default as Healthcare } from './Healthcare';
 export { default as FinTech } from './FinTech';
 export { default as EnergyUtilities } from './EnergyUtilities';
 export { default as DataAI } from './DataAI';
+export { default as AIDataScienceML } from './AIDataScienceML';
+export { default as BusinessAnalytics } from './BusinessAnalytics';
 export { default as Automation } from './Automation';
 export { default as SoftwareCloud } from './SoftwareCloud';
 export { default as EnterpriseApps } from './EnterpriseApps';
 export { default as Cybersecurity } from './Cybersecurity';
+export { default as ComputerVisionNLP } from './ComputerVisionNLP';
+export { default as PythonDataAI } from './PythonDataAI';
+export { default as HuggingFace } from './HuggingFace';
+export { default as Microsoft365PowerPlatform } from './Microsoft365PowerPlatform';
+export { default as SAPEnterpriseApplications } from './SAPEnterpriseApplications';

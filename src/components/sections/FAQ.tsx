@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   ChevronDown, ChevronUp, ArrowRight,
   HelpCircle, MessageCircle, Users, Globe, Code, Shield
@@ -7,36 +7,25 @@ import {
 const FAQ: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  const faqs = [
-    {
-      question: "What services does AppXcess offer?",
-      answer: "AppXcess specializes in IT services and engineering including mobile application development, backend development, UI/UX design, DevOps solutions, quality assurance and testing, and support and maintenance."
-    },
-    {
-      question: "How can I get started with AppXcess?",
-      answer: "Getting started with AppXcess is simple. Contact us through our website or email, and our team will schedule a consultation to understand your project requirements, discuss timelines, and provide a customized solution tailored to your needs."
-    },
-    {
-      question: "Does AppXcess provide post-launch support?",
-      answer: "Yes, we provide comprehensive post-launch support including maintenance, updates, bug fixes, and ongoing optimization to ensure your application continues to perform at its best."
-    },
-    {
-      question: "Can AppXcess handle enterprise-level projects?",
-      answer: "Absolutely. We have extensive experience handling enterprise-level projects with complex requirements, large-scale deployments, and mission-critical applications. Our team is equipped to manage projects of any size."
-    },
-    {
-      question: "How do I join the AppXcess team?",
-      answer: "We're always looking for talented individuals to join our team. Visit our Careers page to view current openings, or send your resume to our HR team. We value innovation, collaboration, and continuous learning."
-    },
-    {
-      question: "Does AppXcess work with international clients?",
-      answer: "Yes, we work with clients globally. Our team is distributed across multiple time zones, allowing us to provide 24/7 support and collaborate effectively with international clients."
-    },
-    {
-      question: "What technologies does AppXcess use?",
-      answer: "We use a wide range of cutting-edge technologies including React, Node.js, Python, Java, AWS, Azure, Docker, Kubernetes, and many more. We stay updated with the latest tech trends to deliver the best solutions."
-    }
-  ];
+  const [faqs, setFaqs] = useState<{ question: string; answer: string; category?: string }[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('http://localhost:8000/api/faqs/');
+        if (!res.ok) return;
+        const data = await res.json();
+        const items = Array.isArray(data) ? data : Array.isArray(data?.results) ? data.results : [];
+        if (!cancelled && items.length) {
+          setFaqs(items.map((i: any) => ({ question: i.question, answer: i.answer, category: i.category })));
+        }
+      } catch (_) {
+        // silently keep fallback content
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
   const categories = [
     {
@@ -163,6 +152,9 @@ const FAQ: React.FC = () => {
                 )}
               </div>
             ))}
+            {faqs.length === 0 && (
+              <></>
+            )}
           </div>
         </div>
       </section>

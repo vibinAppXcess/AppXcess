@@ -1,6 +1,6 @@
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import { About, Careers, Contact, PrivacyPolicy, CareerApply, LogisticsBlog, LogisticsBlog2, LogisticsBlog3, ProductionBlog1, ProductionBlog2, ProductionBlog3, MediaBlog1, MediaBlog2, MediaBlog3, RetailBlog1, RetailBlog2, RetailBlog3, EdTechBlog1, EdTechBlog2, EdTechBlog3, HealthcareBlog1, HealthcareBlog2, HealthcareBlog3, FinTechBlog1, FinTechBlog2, FinTechBlog3, TelecomBlog1, TelecomBlog2, TelecomBlog3 } from './components/pages';
+import { About, Blog, BlogDetail, Careers, Contact, PrivacyPolicy, CareerApply, Events, LogisticsBlog, LogisticsBlog2, LogisticsBlog3, ProductionBlog1, ProductionBlog2, ProductionBlog3, MediaBlog1, MediaBlog2, MediaBlog3, RetailBlog1, RetailBlog2, RetailBlog3, EdTechBlog1, EdTechBlog2, EdTechBlog3, HealthcareBlog1, HealthcareBlog2, HealthcareBlog3, FinTechBlog1, FinTechBlog2, FinTechBlog3, TelecomBlog1, TelecomBlog2, TelecomBlog3, QualitySecurity, AIPlatform, AgenticAI, IOTOTSecurity, CybersecurityFundamentals, CloudSecurity, SalesforceCRMAutomation } from './components/pages';
 import Hero from './components/sections/Hero';
 import FAQ from './components/sections/FAQ';
 import Products from './components/sections/Products';
@@ -8,8 +8,8 @@ import {
   Logistics, Manufacturing, Media, Retail, EdTech, Ecommerce, 
   Healthcare, EnergyUtilities, FinTech, Telecommunications, 
   RealEstateConstruction, Cloud, ExReality, Web3, MVPDevelopment, 
-  BackEnd, DevOps, ESG, ITServices, DataAI, Automation, 
-  SoftwareCloud, EnterpriseApps, Cybersecurity 
+  BackEnd, DevOps, ITServices, DataAI, Automation, 
+  SoftwareCloud, EnterpriseApps, Cybersecurity, AIAgents, AIDataScienceML, BusinessAnalytics, ComputerVisionNLP, PythonDataAI, HuggingFace, Microsoft365PowerPlatform, SAPEnterpriseApplications 
 } from './components/services';
 import { NextGenSolutions, SolutionsTailored, ReadyToUnlock } from './components/features';
 import RootLayout from './components/layout/RootLayout';
@@ -33,6 +33,19 @@ function App() {
       <Route element={<RootLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Blog/:slug" element={<BlogDetail />} />
+        <Route path="/Events" element={<Events />} />
+        <Route path="/AI-Agents" element={<AIAgents />} />
+        <Route path="/Agentic-AI" element={<AgenticAI />} />
+        <Route path="/IOT-OT-Security" element={<IOTOTSecurity />} />
+        <Route path="/Cybersecurity" element={<CybersecurityFundamentals />} />
+        <Route path="/Cybersecurity/" element={<CybersecurityFundamentals />} />
+        <Route path="/Cloud-Security" element={<CloudSecurity />} />
+        <Route path="/Cloud-Security/" element={<CloudSecurity />} />
+        <Route path="/AI-Platform" element={<AIPlatform />} />
+        <Route path="/Salesforce-CRM-Automation" element={<SalesforceCRMAutomation />} />
+        
         <Route path="/Careers" element={<Careers />} />
         <Route path="/Careers/Apply" element={<CareerApply />} />
         <Route path="/FAQ" element={<FAQ />} />
@@ -55,14 +68,22 @@ function App() {
         <Route path="/Back-End" element={<BackEnd />} />
         <Route path="/Devops" element={<DevOps />} />
         <Route path="/Products" element={<Products />} />
-        <Route path="/ESG" element={<ESG />} />
+
+        <Route path="/AI-Data-Science-ML" element={<AIDataScienceML />} />
+        <Route path="/Business-Analytics" element={<BusinessAnalytics />} />
         <Route path="/Data-AI" element={<DataAI />} />
+        <Route path="/Computer-Vision-NLP" element={<ComputerVisionNLP />} />
+        <Route path="/Python-Data-AI" element={<PythonDataAI />} />
+        <Route path="/Hugging-Face" element={<HuggingFace />} />
         <Route path="/Automation" element={<Automation />} />
         <Route path="/Software-Cloud" element={<SoftwareCloud />} />
         <Route path="/Enterprise-Apps" element={<EnterpriseApps />} />
+        <Route path="/SAP-Enterprise-Applications" element={<SAPEnterpriseApplications />} />
+        <Route path="/Microsoft-365-Power-Platform" element={<Microsoft365PowerPlatform />} />
         <Route path="/Cybersecurity" element={<Cybersecurity />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+        <Route path="/Quality-and-Security" element={<QualitySecurity />} />
         <Route path="/Blog/Logistics-Smart-Solutions" element={<LogisticsBlog />} />
         <Route path="/Blog/Logistics-Tech-Enhancements" element={<LogisticsBlog2 />} />
         <Route path="/Blog/Logistics-Advanced-Tech" element={<LogisticsBlog3 />} />

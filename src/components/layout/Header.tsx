@@ -6,9 +6,13 @@ import logo from '../../../Public/appxcess.png';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hoveredServiceCategory, setHoveredServiceCategory] = useState<number>(0);
 
   const companyMenu = [
     { name: "About", href: "/About" },
+    { name: "Quality & Security", href: "/Quality-and-Security" },
+    { name: "Blog", href: "/Blog" },
+    { name: "Events", href: "/Events" },
     { name: "FAQ", href: "/FAQ" },
     { name: "Careers", href: "/Careers" }
   ];
@@ -27,20 +31,68 @@ const Header: React.FC = () => {
     { name: "Real Estate and Construction", href: "/RealEstate-and-Construction/" }
   ];
 
-  const servicesMenu = {
-    "Core Tech Services": [
-      { name: "Data & AI", href: "/Data-AI/" },
-      { name: "Automation & Workflow", href: "/Automation/" },
-      { name: "Software Development & Cloud", href: "/Software-Cloud/" },
-      { name: "Enterprise Applications", href: "/Enterprise-Apps/" },
-      { name: "Cybersecurity & IT Security", href: "/Cybersecurity/" }
-    ]
-  };
+  const servicesMenu = [
+    {
+      category: "Data and AI",
+      description: "Data Engineering, Artificial Intelligence",
+      services: [
+        { name: "AI-Driven Data Science & Machine Learning", href: "/AI-Data-Science-ML/" },
+        { name: "Business Analytics & Decision Intelligence", href: "/Business-Analytics/" },
+        { name: "Computer Vision & NLP Applications", href: "/Computer-Vision-NLP" },
+        { name: "Python for Data & AI Projects", href: "/Python-Data-AI" },
+        { name: "AI & NLP Tools", href: "/Hugging-Face" },
+        { name: "Agentic AI Tools & Applications", href: "/Agentic-AI" },
+        { name: "AI Platform", href: "/AI-Platform/" }
+      ]
+    },
+    {
+      category: "Automation & Workflow Technologies",
+      description: "Process Automation & Integration",
+      services: [
+        { name: "RPA", href: "/Automation/" },
+        { name: "Automation Anywhere", href: "/Automation/" },
+        { name: "UI Path", href: "/Automation/" },
+        { name: "Zapier / Make", href: "/Automation/" },
+        { name: "Enterprise Workflow Automation", href: "/Automation/" }
+      ]
+    },
+    {
+      category: "Software Development & Cloud Engineering",
+      description: "Full Stack & Cloud Engineering",
+      services: [
+        { name: "Full Stack Development with Cloud Deployment", href: "/Software-Cloud/" },
+        { name: "Mobile apps development", href: "/Software-Cloud/" },
+        { name: "Cloud Computing & DevOps", href: "/Software-Cloud/" },
+        { name: "Bubble.io, Outsystems", href: "/Software-Cloud/" },
+        { name: "IT Support & Enterprise Systems", href: "/Software-Cloud/" }
+      ]
+    },
+    {
+      category: "Enterprise Applications & Business Systems",
+      description: "Business Systems & CRM",
+      services: [
+        { name: "Salesforce CRM & Automation", href: "/Salesforce-CRM-Automation" },
+        { name: "Microsoft 365 & Power Platform", href: "/Microsoft-365-Power-Platform" },
+        { name: "SAP & Enterprise Applications", href: "/SAP-Enterprise-Applications" },
+        { name: "HR Systems", href: "/Enterprise-Apps/" },
+        { name: "Business Tools", href: "/Enterprise-Apps/" }
+      ]
+    },
+    {
+      category: "Cybersecurity & IT Security",
+      description: "Security & Cloud Protection",
+      services: [
+        { name: "Cybersecurity Fundamentals", href: "/Cybersecurity/" },
+        { name: "Mastering Cloud Security", href: "/Cloud-Security/" },
+        { name: "IoT/OT Security", href: "/IOT-OT-Security" }
+      ]
+    }
+  ];
 
 
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -79,6 +131,13 @@ const Header: React.FC = () => {
               </div>
             </div>
 
+            {/* AI Agents */}
+            <Link to="/AI-Agents/" className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">
+              AI Agents
+            </Link>
+
+            
+
             {/* Industries Dropdown */}
             <div className="relative group">
               <button 
@@ -108,26 +167,52 @@ const Header: React.FC = () => {
                 Services
                 <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform" />
               </button>
-              <div className="absolute top-full left-0 mt-1 w-96 bg-gradient-to-br from-teal-50 to-gray-50 rounded-lg shadow-lg border border-gray-200 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                  <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(servicesMenu).map(([category, items]: [string, any[]]) => (
-                      <div key={category}>
-                        <h3 className="font-semibold text-gray-900 mb-2">{category}</h3>
-                        <ul className="space-y-1">
-                          {items.map((item: any, index: number) => (
-                            <li key={index}>
-                              <Link
-                                to={item.href}
-                                className="block text-sm text-gray-700 hover:bg-teal-100 hover:text-teal-600 transition-colors px-2 py-1 rounded"
-                              >
-                                {item.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-screen max-w-5xl px-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="bg-white rounded-xl shadow-2xl border border-teal-200/40 overflow-hidden">
+                  <div className="flex">
+                    {/* Left: Categories */}
+                    <div className="w-1/3 min-w-[280px] bg-gradient-to-b from-teal-50 to-blue-50 p-4 border-r border-teal-100">
+                      <h3 className="text-sm font-semibold text-teal-800 mb-2">Categories</h3>
+                      <ul className="space-y-1.5">
+                        {servicesMenu.map((category, index) => (
+                          <li key={index}
+                              onMouseEnter={() => setHoveredServiceCategory(index)}
+                          >
+                            <button
+                              className={`w-full text-left px-3 py-2 rounded-md transition-colors text-[13px] ${
+                                hoveredServiceCategory === index
+                                  ? 'bg-white text-teal-700 border border-teal-200 shadow-sm'
+                                  : 'text-gray-800 hover:bg-white/70'
+                              }`}
+                            >
+                              <div className="font-semibold leading-tight">{category.category}</div>
+                              <div className="text-[11px] text-gray-600 leading-tight mt-0.5">{category.description}</div>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Right: Services for hovered category */}
+                    <div className="flex-1 p-5">
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-sm font-bold text-gray-900">{servicesMenu[hoveredServiceCategory].category}</h4>
+                        <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </div>
-                    ))}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {servicesMenu[hoveredServiceCategory].services.map((service: { name: string; href: string }, index: number) => (
+                          <Link key={index} to={service.href}>
+                            <div className="rounded-md border border-gray-200 bg-white py-2 px-3 hover:border-teal-300 hover:bg-teal-50 transition-colors">
+                              <span className="font-medium text-gray-800 text-[13px] leading-tight">{service.name}</span>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                </div>
               </div>
             </div>
 
@@ -138,10 +223,6 @@ const Header: React.FC = () => {
               Products
             </Link>
 
-            {/* ESG */}
-            <Link to="/ESG/" className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">
-              ESG
-            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -189,6 +270,13 @@ const Header: React.FC = () => {
                 )}
               </div>
 
+              {/* AI Agents */}
+              <Link to="/AI-Agents/" className="block text-gray-700 hover:text-teal-600 px-3 py-2 text-base font-medium">
+                AI Agents
+              </Link>
+
+              
+
               {/* Industries */}
               <div className="space-y-2">
                 <button 
@@ -220,13 +308,14 @@ const Header: React.FC = () => {
                 </button>
                 {activeDropdown === 'services' && (
                   <div className="pl-4 space-y-2">
-                    {Object.entries(servicesMenu).map(([category, items]: [string, any[]]) => (
-                      <div key={category}>
-                        <h4 className="font-semibold text-gray-900 text-sm px-3 py-1">{category}</h4>
+                    {servicesMenu.map((category, index) => (
+                      <div key={index}>
+                        <h4 className="font-semibold text-gray-900 text-sm px-3 py-1">{category.category}</h4>
+                        <p className="text-xs text-gray-500 px-3 py-1">{category.description}</p>
                         <div className="space-y-1">
-                          {items.map((item: any, index: number) => (
-                            <Link key={index} to={item.href} className="block text-gray-600 hover:text-teal-600 px-3 py-1 text-sm">
-                              {item.name}
+                          {category.services.map((service: any, serviceIndex: number) => (
+                            <Link key={serviceIndex} to={service.href} className="block text-gray-600 hover:text-teal-600 px-3 py-1 text-sm">
+                              {service.name}
                             </Link>
                           ))}
                         </div>
@@ -238,12 +327,9 @@ const Header: React.FC = () => {
 
 
 
-              {/* Products & ESG */}
+              {/* Products */}
               <Link to="/Products/" className="block text-gray-700 hover:text-teal-600 px-3 py-2 text-base font-medium">
                 Products
-              </Link>
-              <Link to="/ESG/" className="block text-gray-700 hover:text-teal-600 px-3 py-2 text-base font-medium">
-                ESG
               </Link>
 
               {/* Mobile CTA */}

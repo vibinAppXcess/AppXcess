@@ -5,7 +5,7 @@ import ChatWidget from '../common/ChatWidget';
 
 const RootLayout = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-16">
       <ScrollToTop />
       <Header />
       <Outlet />

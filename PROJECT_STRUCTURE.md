@@ -43,7 +43,7 @@ Main content sections that appear on the homepage:
 
 ### Service Components (`src/components/services/`)
 Industry-specific service components:
-- `ESG.tsx` - Environmental, Social, and Governance
+
 - `EdTech.tsx` - Educational Technology
 - `Ecommerce.tsx` - E-commerce solutions
 - `DevOps.tsx` - DevOps services

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Building2, Users, Shield, Zap, TrendingUp, Globe, Database, Settings, BarChart3, Calendar, CreditCard } from 'lucide-react';
+import { Building2, Users, TrendingUp, Globe, Database, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const EnterpriseApps: React.FC = () => {
   const stats = [
@@ -14,33 +15,26 @@ const EnterpriseApps: React.FC = () => {
       title: "Salesforce CRM & Automation",
       description: "Comprehensive Salesforce implementation and customization to streamline your customer relationship management and sales processes.",
       icon: Users,
-      features: ["CRM implementation", "Sales automation", "Customer analytics"]
+      features: ["CRM implementation", "Sales automation", "Customer analytics"],
+      href: "/Salesforce-CRM-Automation"
     },
     {
       title: "Microsoft 365 & Power Platform",
       description: "Full Microsoft ecosystem integration including Office 365, Power BI, Power Automate, and Power Apps for business transformation.",
       icon: Building2,
-      features: ["Office 365 setup", "Power BI dashboards", "Workflow automation"]
+      features: ["Office 365 setup", "Power BI dashboards", "Workflow automation"],
+      href: "/Microsoft-365-Power-Platform"
     },
     {
       title: "SAP & Enterprise Applications",
       description: "Enterprise resource planning solutions with SAP implementation, customization, and integration for large-scale operations.",
       icon: Database,
-      features: ["ERP implementation", "System integration", "Process optimization"]
+      features: ["ERP implementation", "System integration", "Process optimization"],
+      href: "/SAP-Enterprise-Applications"
     }
   ];
 
   const platforms = [
-    {
-      name: "Workday",
-      description: "Human capital management and HR systems for enterprise organizations",
-      icon: Calendar
-    },
-    {
-      name: "Zoho Suite",
-      description: "Comprehensive business tools and applications for growing companies",
-      icon: BarChart3
-    },
     {
       name: "Enterprise Systems",
       description: "Custom enterprise solutions tailored to your specific business needs",
@@ -82,11 +76,11 @@ const EnterpriseApps: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                                  <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
-                   Learn More About AppXcess
-                 </button>
-                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors">
-                   Contact Us Now
-                 </button>
+                  Learn More About AppXcess
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors">
+                  Contact Us Now
+                </button>
               </div>
             </div>
             <div className="relative">
@@ -144,11 +138,11 @@ const EnterpriseApps: React.FC = () => {
           
           <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <Link key={index} to={service.href ?? '#'} className="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full mb-6">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:underline">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -158,7 +152,7 @@ const EnterpriseApps: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -295,6 +289,9 @@ const EnterpriseApps: React.FC = () => {
                   <span className="text-gray-700">System integration & migration</span>
                 </div>
               </div>
+              <div className="mt-6">
+                <Link to="/SAP-Enterprise-Applications" className="inline-block bg-custom-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-custom-teal transition-colors">Explore SAP & Enterprise Applications</Link>
+              </div>
             </div>
             <div className="bg-gradient-to-br from-teal-100 to-gray-100 rounded-3xl p-8">
               <div className="w-full h-80 rounded-2xl overflow-hidden">
@@ -319,8 +316,8 @@ const EnterpriseApps: React.FC = () => {
             The smartest choice for scalable, secure, and efficient enterprise applications and business systems.
           </p>
                      <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
-             Contact us Now
-           </button>
+            Contact us Now
+          </button>
         </div>
       </section>
 
