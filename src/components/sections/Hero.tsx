@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Brain, Settings, Code, Cloud, Building2, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -11,6 +12,7 @@ const Hero: React.FC = () => {
   const [activeButton, setActiveButton] = useState<string | null>(null);
   const [animationPhase, setAnimationPhase] = useState(0);
   const [cityAnimation, setCityAnimation] = useState(0);
+  const navigate = useNavigate();
 
   const words = [
     "BUILDING",
@@ -73,6 +75,10 @@ const Hero: React.FC = () => {
   const handleButtonClick = (buttonType: string) => {
     setActiveButton(buttonType);
     setTimeout(() => setActiveButton(null), 300);
+    
+    if (buttonType === 'contact' || buttonType === 'learn') {
+      navigate('/Contact');
+    }
   };
 
   return (

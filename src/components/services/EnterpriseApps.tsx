@@ -19,6 +19,13 @@ const EnterpriseApps: React.FC = () => {
       href: "/Salesforce-CRM-Automation"
     },
     {
+      title: "HR Systems",
+      description: "Smarter HR for a modern workforce. Streamline workforce management, enhance employee experiences, and provide data-driven insights for growth.",
+      icon: Users,
+      features: ["Recruitment & Onboarding", "Payroll & Benefits", "Performance Management"],
+      href: "/HR-Systems"
+    },
+    {
       title: "Microsoft 365 & Power Platform",
       description: "Full Microsoft ecosystem integration including Office 365, Power BI, Power Automate, and Power Apps for business transformation.",
       icon: Building2,
@@ -31,6 +38,13 @@ const EnterpriseApps: React.FC = () => {
       icon: Database,
       features: ["ERP implementation", "System integration", "Process optimization"],
       href: "/SAP-Enterprise-Applications"
+    },
+    {
+      title: "Business Tools",
+      description: "Streamline work, empower teams, and drive growth with smart business tools that simplify workflows and enhance collaboration.",
+      icon: Settings,
+      features: ["Workflow Automation", "Project Management", "Collaboration Tools"],
+      href: "/Business-Tools"
     }
   ];
 
@@ -78,9 +92,9 @@ const EnterpriseApps: React.FC = () => {
                                  <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
                   Learn More About AppXcess
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors">
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors inline-block text-center">
                   Contact Us Now
-                </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -136,7 +150,7 @@ const EnterpriseApps: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-5 gap-8">
             {services.map((service, index) => (
               <Link key={index} to={service.href ?? '#'} className="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full mb-6">
@@ -315,9 +329,9 @@ const EnterpriseApps: React.FC = () => {
           <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             The smartest choice for scalable, secure, and efficient enterprise applications and business systems.
           </p>
-                     <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+                     <Link to="/Contact" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors inline-block text-center">
             Contact us Now
-          </button>
+          </Link>
         </div>
       </section>
 

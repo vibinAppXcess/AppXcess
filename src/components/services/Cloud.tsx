@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Cloud as CloudIcon, Database, Shield, Zap, Users, TrendingUp, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Cloud: React.FC = () => {
   const stats = [
@@ -62,9 +63,9 @@ const Cloud: React.FC = () => {
                   Learn More About AppXcess
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors inline-block text-center">
                   Contact Us Now
-                </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -151,9 +152,9 @@ const Cloud: React.FC = () => {
           <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             The smartest choice for scalable, secure, and efficient cloud services.
           </p>
-          <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg">
+          <Link to="/Contact" className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg inline-block text-center">
             Contact us Now
-          </button>
+          </Link>
         </div>
       </section>
 

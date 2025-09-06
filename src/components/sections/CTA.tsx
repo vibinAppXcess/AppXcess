@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
 import { Button } from '../ui';
+import { Link } from 'react-router-dom';
 
 const CTA: React.FC = () => {
   return (
@@ -26,14 +27,16 @@ const CTA: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 border-0 rounded-lg focus:ring-2 focus:ring-white focus:outline-none text-gray-900"
                 />
               </div>
-              <Button variant="whiteOutline" className="whitespace-nowrap">Get Started</Button>
+              <Link to="/Contact">
+                <Button variant="whiteOutline" className="whitespace-nowrap">Get Started</Button>
+              </Link>
             </div>
             
             <p className="text-teal-100">
               Want to contact our team and book a call?{' '}
-              <a href="#contact" className="text-teal-200 hover:text-white underline">
+              <Link to="/Contact" className="text-teal-200 hover:text-white underline">
                 Try it now
-              </a>
+              </Link>
             </p>
           </div>
 

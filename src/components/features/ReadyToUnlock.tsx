@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ReadyToUnlock: React.FC = () => {
   return (
@@ -30,12 +31,14 @@ const ReadyToUnlock: React.FC = () => {
           </p>
 
           {/* CTA Button */}
-          <button className="group bg-white text-teal-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-teal-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-            <span className="flex items-center space-x-3">
-              <span>Reach Out Now</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-          </button>
+          <Link to="/Contact">
+            <button className="group bg-white text-teal-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-teal-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <span className="flex items-center space-x-3">
+                <span>Reach Out Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </button>
+          </Link>
 
           {/* Additional Info */}
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">

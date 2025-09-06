@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cpu, Truck, Battery, PackageSearch, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const LogisticsBlog2: React.FC = () => {
   return (
@@ -58,7 +59,7 @@ const LogisticsBlog2: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-bold mb-4">Accelerate your transportation transformation</h3>
           <p className="text-white/90 mb-8 max-w-3xl mx-auto">From routing to electrification, we deliver measurable improvements fast.</p>
-          <a href="/Contact" className="inline-flex items-center gap-2 bg-white text-custom-teal px-8 py-3 rounded-xl font-semibold hover:bg-gray-100">Contact Us <ArrowRight className="w-5 h-5"/></a>
+          <Link to="/Contact" className="inline-flex items-center gap-2 bg-white text-custom-teal px-8 py-3 rounded-xl font-semibold hover:bg-gray-100">Contact Us <ArrowRight className="w-5 h-5"/></Link>
         </div>
       </section>
     </div>

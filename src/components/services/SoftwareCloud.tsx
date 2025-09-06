@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Shield, Users, Zap, Globe, Lock, TrendingUp, CheckCircle, Star, Code, Cloud, Smartphone, Database, Server } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SoftwareCloud: React.FC = () => {
   const trustFactors = [
@@ -322,9 +323,11 @@ const SoftwareCloud: React.FC = () => {
             <p className="text-teal-100 mb-8 max-w-3xl mx-auto">
               Unlock the future with AppXcess. Discover seamless development and innovation with our software and cloud solutions.
             </p>
-            <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg">
-              Reach Out Now!
-            </button>
+            <Link to="/Contact">
+              <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg">
+                Reach Out Now!
+              </button>
+            </Link>
           </div>
         </div>
       </section>

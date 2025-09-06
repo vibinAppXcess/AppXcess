@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             {/* Feature Highlights */}
             <div className="grid md:grid-cols-3 gap-8 mt-20">
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-teal to-custom-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Global Presence</h3>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-blue to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">24/7 Support</h3>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Expert Team</h3>
@@ -122,44 +122,44 @@ const Contact: React.FC = () => {
             </div>
             
             {/* Tech Center - India */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Tech Center - India</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <span className="text-gray-600">Technology Development Center</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <span className="text-gray-600">+91 91136 19873</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <a href="mailto:tech@appxcess.com" className="text-gray-600 hover:underline">tech@appxcess.com</a>
                 </div>
               </div>
             </div>
             
             {/* Biz Dev Center - Australia */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-indigo-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Building className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Biz Dev Center - Australia</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <span className="text-gray-600">Business Development Center</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <span className="text-gray-600">+61 450 868 663</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
                   <a href="mailto:biz@appxcess.com" className="text-gray-600 hover:underline">biz@appxcess.com</a>
                 </div>
               </div>

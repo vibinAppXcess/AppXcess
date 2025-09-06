@@ -22,6 +22,7 @@ export { default as DataAI } from './DataAI';
 export { default as AIDataScienceML } from './AIDataScienceML';
 export { default as BusinessAnalytics } from './BusinessAnalytics';
 export { default as Automation } from './Automation';
+export { default as UiPathService } from './UiPathService';
 export { default as SoftwareCloud } from './SoftwareCloud';
 export { default as EnterpriseApps } from './EnterpriseApps';
 export { default as Cybersecurity } from './Cybersecurity';

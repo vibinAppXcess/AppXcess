@@ -3,6 +3,7 @@ import {
   ChevronDown, ChevronUp, ArrowRight,
   HelpCircle, MessageCircle, Users, Globe, Code, Shield
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FAQ: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -84,12 +85,12 @@ const FAQ: React.FC = () => {
               Find answers to common questions about our services, processes, and how we can help bring your ideas to life.
             </p>
             <div className="pt-8">
-                             <button className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 group shadow-lg">
+                             <Link to="/Contact" className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 group shadow-lg inline-block">
                  <span className="flex items-center space-x-2">
                    <span>Contact Us</span>
                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                  </span>
-               </button>
+               </Link>
             </div>
           </div>
         </div>
@@ -198,9 +199,6 @@ const FAQ: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
                          <button className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:bg-teal-700">
                Contact Support
-             </button>
-             <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:bg-teal-600 hover:text-white">
-               Schedule a Call
              </button>
           </div>
         </div>

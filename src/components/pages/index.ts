@@ -37,3 +37,15 @@ export { default as CybersecurityFundamentals } from './CybersecurityFundamental
 export { default as CloudSecurity } from './CloudSecurity';
 export { default as AIPlatform } from './AIPlatform';
 export { default as SalesforceCRMAutomation } from './SalesforceCRMAutomation';
+export { default as HRSystems } from './HRSystems';
+export { default as BusinessTools } from './BusinessTools';
+export { default as FullStackCloudDeployment } from './FullStackCloudDeployment';
+export { default as MobileAppDevelopment } from './MobileAppDevelopment';
+export { default as CloudComputingDevOps } from './CloudComputingDevOps';
+export { default as LowCodeNoCodeDevelopment } from './LowCodeNoCodeDevelopment';
+export { default as ITSupportEnterpriseSystems } from './ITSupportEnterpriseSystems';
+export { default as RoboticProcessAutomation } from './RoboticProcessAutomation';
+export { default as AutomationAnywhere } from './AutomationAnywhere';
+export { default as UiPath } from './UiPath';
+export { default as AutomationIntegrationPlatforms } from './AutomationIntegrationPlatforms';
+export { default as EnterpriseWorkflowAutomation } from './EnterpriseWorkflowAutomation';

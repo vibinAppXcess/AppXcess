@@ -1,6 +1,6 @@
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import { About, Blog, BlogDetail, Careers, Contact, PrivacyPolicy, CareerApply, Events, LogisticsBlog, LogisticsBlog2, LogisticsBlog3, ProductionBlog1, ProductionBlog2, ProductionBlog3, MediaBlog1, MediaBlog2, MediaBlog3, RetailBlog1, RetailBlog2, RetailBlog3, EdTechBlog1, EdTechBlog2, EdTechBlog3, HealthcareBlog1, HealthcareBlog2, HealthcareBlog3, FinTechBlog1, FinTechBlog2, FinTechBlog3, TelecomBlog1, TelecomBlog2, TelecomBlog3, QualitySecurity, AIPlatform, AgenticAI, IOTOTSecurity, CybersecurityFundamentals, CloudSecurity, SalesforceCRMAutomation } from './components/pages';
+import { About, Blog, BlogDetail, Careers, Contact, PrivacyPolicy, CareerApply, Events, LogisticsBlog, LogisticsBlog2, LogisticsBlog3, ProductionBlog1, ProductionBlog2, ProductionBlog3, MediaBlog1, MediaBlog2, MediaBlog3, RetailBlog1, RetailBlog2, RetailBlog3, EdTechBlog1, EdTechBlog2, EdTechBlog3, HealthcareBlog1, HealthcareBlog2, HealthcareBlog3, FinTechBlog1, FinTechBlog2, FinTechBlog3, TelecomBlog1, TelecomBlog2, TelecomBlog3, QualitySecurity, AIPlatform, AgenticAI, IOTOTSecurity, CybersecurityFundamentals, CloudSecurity, SalesforceCRMAutomation, HRSystems, BusinessTools, FullStackCloudDeployment, MobileAppDevelopment, CloudComputingDevOps, LowCodeNoCodeDevelopment, ITSupportEnterpriseSystems, RoboticProcessAutomation, AutomationAnywhere, UiPath, AutomationIntegrationPlatforms, EnterpriseWorkflowAutomation } from './components/pages';
 import Hero from './components/sections/Hero';
 import FAQ from './components/sections/FAQ';
 import Products from './components/sections/Products';
@@ -8,8 +8,8 @@ import {
   Logistics, Manufacturing, Media, Retail, EdTech, Ecommerce, 
   Healthcare, EnergyUtilities, FinTech, Telecommunications, 
   RealEstateConstruction, Cloud, ExReality, Web3, MVPDevelopment, 
-  BackEnd, DevOps, ITServices, DataAI, Automation, 
-  SoftwareCloud, EnterpriseApps, Cybersecurity, AIAgents, AIDataScienceML, BusinessAnalytics, ComputerVisionNLP, PythonDataAI, HuggingFace, Microsoft365PowerPlatform, SAPEnterpriseApplications 
+  BackEnd, DevOps, ITServices, DataAI, Automation, UiPathService,
+  EnterpriseApps, Cybersecurity, AIAgents, AIDataScienceML, BusinessAnalytics, ComputerVisionNLP, PythonDataAI, HuggingFace, Microsoft365PowerPlatform, SAPEnterpriseApplications 
 } from './components/services';
 import { NextGenSolutions, SolutionsTailored, ReadyToUnlock } from './components/features';
 import RootLayout from './components/layout/RootLayout';
@@ -45,6 +45,17 @@ function App() {
         <Route path="/Cloud-Security/" element={<CloudSecurity />} />
         <Route path="/AI-Platform" element={<AIPlatform />} />
         <Route path="/Salesforce-CRM-Automation" element={<SalesforceCRMAutomation />} />
+        <Route path="/HR-Systems" element={<HRSystems />} />
+        <Route path="/Business-Tools" element={<BusinessTools />} />
+        <Route path="/Mobile-App-Development" element={<MobileAppDevelopment />} />
+        <Route path="/Cloud-Computing-DevOps" element={<CloudComputingDevOps />} />
+        <Route path="/Low-Code-No-Code-Development" element={<LowCodeNoCodeDevelopment />} />
+        <Route path="/IT-Support-Enterprise-Systems" element={<ITSupportEnterpriseSystems />} />
+        <Route path="/Robotic-Process-Automation" element={<RoboticProcessAutomation />} />
+        <Route path="/Automation-Anywhere" element={<AutomationAnywhere />} />
+        <Route path="/UiPath" element={<UiPath />} />
+        <Route path="/Automation-Integration-Platforms" element={<AutomationIntegrationPlatforms />} />
+        <Route path="/Enterprise-Workflow-Automation" element={<EnterpriseWorkflowAutomation />} />
         
         <Route path="/Careers" element={<Careers />} />
         <Route path="/Careers/Apply" element={<CareerApply />} />
@@ -76,7 +87,8 @@ function App() {
         <Route path="/Python-Data-AI" element={<PythonDataAI />} />
         <Route path="/Hugging-Face" element={<HuggingFace />} />
         <Route path="/Automation" element={<Automation />} />
-        <Route path="/Software-Cloud" element={<SoftwareCloud />} />
+        <Route path="/UiPath-Service" element={<UiPathService />} />
+        <Route path="/Software-Cloud" element={<FullStackCloudDeployment />} />
         <Route path="/Enterprise-Apps" element={<EnterpriseApps />} />
         <Route path="/SAP-Enterprise-Applications" element={<SAPEnterpriseApplications />} />
         <Route path="/Microsoft-365-Power-Platform" element={<Microsoft365PowerPlatform />} />

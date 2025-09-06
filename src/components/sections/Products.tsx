@@ -52,7 +52,7 @@ const Products: React.FC = () => {
             {/* Feature Highlights */}
             <div className="grid md:grid-cols-3 gap-8 mt-20">
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-teal to-custom-blue rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">50+ Mobile Apps</h3>
@@ -60,7 +60,7 @@ const Products: React.FC = () => {
               </div>
               
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-blue to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">AI-Powered</h3>
@@ -68,7 +68,7 @@ const Products: React.FC = () => {
               </div>
               
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Enterprise Ready</h3>
@@ -83,44 +83,6 @@ const Products: React.FC = () => {
         <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-ping"></div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 -mt-16 relative z-10">
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <Smartphone className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">Mobile Apps</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-custom-blue to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">25+</div>
-              <div className="text-gray-600 font-medium">Web Solutions</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-700 rounded-2xl flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">15+</div>
-              <div className="text-gray-600 font-medium">AI Products</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">100%</div>
-              <div className="text-gray-600 font-medium">Success Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Products That Drive Innovation Section */}
       <section className="py-20 bg-white">
@@ -138,15 +100,15 @@ const Products: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Mobile Apps */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-custom-teal/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-custom-teal/20 hover:border-custom-teal/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-custom-teal/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-custom-teal/20 hover:border-custom-teal/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Apps</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   Native and cross-platform mobile applications for iOS and Android with cutting-edge features and seamless user experiences.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all mt-auto">
                   Explore Apps <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -154,15 +116,15 @@ const Products: React.FC = () => {
 
             {/* LMS */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-custom-blue/10 to-teal-500/10 rounded-3xl p-8 h-full border border-custom-blue/20 hover:border-custom-blue/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-custom-blue/10 to-teal-500/10 rounded-3xl p-8 h-full border border-custom-blue/20 hover:border-custom-blue/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-custom-blue to-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">LMS</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for managing online courses with user authentication and interactive features.
                 </p>
-                <div className="flex items-center text-custom-blue font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-custom-blue font-semibold group-hover:gap-3 transition-all mt-auto">
                   Learn More <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -170,15 +132,15 @@ const Products: React.FC = () => {
 
             {/* Attendance */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-teal-500/10 to-custom-teal/10 rounded-3xl p-8 h-full border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-teal-500/10 to-custom-teal/10 rounded-3xl p-8 h-full border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Attendance</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for tracking employee attendance, with check-in, leave requests, and reports.
                 </p>
-                <div className="flex items-center text-teal-600 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-teal-600 font-semibold group-hover:gap-3 transition-all mt-auto">
                   View Features <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -186,15 +148,15 @@ const Products: React.FC = () => {
 
             {/* eCommerce */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-blue-500/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-blue-500/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <ShoppingCart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">eCommerce</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   A multi-vendor app for seamless shopping with categories and notifications.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 transition-all mt-auto">
                   Shop Now <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -202,15 +164,15 @@ const Products: React.FC = () => {
 
             {/* Social Media App */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-custom-teal/10 to-teal-600/10 rounded-3xl p-8 h-full border border-custom-teal/20 hover:border-custom-teal/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-custom-teal/10 to-teal-600/10 rounded-3xl p-8 h-full border border-custom-teal/20 hover:border-custom-teal/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <MessageSquare className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Social Media App</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for connecting people and fostering engagement through interactive features.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all mt-auto">
                   Connect <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -218,47 +180,32 @@ const Products: React.FC = () => {
 
             {/* CMS */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-teal-600/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-teal-600/20 hover:border-teal-600/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-teal-600/10 to-custom-blue/10 rounded-3xl p-8 h-full border border-teal-600/20 hover:border-teal-600/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <FileText className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">CMS</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for managing and delivering content efficiently across various platforms.
                 </p>
-                <div className="flex items-center text-teal-700 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-teal-700 font-semibold group-hover:gap-3 transition-all mt-auto">
                   Manage Content <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
             </div>
 
-            {/* Lead Management */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 h-full border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-2xl">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                  <Target className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Lead Management</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Optimize sales pipelines with lead tracking and nurturing tools.
-                </p>
-                <div className="flex items-center text-purple-600 font-semibold group-hover:gap-3 transition-all">
-                  Track Leads <ArrowRight className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
 
             {/* Sales CRM */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-indigo-500/10 to-blue-500/10 rounded-3xl p-8 h-full border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-indigo-500/10 to-blue-500/10 rounded-3xl p-8 h-full border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Sales CRM</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   Monitor sales pipelines, activities, and performance metrics effectively.
                 </p>
-                <div className="flex items-center text-indigo-600 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-indigo-600 font-semibold group-hover:gap-3 transition-all mt-auto">
                   Monitor Sales <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
@@ -266,15 +213,15 @@ const Products: React.FC = () => {
 
             {/* Support Ticket System */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-3xl p-8 h-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-3xl p-8 h-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <MessageSquare className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Support Ticket System</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   Handle customer queries with ticketing, prioritization, and tracking.
                 </p>
-                <div className="flex items-center text-orange-600 font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center text-orange-600 font-semibold group-hover:gap-3 transition-all mt-auto">
                   Manage Tickets <ArrowRight className="w-5 h-5" />
                 </div>
               </div>

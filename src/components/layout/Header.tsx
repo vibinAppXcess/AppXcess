@@ -12,7 +12,6 @@ const Header: React.FC = () => {
     { name: "About", href: "/About" },
     { name: "Quality & Security", href: "/Quality-and-Security" },
     { name: "Blog", href: "/Blog" },
-    { name: "Events", href: "/Events" },
     { name: "FAQ", href: "/FAQ" },
     { name: "Careers", href: "/Careers" }
   ];
@@ -49,11 +48,11 @@ const Header: React.FC = () => {
       category: "Automation & Workflow Technologies",
       description: "Process Automation & Integration",
       services: [
-        { name: "RPA", href: "/Automation/" },
-        { name: "Automation Anywhere", href: "/Automation/" },
-        { name: "UI Path", href: "/Automation/" },
-        { name: "Zapier / Make", href: "/Automation/" },
-        { name: "Enterprise Workflow Automation", href: "/Automation/" }
+        { name: "RPA", href: "/Robotic-Process-Automation" },
+        { name: "Automation Anywhere", href: "/Automation-Anywhere" },
+        { name: "UiPath", href: "/UiPath" },
+        { name: "Automation and Integration platforms", href: "/Automation-Integration-Platforms" },
+        { name: "Enterprise Workflow Automation", href: "/Enterprise-Workflow-Automation" },
       ]
     },
     {
@@ -61,10 +60,10 @@ const Header: React.FC = () => {
       description: "Full Stack & Cloud Engineering",
       services: [
         { name: "Full Stack Development with Cloud Deployment", href: "/Software-Cloud/" },
-        { name: "Mobile apps development", href: "/Software-Cloud/" },
-        { name: "Cloud Computing & DevOps", href: "/Software-Cloud/" },
-        { name: "Bubble.io, Outsystems", href: "/Software-Cloud/" },
-        { name: "IT Support & Enterprise Systems", href: "/Software-Cloud/" }
+        { name: "Mobile apps development", href: "/Mobile-App-Development" },
+        { name: "Cloud Computing & DevOps", href: "/Cloud-Computing-DevOps" },
+        { name: "Low-Code/No-Code Development", href: "/Low-Code-No-Code-Development" },
+        { name: "IT Support & Enterprise Systems", href: "/IT-Support-Enterprise-Systems" }
       ]
     },
     {
@@ -74,8 +73,8 @@ const Header: React.FC = () => {
         { name: "Salesforce CRM & Automation", href: "/Salesforce-CRM-Automation" },
         { name: "Microsoft 365 & Power Platform", href: "/Microsoft-365-Power-Platform" },
         { name: "SAP & Enterprise Applications", href: "/SAP-Enterprise-Applications" },
-        { name: "HR Systems", href: "/Enterprise-Apps/" },
-        { name: "Business Tools", href: "/Enterprise-Apps/" }
+        { name: "HR Systems", href: "/HR-Systems" },
+        { name: "Business Tools", href: "/Business-Tools" }
       ]
     },
     {

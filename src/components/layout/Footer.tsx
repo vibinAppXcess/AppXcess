@@ -55,10 +55,10 @@ const Footer: React.FC = () => {
                     href = "/Automation";
                     break;
                   case "Software Development & Cloud":
-                    href = "/SoftwareCloud";
+                    href = "/Software-Cloud";
                     break;
                   case "Enterprise Applications":
-                    href = "/EnterpriseApps";
+                    href = "/Enterprise-Apps";
                     break;
                   case "Cybersecurity & IT Security":
                     href = "/Cybersecurity";
@@ -68,12 +68,12 @@ const Footer: React.FC = () => {
                 }
                 return (
                   <li key={index}>
-                    <a 
-                      href={href}
+                    <Link 
+                      to={href}
                       className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
                     >
                       {service}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

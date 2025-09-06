@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Shield, Lock, Users, Zap, TrendingUp, Globe, Database, Eye, AlertTriangle, Key, Server } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Cybersecurity: React.FC = () => {
   const stats = [
@@ -84,9 +85,9 @@ const Cybersecurity: React.FC = () => {
                                  <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
                    Learn More About AppXcess
                  </button>
-                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors">
+                 <Link to="/Contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-colors inline-block text-center">
                    Contact Us Now
-                 </button>
+                 </Link>
               </div>
             </div>
             <div className="relative">
@@ -318,9 +319,9 @@ const Cybersecurity: React.FC = () => {
           <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             The smartest choice for comprehensive, proactive, and effective IT security solutions.
           </p>
-                     <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+                     <Link to="/Contact" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors inline-block text-center">
              Contact us Now
-           </button>
+           </Link>
         </div>
       </section>
 

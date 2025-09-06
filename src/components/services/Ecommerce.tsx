@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShoppingCart, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, CreditCard, Zap, Shield, Globe, Star, Package, Truck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Ecommerce: React.FC = () => {
   return (
@@ -351,14 +352,18 @@ const Ecommerce: React.FC = () => {
             Join thousands of successful businesses that have transformed their online presence with our cutting-edge ecommerce solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-custom-teal px-12 py-6 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
-              Start Building Now
-              <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="border-2 border-white/50 text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-              <ShoppingCart className="w-6 h-6" />
-              Free Consultation
-            </button>
+            <Link to="/Contact">
+              <button className="bg-white text-custom-teal px-12 py-6 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
+                Start Building Now
+                <ArrowRight className="w-6 h-6" />
+              </button>
+            </Link>
+            <Link to="/Contact">
+              <button className="border-2 border-white/50 text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
+                <ShoppingCart className="w-6 h-6" />
+                Free Consultation
+              </button>
+            </Link>
           </div>
         </div>
       </section>
