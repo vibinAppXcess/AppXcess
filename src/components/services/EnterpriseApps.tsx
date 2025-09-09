@@ -227,7 +227,7 @@ const EnterpriseApps: React.FC = () => {
             <div className="bg-gradient-to-br from-teal-100 to-gray-100 rounded-3xl p-8">
               <div className="w-full h-80 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="/src/assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg" 
                   alt="Microsoft Power Platform"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

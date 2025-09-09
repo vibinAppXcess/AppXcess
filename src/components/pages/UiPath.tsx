@@ -76,7 +76,7 @@ const UiPath: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Operate</h3>
               </div>
               <p className="text-gray-600">
-                Manage automations at enterprise scale, with real-time analytics, unified governance, continuous testing, and cloud-native flexibility
+                Manage automations at scale, with analytics, governance, continuous testing, and cloud-native flexibility
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const UiPath: React.FC = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <Layers className="h-8 w-8 text-teal-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Studio (StudioX & Studio Web)</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Studio</h3>
               </div>
               <p className="text-gray-600">
                 Low-code visual IDEs for both citizen developers and RPA teams
@@ -132,7 +132,7 @@ const UiPath: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Process Discovery Tools</h3>
               </div>
               <p className="text-gray-600">
-                Tools like Task Capture and Automation Hub to identify and prioritize automation projects
+                Tools like Task Capture and Automation Hub identify and prioritize automation projects
               </p>
             </div>
 
@@ -142,7 +142,7 @@ const UiPath: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">AI & Analytics</h3>
               </div>
               <p className="text-gray-600">
-                Document Understanding, AI Center, Insights, Data Service—designed for intelligent automation and actionable governance
+                Document Understanding, AI Center, Insights, Data Service—governance
               </p>
             </div>
 
@@ -183,7 +183,7 @@ const UiPath: React.FC = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Insights & Automation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Insights</h3>
               <p className="text-gray-600">
                 Pioneering "agentic automation": intelligent agents that adapt and act on their own
               </p>
@@ -195,7 +195,7 @@ const UiPath: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Real Results in Healthcare</h3>
               <p className="text-gray-600">
-                Omega Healthcare automated claims and billing workflows using UiPath's Document Understanding, saving thousands of employee hours per month
+                Omega Healthcare automated claims and billing workflows using UiPath.
               </p>
             </div>
           </div>
@@ -268,7 +268,7 @@ const UiPath: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Speed & Scale</h3>
               </div>
               <p className="text-gray-600">
-                Deploy automations quickly and confidently with secure, cloud-native infrastructure
+                Deploy automations quickly, reliably, and confidently with secure, cloud-native infrastructure
               </p>
             </div>
 
@@ -308,7 +308,7 @@ const UiPath: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Future-Ready Platform</h3>
               </div>
               <p className="text-gray-600">
-                With agentic AI, UiPath is leading toward autonomous, context-aware automation
+                With agentic AI, UiPath is leading toward truly scalable, autonomous, context-aware automation
               </p>
             </div>
 

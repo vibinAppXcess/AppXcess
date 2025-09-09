@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-custom-blue via-custom-teal to-teal-600 text-white overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-100 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-custom-teal/20 rounded-full blur-3xl animate-pulse"></div>
@@ -42,38 +42,38 @@ const Contact: React.FC = () => {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight">
-              <span className="text-white">Contact&nbsp;Us</span>
+              <span className="text-gray-900">Contact&nbsp;Us</span>
             </h1>
             
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl mb-16 text-white/80 font-light max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-16 text-gray-700 font-light max-w-4xl mx-auto leading-relaxed">
               Ready to transform your business? Let's discuss how our innovative solutions can drive your success. Get in touch with our team today.
             </p>
             
             {/* Feature Highlights */}
             <div className="grid md:grid-cols-3 gap-8 mt-20">
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Global Presence</h3>
-                <p className="text-white/70 text-sm">Malaysia - India - Australia - Singapore - Dubai</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Global Presence</h3>
+                <p className="text-gray-600 text-sm">Malaysia - India - Australia - Singapore</p>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">24/7 Support</h3>
-                <p className="text-white/70 text-sm">Round-the-clock assistance across all time zones</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">24/7 Support</h3>
+                <p className="text-gray-600 text-sm">Round-the-clock assistance across all time zones</p>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Expert Team</h3>
-                <p className="text-white/70 text-sm">Dedicated professionals ready to help</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Expert Team</h3>
+                <p className="text-gray-600 text-sm">Dedicated professionals ready to help</p>
               </div>
             </div>
           </div>
@@ -90,8 +90,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
-              Our Contact
-              <span className="block text-teal-600">Address Here</span>
+              Our Contact <span className="inline text-teal-600">Address Here</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Connect with us across our global offices and get the support you need for your business transformation.
@@ -99,68 +98,110 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* HQ - Malaysia */}
+            {/* Our Location */}
             <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
-                <Building className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">HQ - Malaysia</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Location</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Headquarters Office</span>
+                <div>
+                  <a 
+                    href="https://maps.app.goo.gl/MysZDAHc5DuZTzR16" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    HQ - Malaysia
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">+60 11-2357 9727</span>
+                <div>
+                  <a 
+                    href="https://maps.app.goo.gl/S7x4e6CTuH1cREtW9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    Biz Dev Center - Australia
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <a href="mailto:info@appxcess.com" className="text-gray-600 hover:underline">info@appxcess.com</a>
+                <div>
+                  <a 
+                    href="https://maps.app.goo.gl/W8byGv1e5fTS7ECy5" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    Tech Center - India
+                  </a>
                 </div>
               </div>
             </div>
             
-            {/* Tech Center - India */}
+            {/* Our Email Address */}
             <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tech Center - India</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Email Address</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Technology Development Center</span>
+                <div>
+                  <a 
+                    href="mailto:sales.my@appxcess.com" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    sales.my@appxcess.com
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">+91 91136 19873</span>
+                <div>
+                  <a 
+                    href="mailto:sales.au@appxcess.com" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    sales.au@appxcess.com
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <a href="mailto:tech@appxcess.com" className="text-gray-600 hover:underline">tech@appxcess.com</a>
+                <div>
+                  <a 
+                    href="mailto:sales.in@appxcess.com" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    sales.in@appxcess.com
+                  </a>
                 </div>
               </div>
             </div>
             
-            {/* Biz Dev Center - Australia */}
+            {/* Contact Phone Number */}
             <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-100">
               <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <Building className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Biz Dev Center - Australia</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Phone Number</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">Business Development Center</span>
+                <div>
+                  <a 
+                    href="tel:+60 11-2357 9727" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    +60 11-2357 9727
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <span className="text-gray-600">+61 450 868 663</span>
+                <div>
+                  <a 
+                    href="tel:+61 450 868 663" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    +61 450 868 663
+                  </a>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" />
-                  <a href="mailto:biz@appxcess.com" className="text-gray-600 hover:underline">biz@appxcess.com</a>
+                <div>
+                  <a 
+                    href="tel:+91 91136 19873" 
+                    className="text-gray-600 hover:text-teal-600 transition-colors duration-200 block"
+                  >
+                    +91 91136 19873
+                  </a>
                 </div>
               </div>
             </div>
@@ -311,13 +352,13 @@ const Contact: React.FC = () => {
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Email Addresses</h4>
                     <div className="space-y-1 text-gray-600">
                       <p>
-                        General: <a href="mailto:info@appxcess.com" className="hover:underline">info@appxcess.com</a>
+                        Malaysia: <a href="mailto:sales.my@appxcess.com" className="hover:underline">sales.my@appxcess.com</a>
                       </p>
                       <p>
-                        Business: <a href="mailto:biz@appxcess.com" className="hover:underline">biz@appxcess.com</a>
+                        Australia: <a href="mailto:sales.au@appxcess.com" className="hover:underline">sales.au@appxcess.com</a>
                       </p>
                       <p>
-                        Technical: <a href="mailto:tech@appxcess.com" className="hover:underline">tech@appxcess.com</a>
+                        India: <a href="mailto:sales.in@appxcess.com" className="hover:underline">sales.in@appxcess.com</a>
                       </p>
                     </div>
                   </div>

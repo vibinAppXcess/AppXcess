@@ -65,8 +65,8 @@ const BusinessTools: React.FC = () => {
               { title: 'Project & Task Management', text: 'Manage projects efficiently with task tracking, timelines, resource allocation, and progress reporting.' },
               { title: 'Document & Knowledge Management', text: 'Centralize documents, automate approvals, and ensure secure sharing across departments.' },
               { title: 'Workflow Automation', text: 'Reduce repetitive manual processes with automation that boosts efficiency and minimizes errors.' },
-              { title: 'Customer Relationship Management (CRM) Extensions', text: 'Add advanced tools for lead tracking, customer engagement, and sales pipeline management.' },
-              { title: 'Data & Reporting Dashboards', text: 'Empower decision-makers with insights through customizable analytics and visualization tools.' },
+              { title: 'CRM Extensions', text: 'Add advanced tools for lead tracking, customer engagement, and sales pipeline management at scale.' },
+              { title: 'Data & Reporting Dashboards', text: 'Empower decision-makers with insights through customizable analytics and visualization tools for clarity.' },
             ].map((item, idx) => (
               <div key={item.title} className={`relative rounded-xl bg-white border shadow-sm p-6 transition-all hover:shadow-md ${idx % 2 === 0 ? 'border-custom-teal/30' : 'border-custom-blue/30'}`}>
                 <div className={`absolute -top-1 left-6 h-1 w-20 rounded-full ${idx % 2 === 0 ? 'bg-custom-teal' : 'bg-custom-blue'}`} />
@@ -118,12 +118,12 @@ const BusinessTools: React.FC = () => {
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { k: '01', title: 'Microsoft 365 & Power Platform', text: 'End-to-end productivity and automation suite for comprehensive business management.' },
+              { k: '01', title: 'Microsoft 365 & Power', text: 'End-to-end productivity suite for business management at scale and security.' },
               { k: '02', title: 'Google Workspace (G-Suite)', text: 'Cloud-based collaboration and communication tools for modern teams.' },
               { k: '03', title: 'Zoho Business Suite', text: 'CRM, finance, HR, and productivity applications in one integrated ecosystem.' },
               { k: '04', title: 'Slack & Microsoft Teams', text: 'Unified communication and collaboration platforms for seamless teamwork.' },
               { k: '05', title: 'Trello, Asana & Monday.com', text: 'Project and task management solutions for organized workflow management.' },
-              { k: '06', title: 'Salesforce Extensions', text: 'CRM add-ons and business process enhancements for advanced customer management.' },
+              { k: '06', title: 'Salesforce Extensions', text: 'CRM add-ons and business process enhancements for customer management.' },
               { k: '07', title: 'SAP Business Tools', text: 'Enterprise-grade process and resource management solutions for large organizations.' },
               { k: '08', title: 'DocuSign & Adobe Sign', text: 'Digital document signing and workflow automation for streamlined processes.' },
             ].map((item, idx) => (

@@ -33,7 +33,7 @@ const Careers: React.FC = () => {
     { 
       name: "Competitive Benefits", 
       icon: <Award size={24} />,
-      description: "Access attractive compensation and employee perks."
+      description: "Access attractive compensation and employee perks packages."
     },
     { 
       name: "Recognition & Awards", 
@@ -67,9 +67,8 @@ const Careers: React.FC = () => {
 
   const stats = [
     { number: "50+", label: "Team Members" },
-    { number: "15+", label: "Countries" },
-    { number: "95%", label: "Employee Satisfaction" },
-    { number: "25+", label: "Open Positions" }
+    { number: "5+", label: "Countries" },
+    { number: "95%", label: "Employee Satisfaction" }
   ];
 
   const testimonials = [
@@ -188,25 +187,6 @@ const Careers: React.FC = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30">
-            <div className="flex items-start">
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mr-6">
-                {React.cloneElement(benefits[activeBenefit].icon, { className: "text-teal-600", size: 28 })}
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {benefits[activeBenefit].name}
-                </h3>
-                <p className="text-gray-600 text-lg">
-                  {benefits[activeBenefit].description}
-                </p>
-                <button className="mt-6 flex items-center text-teal-600 font-medium group">
-                  Learn more about this benefit
-                  <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -222,7 +202,7 @@ const Careers: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400 mb-4">
@@ -252,9 +232,6 @@ const Careers: React.FC = () => {
             <a href="/Careers/Apply" className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg">
               Apply Now
             </a>
-            <button className="bg-white/90 backdrop-blur-sm text-gray-900 border border-white/30 px-8 py-4 rounded-xl font-medium hover:bg-white transition-all duration-300 shadow-lg">
-              View Open Positions
-            </button>
           </div>
         </div>
       </section>

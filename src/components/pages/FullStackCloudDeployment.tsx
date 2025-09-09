@@ -57,8 +57,8 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Code className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Unified Development Model</h3>
-              <p className="text-gray-600">
-                Our full-stack approach bridges front-end brilliance and back-end reliability—delivering cohesive user experiences and seamless integration across your tech stack.
+              <p className="text-gray-600 text-left">
+                Our approach bridges front-end and back-end—delivering experiences and integration across your tech stack.
               </p>
             </div>
 
@@ -67,8 +67,8 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Cloud className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud-Optimized Architectures</h3>
-              <p className="text-gray-600">
-                Harness the benefits of cloud environments—auto-scaling, global availability, and high performance—through containerized deployment, serverless models, or microservices.
+              <p className="text-gray-600 text-left">
+                Harness cloud environments—auto-scaling—through containerized deployment, serverless, microservices.
               </p>
             </div>
 
@@ -76,8 +76,8 @@ const FullStackCloudDeployment: React.FC = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">User-Centric Design</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Truly User-Centric Design Experience</h3>
+              <p className="text-gray-600 text-left">
                 Every interface is intuitive, responsive, and accessible, ensuring strong engagement across platforms and devices.
               </p>
             </div>
@@ -87,8 +87,8 @@ const FullStackCloudDeployment: React.FC = () => {
                 <TrendingUp className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Resilient & Scalable Systems</h3>
-              <p className="text-gray-600">
-                Built to endure, our architectures adapt to growing user demand while maintaining optimal performance and reliability.
+              <p className="text-gray-600 text-left">
+                Built to endure, our architectures adapt to growing user demand while maintaining performance and reliability.
               </p>
             </div>
           </div>
@@ -153,7 +153,7 @@ const FullStackCloudDeployment: React.FC = () => {
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">CI/CD & DevOps Integration</h3>
                 <p className="text-gray-600 mb-4">
-                  Streamline development with automated pipelines, infrastructure as code (IaC), and continuous monitoring to accelerate delivery and reduce downtime.
+                  Streamline development with pipelines, infrastructure as code (IaC), and continuous monitoring to accelerate delivery and reduce downtime.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-700">
@@ -174,7 +174,7 @@ const FullStackCloudDeployment: React.FC = () => {
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Secure & Compliant Operations</h3>
                 <p className="text-gray-600 mb-4">
-                  Security and compliance are embedded at every layer—from secure code practices to cloud configuration and data protection.
+                  Security and compliance are embedded at every layer—from secure code practices, continuous auditing, to cloud configuration and data protection.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-700">
@@ -211,7 +211,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Zap className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Greater Agility</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Update and deploy with confidence using modern DevOps workflows.
               </p>
             </div>
@@ -221,7 +221,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <TrendingUp className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimized Costs</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Cloud environments offer cost-efficient scaling, reducing overhead.
               </p>
             </div>
@@ -231,7 +231,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Operational Resilience</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Enjoy stability, backup automation, and disaster readiness.
               </p>
             </div>
@@ -240,9 +240,9 @@ const FullStackCloudDeployment: React.FC = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Future-Proof Architecture</h3>
-              <p className="text-gray-600">
-                Ready for growth and adaptable to emerging tech trends.
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Future-Proof</h3>
+              <p className="text-gray-600 text-left">
+                Ready for growth and adaptable to emerging tech trends at scale.
               </p>
             </div>
           </div>
@@ -325,7 +325,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Server className="h-8 w-8 text-blue-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">Back-End</h3>
               </div>
-              <p className="text-gray-600 mb-4">Node.js, Python, Java, APIs, microservices</p>
+              <p className="text-gray-600 mb-4">Node.js, Python, Java, APIs, microservices, and WebSockets</p>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl">
@@ -378,7 +378,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Globe className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Holistic Approach</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Full-stack development with deep cloud-engineering expertise.
               </p>
             </div>
@@ -388,8 +388,8 @@ const FullStackCloudDeployment: React.FC = () => {
                 <TrendingUp className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable Delivery</h3>
-              <p className="text-gray-600">
-                Architectures that grow seamlessly with your business.
+              <p className="text-gray-600 text-left">
+                Architectures that grow seamlessly over time with your business.
               </p>
             </div>
 
@@ -398,8 +398,8 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality Assurance</h3>
-              <p className="text-gray-600">
-                Rigorous testing ensures performance and reliability.
+              <p className="text-gray-600 text-left">
+                Rigorous testing ensures performance, reliability, and consistency.
               </p>
             </div>
 
@@ -408,7 +408,7 @@ const FullStackCloudDeployment: React.FC = () => {
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Long-Term Partnership</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 From launch to scale, we provide ongoing support and optimization.
               </p>
             </div>

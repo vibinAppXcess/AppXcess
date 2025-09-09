@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShoppingCart, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, CreditCard, Zap, Shield, Globe, Star, Package, Truck } from 'lucide-react';
+import { ArrowRight, ShoppingCart, BarChart3, Smartphone, Users, Play, TrendingUp, CreditCard, Shield, Globe, Star, Package, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Ecommerce: React.FC = () => {
@@ -16,10 +16,6 @@ const Ecommerce: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-                <Zap className="w-5 h-5" />
-                <span className="text-sm font-medium">Next-Gen Ecommerce</span>
-              </div>
               <h1 className="text-6xl lg:text-7xl font-bold mb-8 drop-shadow-lg leading-tight">
                 Digital Commerce
                 <span className="block text-teal-300 drop-shadow-lg">Redefined</span>
@@ -28,11 +24,11 @@ const Ecommerce: React.FC = () => {
                 Transform your business with cutting-edge ecommerce solutions that drive growth, enhance customer experiences, and scale operations seamlessly.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
-                <button className="bg-white text-custom-teal px-10 py-5 rounded-full text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
+                <button className="bg-white text-custom-teal px-10 py-5 rounded-lg text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
                   Launch Your Store
                   <ArrowRight className="w-6 h-6" />
                 </button>
-                <button className="border-2 border-white/50 text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
+                <button className="border-2 border-white/50 text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
                   <Play className="w-6 h-6" />
                   Watch Demo
                 </button>
@@ -271,72 +267,7 @@ const Ecommerce: React.FC = () => {
         </div>
       </section>
 
-      {/* Success Stories Section - New design */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
-              Success
-              <span className="block text-custom-teal">Stories</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how businesses are transforming their operations and achieving remarkable growth with our ecommerce solutions.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Fashion Retailer</h3>
-                  <p className="text-gray-600">Global Fashion Brand</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                "AppXcess transformed our online presence completely. We saw a 400% increase in online sales within the first 6 months, and our customer satisfaction scores improved dramatically."
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                </div>
-                <span className="text-custom-teal font-semibold">5.0 Rating</span>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-custom-blue to-blue-600 rounded-2xl flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Electronics Store</h3>
-                  <p className="text-gray-600">Tech Solutions Inc.</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                "The platform's scalability and performance optimization features helped us handle 10x more traffic during peak seasons without any issues. Our conversion rates improved by 250%."
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                </div>
-                <span className="text-custom-blue font-semibold">5.0 Rating</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section - Redesigned */}
       <section className="py-20 bg-gradient-to-bl from-custom-blue via-custom-teal to-teal-600 text-white relative overflow-hidden">

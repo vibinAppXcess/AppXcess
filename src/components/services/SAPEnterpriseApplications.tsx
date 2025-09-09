@@ -28,9 +28,10 @@ const SAPEnterpriseApplications: React.FC = () => {
           {[
             { t: 'SAP ERP Implementation', d: 'End-to-end deployment of SAP ERP modules across finance, procurement, supply chain, and HR.' },
             { t: 'SAP S/4HANA Migration', d: 'Transition to the next-generation ERP platform for real-time data insights and advanced analytics.' },
-            { t: 'SAP Business One', d: 'Tailored ERP for small and medium enterprises to streamline operations.' },
-            { t: 'SAP Integration', d: 'Seamless connectivity with CRM, cloud, and third-party systems.' },
-            { t: 'Analytics & Reporting', d: 'Transform raw business data into actionable intelligence.' },
+            { t: 'SAP Business One', d: 'Tailored ERP for small and medium enterprises to streamline operations that deliver measurable value for your business.' },
+            { t: 'SAP Integration', d: 'Seamless connectivity with CRM, cloud, and third-party systems that deliver measurable value for your business.' },
+            { t: 'Analytics & Reporting', d: 'Transform raw business data into actionable intelligence that deliver measurable value for your business.' },
+            { t: 'SAP Fiori UX', d: 'Modern, role-based interfaces that improve usability and accelerate user adoption and satisfaction.' },
           ].map((item, i) => (
             <div key={item.t} className="group relative rounded-xl bg-white shadow-sm border overflow-hidden">
               <div className={`absolute inset-x-0 top-0 h-1 ${i % 2 === 0 ? 'bg-custom-teal' : 'bg-custom-blue'}`} />
@@ -50,10 +51,11 @@ const SAPEnterpriseApplications: React.FC = () => {
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { t: 'CRM & Customer Engagement', d: 'Enhance customer experiences with integrated CRM solutions.' },
-              { t: 'HR & Workforce Management', d: 'Digitize HR processes with modern HCM tools.' },
+              { t: 'HR & Workforce Management', d: 'Digitize HR processes with modern HCM tools at scale.' },
               { t: 'Finance & Accounting Systems', d: 'Automate financial operations and ensure compliance.' },
               { t: 'Supply Chain & Inventory Management', d: 'Achieve real-time visibility and efficiency across your supply chain.' },
               { t: 'Custom Enterprise Solutions', d: 'Scalable enterprise apps built to match your unique business requirements.' },
+              { t: 'Project Portfolio Management', d: 'Plan, prioritize, and track initiatives to maximize business outcomes.' },
             ].map((item, i) => (
               <div key={item.t} className="rounded-xl bg-white border p-6 shadow-sm">
                 <div className={`h-2 w-12 rounded-full ${i % 2 === 0 ? 'bg-custom-teal' : 'bg-custom-blue'}`} />
@@ -62,25 +64,6 @@ const SAPEnterpriseApplications: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Choose AppXcess */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Why Choose AppXcess?</h2>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { t: 'Expert Implementation', d: 'Smooth deployment with minimal disruption.' },
-            { t: 'Customization & Integration', d: 'Tailored solutions that connect seamlessly with existing IT ecosystems.' },
-            { t: 'Process Optimization', d: 'Re-engineered workflows to reduce costs and boost efficiency.' },
-            { t: 'Ongoing Support & Training', d: 'Continuous improvement and user adoption support.' },
-          ].map((item, i) => (
-            <div key={item.t} className="rounded-xl bg-white border p-6 shadow-sm">
-              <div className={`mx-auto mb-3 h-10 w-10 rounded-lg text-white flex items-center justify-center font-semibold ${i % 2 === 0 ? 'bg-custom-blue' : 'bg-custom-teal'}`}>{String(i + 1).padStart(2, '0')}</div>
-              <h3 className="font-semibold text-gray-900 text-center">{item.t}</h3>
-              <p className="mt-2 text-gray-700 text-center">{item.d}</p>
-            </div>
-          ))}
         </div>
       </section>
 

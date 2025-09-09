@@ -53,7 +53,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Microsoft Power Platform</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                <strong>Power Apps & Automate</strong> - Unlock automation, workflow innovation, and custom solutions with minimal coding effort.
+                Unlock automation, workflow innovation, and custom solutions with minimal coding effort.
               </p>
               <p className="text-gray-600">
                 We upgrade legacy systems into modern, cloud-ready, AI-enhanced platforms—ensuring seamless transformation with no disruption.
@@ -63,7 +63,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Users className="h-8 w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Citizen Development Enablement</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Citizen Development</h3>
               </div>
               <p className="text-gray-600 mb-4">
                 We equip your non-technical teams with the tools, support, and strategies to create apps independently.
@@ -76,13 +76,13 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Database className="h-8 w-8 text-indigo-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">System Integration & Workflow Connectivity</h3>
+                <h3 className="text-xl font-semibold text-gray-900">System Integration</h3>
               </div>
               <p className="text-gray-600 mb-4">
                 Ensure your low-code/no-code apps talk to each other and your core systems—ERPs, CRMs, databases—seamlessly.
               </p>
               <p className="text-gray-600">
-                Drive cross-functional collaboration with smooth data flows across all platforms.
+                Drive cross-functional collaboration with smooth data flows across all platforms in real time across distributed teams and securely.
               </p>
             </div>
           </div>
@@ -104,7 +104,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 <Settings className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Microsoft Power Apps</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Ideal for enhancing the Microsoft ecosystem with low-code solutions.
               </p>
             </div>
@@ -114,8 +114,8 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 <Rocket className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">OutSystems</h3>
-              <p className="text-gray-600">
-                A robust low-code platform for full-stack enterprise applications with modern UI/UX and DevOps-ready deployments.
+              <p className="text-gray-600 text-left">
+                A robust low-code platform for full-stack enterprise applications.
               </p>
             </div>
 
@@ -124,8 +124,8 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 <Code className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Bubble.io</h3>
-              <p className="text-gray-600">
-                A leading no-code tool for rapid MVPs, web apps, and scalable digital products without traditional coding.
+              <p className="text-gray-600 text-left">
+                A leading no-code tool for MVPs, web apps, and scalable products without coding.
               </p>
             </div>
 
@@ -133,8 +133,8 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Zoho Creator, Salesforce Lightning, Mendix</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Zoho Creator</h3>
+              <p className="text-gray-600 text-left">
                 Flexible options for tailored, enterprise-grade, low-code solutions.
               </p>
             </div>
@@ -198,7 +198,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable & Flexible</h3>
               <p className="text-gray-600">
-                From lightweight workflows to large-scale enterprise systems, platforms like OutSystems and Bubble.io scale with your business needs.
+                Platforms like OutSystems and Bubble.io scale with your business needs.
               </p>
             </div>
 
@@ -291,7 +291,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Database className="h-8 w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Customer Relationship Management</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Customer Management</h3>
               </div>
               <p className="text-gray-600">
                 Custom CRM systems, lead tracking, customer support portals, and sales pipeline management.
@@ -334,7 +334,7 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Inventory Management</h3>
               </div>
               <p className="text-gray-600">
-                Stock tracking, order management, supplier portals, and supply chain optimization tools.
+                Stock tracking, order management, supplier portals, and supply chain optimization tools and analytics.
               </p>
             </div>
           </div>

@@ -7,6 +7,11 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [hoveredServiceCategory, setHoveredServiceCategory] = useState<number>(0);
+  const [showTopBar, setShowTopBar] = useState<boolean>(true);
+
+  const hideTopBar = () => {
+    setShowTopBar(false);
+  };
 
   const companyMenu = [
     { name: "About", href: "/About" },
@@ -92,6 +97,41 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+      {/* Top Announcement Bar */}
+      {showTopBar && (
+        <div className="relative w-full text-white overflow-hidden">
+          <div
+            className="w-full"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+            <div className="bg-black/50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between py-2">
+                  <button className="hidden sm:inline-flex bg-teal-600 hover:bg-teal-700 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-full transition-colors">
+                    Explore AppXcess Worldwide
+                  </button>
+                  <div className="text-center text-xs sm:text-lg font-semibold tracking-wide flex-1 sm:flex-none sm:px-6">
+                    Malaysia - India - Australia - Singapore
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Link to="/About" className="text-xs sm:text-base font-semibold hover:text-teal-300 transition-colors flex items-center gap-2">
+                      About Us
+                      <span aria-hidden>→</span>
+                    </Link>
+                    <button aria-label="Close" onClick={hideTopBar} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
+                      ×
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -109,7 +149,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
-            {/* Company Dropdown */}
+            {/* Company Dropdown - styled like category list */}
             <div className="relative group">
               <button 
                 className="flex items-center text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -117,16 +157,18 @@ const Header: React.FC = () => {
                 Company
                 <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform" />
               </button>
-              <div className="absolute top-full left-0 mt-1 w-48 bg-gradient-to-br from-teal-50 to-gray-50 rounded-lg shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {companyMenu.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-100 hover:text-teal-600 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 mt-1 w-[260px] px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
+                  <ul className="p-2 space-y-1">
+                    {companyMenu.map((item, index) => (
+                      <li key={index}>
+                        <Link to={item.href} className="block px-4 py-2 text-sm text-gray-800 rounded-lg border border-transparent hover:border-teal-300 hover:bg-gradient-to-b hover:from-teal-50 hover:to-blue-50 hover:shadow-sm hover:text-teal-700 transition-all leading-tight">
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -145,16 +187,18 @@ const Header: React.FC = () => {
                 Industries
                 <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform" />
               </button>
-              <div className="absolute top-full left-0 mt-1 w-64 bg-gradient-to-br from-teal-50 to-gray-50 rounded-lg shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {industriesMenu.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-100 hover:text-teal-600 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 mt-1 w-[340px] px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
+                  <ul className="p-2 space-y-1">
+                    {industriesMenu.map((item, index) => (
+                      <li key={index}>
+                        <Link to={item.href} className="block px-4 py-2 text-sm text-gray-800 rounded-lg border border-transparent hover:border-teal-300 hover:bg-gradient-to-b hover:from-teal-50 hover:to-blue-50 hover:shadow-sm hover:text-teal-700 transition-all leading-tight">
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
 

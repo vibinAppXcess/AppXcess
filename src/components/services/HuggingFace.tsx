@@ -173,13 +173,13 @@ const HuggingFace: React.FC = () => {
     },
     {
       title: "Content Moderation",
-      description: "Automated content filtering and moderation using advanced NLP models.",
+      description: "Automated content filtering and moderation using advanced NLP models today.",
       icon: <Shield className="h-8 w-8 text-teal-600" />,
       benefits: ["Real-time content filtering", "Reduced manual review", "Consistent moderation"]
     },
     {
       title: "Document Analysis",
-      description: "Extract insights and information from documents using OCR and NLP.",
+      description: "Extract insights and information from documents using OCR and NLP effectively.",
       icon: <FileText className="h-8 w-8 text-teal-600" />,
       benefits: ["Automated data extraction", "Improved accuracy", "Faster processing"]
     },

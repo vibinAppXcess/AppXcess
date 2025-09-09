@@ -43,7 +43,7 @@ const ReadyToUnlock: React.FC = () => {
           {/* Additional Info */}
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
             <div className="text-white/80">
-              <div className="text-2xl font-bold text-white mb-2">500+</div>
+              <div className="text-2xl font-bold text-white mb-2">100+</div>
               <div className="text-sm">Projects Completed</div>
             </div>
             <div className="text-white/80">
@@ -51,7 +51,7 @@ const ReadyToUnlock: React.FC = () => {
               <div className="text-sm">Expert Team Members</div>
             </div>
             <div className="text-white/80">
-              <div className="text-2xl font-bold text-white mb-2">98%</div>
+              <div className="text-2xl font-bold text-white mb-2">99%</div>
               <div className="text-sm">Client Satisfaction</div>
             </div>
           </div>

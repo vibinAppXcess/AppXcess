@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Leaf } from 'lucide-react';
 
 const EnergyUtilities: React.FC = () => {
@@ -23,10 +24,16 @@ const EnergyUtilities: React.FC = () => {
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 Empowering energy and utility organizations with cutting-edge technology for improved efficiency, sustainability, and operational excellence.
               </p>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
-                More About Us
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                  More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                  Contact Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
@@ -302,7 +309,7 @@ const EnergyUtilities: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/workers-control-room.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -350,14 +357,14 @@ const EnergyUtilities: React.FC = () => {
             From strategy to execution, AppXcess Technologies is your partner in driving efficiency and innovation in the energy and utilities sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-              Reach Out Now
+            <Link to="/About" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+              Learn More About Us
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </button>
+            </Link>
+            <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

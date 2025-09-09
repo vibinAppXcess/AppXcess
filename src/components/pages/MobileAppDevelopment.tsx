@@ -47,9 +47,6 @@ const MobileAppDevelopment: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               It's All About Bringing a Change to Users' Lives
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              With the evolution of user expectations, today's applications must be <strong>smart, intelligent, and adaptive</strong>—always staying one step ahead of user needs. But world-class apps don't just appear out of nowhere. They're the result of:
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -84,11 +81,7 @@ const MobileAppDevelopment: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              As a full-service application development company, we build digital products that <strong>solve real problems, delight users, and accelerate business growth</strong>.
-            </p>
-          </div>
+          
         </div>
       </section>
 
@@ -99,9 +92,6 @@ const MobileAppDevelopment: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Expertise – What We Do
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We specialize in building <strong>Android, iOS, and Web apps</strong> across industries. Our <strong>end-to-end capabilities</strong>—from product strategy and design to development, testing, deployment, and maintenance—enable us to deliver <strong>cutting-edge applications</strong> that simplify business complexities while being future-ready.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -110,7 +100,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <Smartphone className="h-8 w-8 text-teal-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">Native Development</h3>
               </div>
-              <p className="text-gray-600 mb-4">Native Android & iOS Development</p>
+              <p className="text-gray-600 mb-4">Native Android & iOS Development and maintenance</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
@@ -126,15 +116,15 @@ const MobileAppDevelopment: React.FC = () => {
                 <Zap className="h-8 w-8 text-indigo-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">Progressive Web Apps</h3>
               </div>
-              <p className="text-gray-600 mb-4">Progressive Web Apps (PWAs)</p>
+              <p className="text-gray-600 mb-4">Progressive Web Apps (PWAs) for performance</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <Users className="h-8 w-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Enterprise Solutions</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Enterprise Solutions at Scale</h3>
               </div>
-              <p className="text-gray-600 mb-4">Enterprise Mobility Solutions</p>
+              <p className="text-gray-600 mb-4">Enterprise Mobility Solutions at scale</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
@@ -175,7 +165,7 @@ const MobileAppDevelopment: React.FC = () => {
                   <h3 className="text-2xl font-semibold text-gray-900">Understand the Goals</h3>
                 </div>
                 <p className="text-gray-600 text-lg">
-                  We start by understanding your <strong>business objectives, user needs, and market dynamics</strong>, ensuring that the app is aligned with your vision.
+                  We start by understanding your <strong>business objectives, user needs, and market dynamics</strong>, ensuring that the app is aligned with your vision from inception.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-xl">
@@ -274,7 +264,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <Lightbulb className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">AI & ML-Powered Apps</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm text-left">
                 Build intelligent apps with personalization, predictive analytics, and automation.
               </p>
             </div>
@@ -284,8 +274,8 @@ const MobileAppDevelopment: React.FC = () => {
                 <Smartphone className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">IoT & Wearable Integration</h3>
-              <p className="text-gray-600 text-sm">
-                Extend mobile apps to connected devices and smart ecosystems.
+              <p className="text-gray-600 text-sm text-left">
+                Extend mobile apps to connected devices and smart ecosystems at scale.
               </p>
             </div>
 
@@ -294,8 +284,8 @@ const MobileAppDevelopment: React.FC = () => {
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Secure by Design</h3>
-              <p className="text-gray-600 text-sm">
-                Embed security best practices in code, APIs, and cloud infrastructure.
+              <p className="text-gray-600 text-sm text-left">
+                Embed security best practices in code, APIs, and cloud infrastructure and continuous monitoring.
               </p>
             </div>
 
@@ -304,7 +294,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <Heart className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Post-Launch Support</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm text-left">
                 Continuous monitoring, updates, and feature enhancements to keep your app future-ready.
               </p>
             </div>
@@ -400,7 +390,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <CheckCircle className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Expertise</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Experience across industries and app ecosystems.
               </p>
             </div>
@@ -410,7 +400,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <Target className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Solutions</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Tailored apps designed for your business challenges.
               </p>
             </div>
@@ -419,9 +409,9 @@ const MobileAppDevelopment: React.FC = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Future-Ready Development</h3>
-              <p className="text-gray-600">
-                Modern architecture, cloud integration, and intelligent features.
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Future-Ready</h3>
+              <p className="text-gray-600 text-left">
+                Modern architecture, cloud integration, and features.
               </p>
             </div>
 
@@ -430,7 +420,7 @@ const MobileAppDevelopment: React.FC = () => {
                 <Heart className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">End-to-End Partner</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 From ideation to support, we're with you at every step.
               </p>
             </div>
@@ -452,7 +442,7 @@ const MobileAppDevelopment: React.FC = () => {
               to="/Contact"
               className="bg-white text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
-              📩 Ready to build your next mobile app?
+              Ready to build your next mobile app?
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link

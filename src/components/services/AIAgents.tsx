@@ -37,7 +37,7 @@ const AIAgents: React.FC = () => {
     {
       icon: <Monitor className="h-12 w-12 text-teal-600" />,
       title: "IT Ops Agent",
-      description: "An AI Agent that analyzes complex IT issues at once, acts on multiple incidents in unison, and significantly reduces downtime. An agent with tenfold expertise and continuously learning and mastering new tools.",
+      description: "An AI Agent that analyzes complex IT issues at once, acts on multiple incidents in unison, and significantly reduces downtime. An agent with tenfold expertise and continuously learning and mastering tools.",
       features: ["Incident management", "Automated resolution", "Continuous learning", "Tool integration"]
     },
     {
@@ -49,7 +49,7 @@ const AIAgents: React.FC = () => {
     {
       icon: <FileText className="h-12 w-12 text-teal-600" />,
       title: "OCR Agent",
-      description: "Turn documents into decisions. Our OCR Agent doesn't just read text—it extracts meaning, detects patterns, and integrates seamlessly into your workflows. Say goodbye to manual data entry and hello to intelligent automation.",
+      description: "Turn documents into decisions. Our OCR Agent doesn't just read text—it extracts meaning, detects patterns, and integrates into workflows. Say goodbye to manual data entry and hello to intelligent automation.",
       features: ["Text extraction", "Pattern detection", "Workflow integration", "Error-free processing"]
     },
     {
@@ -61,7 +61,7 @@ const AIAgents: React.FC = () => {
     {
       icon: <Users className="h-12 w-12 text-teal-600" />,
       title: "HR Agent",
-      description: "Streamline your human resources operations with an intelligent HR agent that handles recruitment, employee onboarding, performance management, and HR inquiries. Automate routine tasks and enhance employee experience.",
+      description: "Streamline human resources operations with an HR agent that handles recruitment, onboarding, performance management, and HR inquiries. Automate routine tasks and enhance employee experience.",
       features: ["Recruitment automation", "Employee onboarding", "Performance tracking", "HR policy guidance"]
     }
   ];
@@ -96,7 +96,7 @@ const AIAgents: React.FC = () => {
       description: "Instant processing and insights from live data streams"
     },
     {
-      title: "Secure AI adoption",
+      title: "Secure AI adoption framework strategy",
       description: "Enterprise-grade security for AI implementation"
     }
   ];
@@ -150,9 +150,9 @@ const AIAgents: React.FC = () => {
             
             {/* Right Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden">
+              <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 h-[420px] flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src="/src/assets/images/man-robot-working-together-high-tech-office.jpg"
                   alt="AI Agents Technology"
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                 />
@@ -340,9 +340,9 @@ const AIAgents: React.FC = () => {
             <p className="text-xl mb-8">
               Why waste another minute on a manual task? The future of productivity is here.
             </p>
-            <button className="bg-white text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link to="/Contact/" className="bg-white text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
               Boost your Productivity
-            </button>
+            </Link>
           </div>
         </div>
       </section>

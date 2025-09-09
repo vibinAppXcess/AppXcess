@@ -40,28 +40,25 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
       {/* What is Enterprise Workflow Automation */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="mb-16">
+            <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What is Enterprise Workflow Automation?
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Enterprise Workflow Automation (EWA) involves designing and implementing <strong>end-to-end automated processes</strong> that span multiple applications, teams, and systems. Unlike individual task automation, EWA focuses on <strong>coordinating the flow of work at the organizational level</strong>, ensuring operational efficiency, compliance, and scalability.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
                 <LinkIcon className="h-8 w-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cross-Application Integration</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Application Integration</h3>
               <p className="text-gray-600">
                 Connect ERP, CRM, HRMS, finance, and collaboration tools seamlessly.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Workflow className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Process Orchestration</h3>
@@ -70,8 +67,8 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                 <BarChart3 className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Monitoring & Analytics</h3>
@@ -80,11 +77,11 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <Brain className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Rule-Based & Intelligent Automation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Intelligent Automation</h3>
               <p className="text-gray-600">
                 Automate repetitive tasks with RPA and AI-enhanced decision-making.
               </p>
@@ -109,7 +106,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Operational Efficiency</h3>
               </div>
               <p className="text-gray-600">
-                Automate repetitive tasks, approvals, and notifications to free your workforce for strategic initiatives.
+                Automate tasks, approvals, and notifications to free workforce for strategic initiatives.
               </p>
             </div>
 
@@ -139,7 +136,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Real-Time Visibility</h3>
               </div>
               <p className="text-gray-600">
-                Monitor tasks, process metrics, and workflow health for proactive decision-making.
+                Monitor tasks, process metrics, and workflow health for decision-making.
               </p>
             </div>
 
@@ -192,7 +189,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">HR & Employee Management</h3>
               </div>
               <p className="text-gray-600">
-                Streamline onboarding, leave approvals, performance evaluations, and payroll workflows.
+                Streamline onboarding, leave approvals, evaluations, and payroll workflows.
               </p>
             </div>
 
@@ -254,7 +251,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <Settings className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">End-to-End Expertise</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 From process discovery to automation deployment and continuous optimization.
               </p>
             </div>
@@ -264,7 +261,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <Bot className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Hybrid Automation</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Combine RPA, AI, and low-code platforms for maximum impact.
               </p>
             </div>
@@ -274,7 +271,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <Target className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Customized Solutions</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Tailored workflows aligned with your business needs and systems.
               </p>
             </div>
@@ -284,7 +281,7 @@ const EnterpriseWorkflowAutomation: React.FC = () => {
                 <Shield className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Support & Governance</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Ensure smooth operation, compliance, and scalability of automated workflows.
               </p>
             </div>

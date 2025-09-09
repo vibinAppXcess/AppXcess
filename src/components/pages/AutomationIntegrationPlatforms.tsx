@@ -50,38 +50,38 @@ const AutomationIntegrationPlatforms: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
                 <LinkIcon className="h-8 w-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Seamlessly Connect Apps</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 whitespace-nowrap">Seamlessly Connect Apps</h3>
               <p className="text-gray-600">
                 Connect apps across cloud and on-premise environments without complex integrations.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Workflow className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Automate Repetitive Workflows</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 whitespace-nowrap">Automate Workflows</h3>
               <p className="text-gray-600">
                 Automate notifications, approvals, data transfers, and reports to save time and effort.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Improve Accuracy & Reliability</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 whitespace-nowrap">Accuracy & Reliability</h3>
               <p className="text-gray-600">
                 Reduce manual errors and ensure consistent, reliable data processing across systems.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Accelerate Operations</h3>
@@ -189,7 +189,7 @@ const AutomationIntegrationPlatforms: React.FC = () => {
             <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Target className="h-8 w-8 text-teal-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Marketing Automation</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Marketing</h3>
               </div>
               <p className="text-gray-600">
                 Sync leads from forms to CRM, trigger email campaigns, and track engagement automatically.
@@ -202,14 +202,14 @@ const AutomationIntegrationPlatforms: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">E-Commerce</h3>
               </div>
               <p className="text-gray-600">
-                Automate order processing, inventory updates, and customer notifications.
+                Automate order processing, inventory updates, and customer notifications and alerts.
               </p>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <BarChart3 className="h-8 w-8 text-indigo-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Finance & Accounting</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Finance</h3>
               </div>
               <p className="text-gray-600">
                 Generate reports, update spreadsheets, and reconcile data across platforms automatically.
@@ -219,7 +219,7 @@ const AutomationIntegrationPlatforms: React.FC = () => {
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Users className="h-8 w-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Operations & Collaboration</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Operations</h3>
               </div>
               <p className="text-gray-600">
                 Notify teams, schedule tasks, or update project management tools seamlessly.
@@ -239,28 +239,28 @@ const AutomationIntegrationPlatforms: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-left">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
                 <Settings className="h-8 w-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Tailored Workflow Solutions</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Tailored Solutions</h3>
               <p className="text-gray-600">
                 We analyze your business processes and design automated workflows that fit your operations perfectly.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-left">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Zap className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">No-Code, Fast Deployment</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Deployment</h3>
               <p className="text-gray-600">
-                Implement automations quickly without impacting existing infrastructure.
+                Implement automations quickly and securely without impacting existing infrastructure.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-left">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable & Flexible</h3>
@@ -269,8 +269,8 @@ const AutomationIntegrationPlatforms: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-left">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <Monitor className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Monitoring & Support</h3>

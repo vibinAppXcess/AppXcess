@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Heart, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Healthcare: React.FC = () => {
   return (
@@ -24,14 +25,14 @@ const Healthcare: React.FC = () => {
                 Empowering healthcare organizations with cutting-edge technology for improved patient outcomes and operational efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
                   More About Us
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                </Link>
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
                   Contact Us
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -82,9 +83,7 @@ const Healthcare: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Empowering healthcare providers with tailored IT solutions to optimize workflows, reduce costs, and improve decision-making through data-driven insights.
               </p>
-              <a href="/Blog/Healthcare-Technology-Trends" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -95,9 +94,7 @@ const Healthcare: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Delivering innovative technologies that support telemedicine, patient engagement, and secure data management for seamless and effective healthcare delivery.
               </p>
-              <a href="/Blog/Healthcare-Operational-Excellence" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -106,11 +103,9 @@ const Healthcare: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Operational Efficiency</h3>
               <p className="text-gray-600 mb-6 flex-grow">
-                Optimizing healthcare operations with modern technology to streamline processes and improve overall facility performance.
+                Optimizing healthcare operations with modern technology to streamline processes and significantly improve overall facility performance and reliability.
               </p>
-              <a href="/Blog/Healthcare-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
           </div>
         </div>
@@ -208,43 +203,43 @@ const Healthcare: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-                         <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-               <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
-               }}></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Technology Trends
-                </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
-                  Advancements in AI and analytics are reshaping healthcare delivery and patient care outcomes.
-                </p>
-                <a href="/Blog/Healthcare-Technology-Trends" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                  Read More <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/doctor-using-virtual-application.jpg')"
               }}></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Streamlining Operations
-                </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
-                  Overcome challenges with tailored IT strategies designed specifically for healthcare environments.
-                </p>
-                <a href="/Blog/Healthcare-Operational-Excellence" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                  Read More <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
+             <div className="p-6 flex flex-col flex-grow">
+               <h3 className="text-xl font-bold text-gray-900 mb-3">
+                 Technology Trends
+               </h3>
+               <p className="text-gray-600 mb-4 flex-grow">
+                 Advancements in AI and analytics are reshaping healthcare delivery and patient care outcomes.
+               </p>
+               <a href="/Blog/Healthcare-Technology-Trends" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                 Read More <ArrowRight className="w-4 h-4" />
+               </a>
+             </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
+             <div className="h-48 bg-cover bg-center" style={{
+               backgroundImage: "url('/src/assets/images/mature-medical-physician-explaining-treatment-nurses-healthcare-seminar-pointing-digital-monitor-clinic-herapist-discussing-with-colleagues-about-disease-medicine-professional.jpg')"
+             }}></div>
+             <div className="p-6 flex flex-col flex-grow">
+               <h3 className="text-xl font-bold text-gray-900 mb-3">
+                 Streamlining Operations
+               </h3>
+               <p className="text-gray-600 mb-4 flex-grow">
+                 Overcome challenges with tailored IT strategies designed specifically for healthcare environments.
+               </p>
+               <a href="/Blog/Healthcare-Operational-Excellence" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                 Read More <ArrowRight className="w-4 h-4" />
+               </a>
+             </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/teamwork-consulting-doctors-with-patient-hospital-meeting-help-assistance-healthcare-documents-data-charts-woman-consultation-with-medical-workers-vaccine-information.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

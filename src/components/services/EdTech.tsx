@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, BookOpen, BarChart3, Cloud, Users, CheckCircle, Play, TrendingUp, GraduationCap, Brain, Globe, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BarChart3, Cloud, CheckCircle, Play, GraduationCap, Brain } from 'lucide-react';
 
 const EdTech: React.FC = () => {
   return (
@@ -14,10 +15,6 @@ const EdTech: React.FC = () => {
         }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-              <GraduationCap className="w-5 h-5" />
-              <span className="text-sm font-medium">Leading EdTech Innovation</span>
-            </div>
             <h1 className="text-6xl lg:text-7xl font-bold mb-8 drop-shadow-lg leading-tight">
               Future of
               <span className="block text-teal-300 drop-shadow-lg">Learning</span>
@@ -26,57 +23,16 @@ const EdTech: React.FC = () => {
               Empowering the next generation with cutting-edge educational technology that transforms how we learn, teach, and grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-white text-custom-teal px-10 py-5 rounded-full text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
+              <Link to="/Contact" className="bg-white text-custom-teal px-10 py-5 rounded-lg text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
                 Start Learning Journey
                 <ArrowRight className="w-6 h-6" />
-              </button>
-              <button className="border-2 border-white/50 text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-                <Play className="w-6 h-6" />
-                Watch Overview
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - New floating cards design */}
-      <section className="py-20 bg-gray-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 -mt-16 relative z-10">
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">2M+</div>
-              <div className="text-gray-600 font-medium">Active Learners</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-custom-blue to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <BookOpen className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">500+</div>
-              <div className="text-gray-600 font-medium">Courses Created</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-700 rounded-2xl flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">150+</div>
-              <div className="text-gray-600 font-medium">Countries Reached</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">98%</div>
-              <div className="text-gray-600 font-medium">Success Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Features Section - New hexagonal grid layout */}
       <section className="py-20 bg-white">
@@ -101,9 +57,7 @@ const EdTech: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Personalized learning experiences powered by artificial intelligence that adapt to each student's unique needs and pace.
                 </p>
-                <a href="/Blog/EdTech-AI-Learning" className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all">
-                  Explore AI Learning <ArrowRight className="w-5 h-5" />
-                </a>
+                
               </div>
             </div>
 
@@ -116,9 +70,7 @@ const EdTech: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Comprehensive insights into learning progress, engagement metrics, and performance optimization strategies.
                 </p>
-                <a href="/Blog/EdTech-Learning-Impact" className="flex items-center text-custom-blue font-semibold group-hover:gap-3 transition-all">
-                  View Analytics <ArrowRight className="w-5 h-5" />
-                </a>
+                
               </div>
             </div>
 
@@ -131,9 +83,7 @@ const EdTech: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Scalable cloud solutions that ensure seamless access to educational content from anywhere, anytime.
                 </p>
-                <a href="/Blog/EdTech-Cloud-Platforms" className="flex items-center text-teal-600 font-semibold group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight className="w-5 h-5" />
-                </a>
+                
               </div>
             </div>
           </div>
@@ -240,14 +190,14 @@ const EdTech: React.FC = () => {
             Join thousands of educators and learners who are already experiencing the future of education with our innovative platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-custom-teal px-12 py-6 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
+            <Link to="/Contact" className="bg-white text-custom-teal px-12 py-6 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
               Start Free Trial
               <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="border-2 border-white/50 text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
+            </Link>
+            <Link to="/Contact" className="border-2 border-white/50 text-white px-12 py-6 rounded-lg text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
               <GraduationCap className="w-6 h-6" />
               Schedule Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>

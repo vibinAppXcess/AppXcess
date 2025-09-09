@@ -175,35 +175,35 @@ const AIPlatform: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/30">
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
+              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6">
                 <Database className="text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Data Ingestion</h3>
-              <p className="text-gray-600 text-center">Batch/stream pipelines from apps, IoT, files, and APIs with lineage.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Data Ingestion</h3>
+              <p className="text-gray-600">Batch/stream pipelines from apps, IoT, files, and APIs with lineage.</p>
             </div>
 
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/30">
-              <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
+              <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Server className="text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Lakehouse & Storage</h3>
-              <p className="text-gray-600 text-center">Open table formats with governance, ACID transactions, and versions.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Lakehouse & Storage</h3>
+              <p className="text-gray-600">Open table formats with governance, ACID transactions, and versions.</p>
             </div>
 
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/30">
-              <div className="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
+              <div className="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center mb-6">
                 <Code2 className="text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Training & Experimentation</h3>
-              <p className="text-gray-600 text-center">Distributed training, experiment tracking, and model registry.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Training & Experimentation</h3>
+              <p className="text-gray-600">Distributed training, experiment tracking, and model registry.</p>
             </div>
 
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/30">
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
+              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6">
                 <Zap className="text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Serving & Monitoring</h3>
-              <p className="text-gray-600 text-center">Low-latency inference, A/B rollout, telemetry, and drift monitoring.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Serving & Monitoring</h3>
+              <p className="text-gray-600">Low-latency inference, A/B rollout, telemetry, and drift monitoring.</p>
             </div>
           </div>
         </div>
@@ -224,11 +224,11 @@ const AIPlatform: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {platformCapabilities.map((capability, index) => (
               <div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6">
                   {React.cloneElement(capability.icon, { className: "text-teal-600" })}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{capability.title}</h3>
-                <p className="text-gray-600 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>
+                <p className="text-gray-600">
                   {capability.description}
                 </p>
               </div>

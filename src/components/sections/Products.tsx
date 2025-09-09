@@ -5,7 +5,7 @@ const Products: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-custom-blue via-custom-teal to-teal-600 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-100 py-20 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-custom-teal/20 rounded-full blur-3xl animate-pulse"></div>
@@ -19,20 +19,20 @@ const Products: React.FC = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight text-center">
-              <span className="block text-white">
+              <span className="block text-gray-900">
                 Products That
               </span>
-              <span className="block text-white">
+              <span className="block text-gray-900">
                 Drive Innovation
               </span>
             </h1>
             
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl mb-16 text-white/80 font-light max-w-4xl mx-auto leading-relaxed text-center">
+            <p className="text-xl md:text-2xl mb-16 text-gray-700 font-light max-w-4xl mx-auto leading-relaxed text-center">
               Explore our comprehensive suite of cutting-edge products designed to transform businesses across every industry. 
               From AI-powered solutions to enterprise-grade applications, we deliver the tools that drive success.
             </p>
@@ -43,7 +43,7 @@ const Products: React.FC = () => {
                 <span>Explore Products</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </button>
-              <button className="group border-2 border-white/70 text-white px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300 flex items-center gap-4 hover:bg-white hover:text-custom-teal hover:scale-105 backdrop-blur-sm">
+              <button className="group border-2 border-teal-600 text-teal-600 px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300 flex items-center gap-4 hover:bg-teal-600 hover:text-white hover:scale-105 backdrop-blur-sm">
                 <Play className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 <span>Watch Demo</span>
               </button>
@@ -51,29 +51,7 @@ const Products: React.FC = () => {
             
             {/* Feature Highlights */}
             <div className="grid md:grid-cols-3 gap-8 mt-20">
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-                  <Smartphone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">50+ Mobile Apps</h3>
-                <p className="text-white/70 text-sm">Native and cross-platform solutions for iOS and Android</p>
-              </div>
               
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">AI-Powered</h3>
-                <p className="text-white/70 text-sm">Intelligent solutions that adapt and learn</p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Enterprise Ready</h3>
-                <p className="text-white/70 text-sm">Secure, scalable solutions for large organizations</p>
-              </div>
             </div>
           </div>
         
@@ -106,11 +84,9 @@ const Products: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Apps</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                  Native and cross-platform mobile applications for iOS and Android with cutting-edge features and seamless user experiences.
+                  Native and cross-platform mobile applications for iOS and Android.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Explore Apps <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -122,11 +98,9 @@ const Products: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">LMS</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                  An app for managing online courses with user authentication and interactive features.
+                  An app for managing online courses with authentication and interactive features.
                 </p>
-                <div className="flex items-center text-custom-blue font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Learn More <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -140,9 +114,7 @@ const Products: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for tracking employee attendance, with check-in, leave requests, and reports.
                 </p>
-                <div className="flex items-center text-teal-600 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  View Features <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -156,9 +128,7 @@ const Products: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   A multi-vendor app for seamless shopping with categories and notifications.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Shop Now <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -172,9 +142,7 @@ const Products: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for connecting people and fostering engagement through interactive features.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Connect <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -188,9 +156,7 @@ const Products: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   An app for managing and delivering content efficiently across various platforms.
                 </p>
-                <div className="flex items-center text-teal-700 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Manage Content <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
@@ -205,25 +171,21 @@ const Products: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   Monitor sales pipelines, activities, and performance metrics effectively.
                 </p>
-                <div className="flex items-center text-indigo-600 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Monitor Sales <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
 
-            {/* Support Ticket System */}
+            {/* Support Tickets */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-3xl p-8 h-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl flex flex-col">
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <MessageSquare className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Support Ticket System</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Support Tickets</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   Handle customer queries with ticketing, prioritization, and tracking.
                 </p>
-                <div className="flex items-center text-orange-600 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  Manage Tickets <ArrowRight className="w-5 h-5" />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -280,7 +242,7 @@ const Products: React.FC = () => {
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
                 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop" alt="Professional connections" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Professional Connections</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Connections</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Build and expand your professional network with meaningful connections.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Connect <ArrowRight className="w-4 h-4" />
@@ -369,7 +331,7 @@ const Products: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop" alt="Flexible CMS" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Flexible CMS</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Create and manage multipurpose web pages with user-friendly interfaces and tools.</p>
+                  <p className="text-gray-600 mb-4 flex-grow">Create and manage multipurpose web pages with friendly interfaces and tools.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Manage <ArrowRight className="w-4 h-4" />
                   </button>
@@ -607,7 +569,7 @@ const Products: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1600&auto=format&fit=crop" alt="HR management" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Staff Hub</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Optimize employee management with leave, attendance, and payroll features.</p>
+                  <p className="text-gray-600 mb-4 flex-grow">Optimize employee management with leave, attendance, and payroll.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Manage Staff <ArrowRight className="w-4 h-4" />
                   </button>

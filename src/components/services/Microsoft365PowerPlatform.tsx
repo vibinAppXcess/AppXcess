@@ -105,11 +105,11 @@ const Microsoft365PowerPlatform: React.FC = () => {
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-custom-blue via-gray-300 to-custom-teal" />
             <div className="space-y-10">
               {[
-                { title: 'Microsoft 365 Consulting & Deployment', text: 'Smooth setup, migration, and adoption of Microsoft’s cloud ecosystem.' },
-                { title: 'Custom App Development', text: 'Low-code solutions with Power Apps to meet unique enterprise requirements.' },
-                { title: 'Business Process Automation', text: 'End-to-end automation with Power Automate for improved efficiency.' },
-                { title: 'Data-Driven Insights', text: 'Powerful dashboards with Power BI for real-time decision intelligence.' },
-                { title: 'Training & Ongoing Support', text: 'Empower teams to adopt Microsoft 365 and Power Platform with confidence.' },
+                { title: 'Microsoft 365 Consulting & Deployment', text: 'Smooth setup, migration, and adoption of Microsoft’s cloud ecosystem for your business.' },
+                { title: 'Custom App Development', text: 'Low-code solutions with Power Apps to meet unique enterprise requirements for your business.' },
+                { title: 'Business Process Automation', text: 'End-to-end automation with Power Automate for improved efficiency for your business.' },
+                { title: 'Data-Driven Insights', text: 'Powerful dashboards with Power BI for real-time decision intelligence for your business.' },
+                { title: 'Training & Ongoing Support', text: 'Empower teams to adopt Microsoft 365 and Power Platform with confidence for your business.' },
               ].map((step, i) => (
                 <div key={step.title} className={`relative md:flex md:items-center md:gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className="relative z-10 ml-10 md:ml-0 md:w-1/2">

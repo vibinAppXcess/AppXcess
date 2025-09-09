@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { 
-  Cloud, Brain, Link, 
+  Cloud, Brain, Link as LinkIcon, 
   Smartphone, Palette, Rocket, Users, 
   Target, ArrowRight,
   BarChart3, Lightbulb, Code2, Server, Eye, ArrowUpRight
 } from 'lucide-react';
 import { Button } from '../ui';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const [activeService, setActiveService] = useState(0);
@@ -14,42 +15,42 @@ const About: React.FC = () => {
     { 
       name: "Cloud Solutions", 
       icon: <Cloud size={24} />,
-      description: "Scalable cloud infrastructure and migration services for businesses of all sizes."
+      description: "Transform your infrastructure with scalable cloud solutions, migration services, and robust security protocols designed for enterprise-grade performance and reliability."
     },
     { 
       name: "Extended Reality", 
       icon: <Eye size={24} />,
-      description: "Immersive AR/VR experiences that transform how users interact with your brand."
+      description: "Create immersive AR/VR experiences that revolutionize user engagement, training programs, and provide innovative solutions for retail, education, and applications."
     },
     { 
       name: "Web3 & Blockchain", 
-      icon: <Link size={24} />,
-      description: "Decentralized applications and blockchain integration for the new internet era."
+      icon: <LinkIcon size={24} />,
+      description: "Build the future with decentralized applications, smart contracts, and blockchain integration that enable secure, transparent, and efficient digital ecosystems."
     },
     { 
       name: "Technology Consulting", 
       icon: <Brain size={24} />,
-      description: "Strategic guidance to leverage technology for competitive advantage."
+      description: "Strategic technology guidance and digital transformation consulting to optimize your operations, reduce costs, and accelerate innovation across your organization."
     },
     { 
       name: "Mobile Development", 
       icon: <Smartphone size={24} />,
-      description: "Native and cross-platform mobile applications with exceptional user experiences."
+      description: "Develop powerful native and cross-platform mobile applications with cutting-edge features, seamless performance, and exceptional user experiences that drive engagement."
     },
     { 
       name: "Web Applications", 
       icon: <Code2 size={24} />,
-      description: "High-performance web applications built with modern frameworks and technologies."
+      description: "Build high-performance web applications using modern frameworks, responsive design, and advanced technologies that deliver fast, secure, and scalable solutions."
     },
     { 
       name: "SaaS Platforms", 
       icon: <Server size={24} />,
-      description: "Custom software-as-a-service solutions that scale with your business."
+      description: "Create custom software-as-a-service platforms that grow with your business, featuring multi-tenancy, scaling, and comprehensive analytics for performance."
     },
     { 
       name: "UI/UX Design", 
       icon: <Palette size={24} />,
-      description: "User-centered design that creates intuitive and engaging digital experiences."
+      description: "Design intuitive and engaging digital experiences through user-centered design principles, creating interfaces that users and drive business success through research-driven strategies."
     }
   ];
 
@@ -80,7 +81,7 @@ const About: React.FC = () => {
     { number: "150+", label: "Projects Delivered" },
     { number: "50+", label: "Experts Team" },
     { number: "30+", label: "Global Clients" },
-    { number: "98%", label: "Client Satisfaction" }
+    { number: "99%", label: "Client Satisfaction" }
   ];
 
   // Testimonials section removed
@@ -121,8 +122,8 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Lightbulb className="text-teal-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Innovation</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Innovation</h3>
+                <p className="text-gray-600 text-left">
                   We stay ahead of technology trends to deliver cutting-edge solutions that give you a competitive edge.
                 </p>
               </div>
@@ -131,8 +132,8 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Target className="text-blue-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Excellence</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Excellence</h3>
+                <p className="text-gray-600 text-left">
                   Our commitment to quality ensures that every project meets the highest standards of performance and reliability.
                 </p>
               </div>
@@ -141,8 +142,8 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Users className="text-indigo-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Partnership</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Partnership</h3>
+                <p className="text-gray-600 text-left">
                   We collaborate closely with you, ensuring our solutions align perfectly with your business goals.
                 </p>
               </div>
@@ -158,12 +159,12 @@ const About: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive digital solutions tailored to your specific business needs
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We offer a comprehensive suite of digital solutions designed to transform your business operations, enhance customer experiences, and drive sustainable growth. Our expert team combines cutting-edge technology with industry best practices to deliver results that exceed expectations.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {services.map((service, index) => (
               <div 
                 key={index} 
@@ -176,32 +177,14 @@ const About: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors duration-300">
                   {service.name}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                <p className="text-sm text-gray-600 mt-2">
                   {service.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30">
-            <div className="flex items-start">
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center mr-6">
-                {React.cloneElement(services[activeService].icon, { className: "text-teal-600", size: 28 })}
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {services[activeService].name}
-                </h3>
-                <p className="text-gray-600 text-lg">
-                  {services[activeService].description}
-                </p>
-                <button className="mt-6 flex items-center text-teal-600 font-medium group">
-                  Learn more about this service
-                  <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </button>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -279,9 +262,9 @@ const About: React.FC = () => {
             Let's discuss how our expertise can help you achieve your digital goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" className="px-8 py-4 rounded-xl shadow-lg">
+            <Link to="/contact" className="px-8 py-4 rounded-xl shadow-lg bg-teal-600 text-white hover:bg-teal-700 transition-colors">
               Schedule a Consultation
-            </Button>
+            </Link>
           </div>
         </div>
       </section>

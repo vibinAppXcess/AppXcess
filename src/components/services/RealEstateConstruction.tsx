@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Building, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Zap, Home } from 'lucide-react';
 
 const RealEstateConstruction: React.FC = () => {
@@ -23,10 +24,16 @@ const RealEstateConstruction: React.FC = () => {
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 Empowering the real estate and construction industry with innovative technology solutions for enhanced efficiency, sustainability, and growth.
               </p>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
-                Learn More
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                  More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                  Contact Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
@@ -76,35 +83,26 @@ const RealEstateConstruction: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Streamline construction projects with advanced project management tools and real-time collaboration platforms.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                 <Home className="w-8 h-8 text-custom-teal" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Real Estate Platforms</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Real Estate Platforms for modern industry needs</h3>
               <p className="text-gray-600 mb-6 flex-grow">
                 Create comprehensive real estate platforms for property management, sales, and customer engagement.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                 <BarChart3 className="w-8 h-8 text-custom-teal" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights for data-driven decisions</h3>
               <p className="text-gray-600 mb-6 flex-grow">
                 Leverage data-driven insights to optimize operations, track performance, and make informed decisions.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
           </div>
         </div>
@@ -275,11 +273,11 @@ const RealEstateConstruction: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/person-using-ar-technology-their-daily-occupation.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Technology Trends in Construction
+                  Technology Trends in Construction Today
                 </h3>
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore the latest technology trends transforming the construction industry and project management.
@@ -292,7 +290,7 @@ const RealEstateConstruction: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/5g-communication-technology-internet-network.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -309,7 +307,7 @@ const RealEstateConstruction: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/colleagues-working-together-environment-project.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -340,14 +338,14 @@ const RealEstateConstruction: React.FC = () => {
             From innovative tools to seamless integration, AppXcess Technologies helps you streamline operations and deliver superior results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-              Let's Get Started
+            <Link to="/About" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+              Learn More About Us
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </button>
+            </Link>
+            <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

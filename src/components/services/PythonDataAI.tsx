@@ -49,7 +49,7 @@ const PythonDataAI: React.FC = () => {
   const services = [
     {
       icon: <Brain className="h-12 w-12 text-teal-600" />,
-      title: "Machine Learning Development",
+      title: "Machine\u00A0Learning\u00A0Development",
       description: "Custom ML models and algorithms built with Python's powerful ecosystem for predictive analytics and pattern recognition.",
       features: [
         "Custom ML model development",
@@ -71,7 +71,7 @@ const PythonDataAI: React.FC = () => {
     },
     {
       icon: <BarChart className="h-12 w-12 text-teal-600" />,
-      title: "Data Analytics & Visualization",
+      title: "Data\u00A0Analytics\u00A0&\u00A0Visualization",
       description: "Advanced analytics and interactive visualizations using Python's rich ecosystem of data science libraries.",
       features: [
         "Statistical analysis",
@@ -104,7 +104,7 @@ const PythonDataAI: React.FC = () => {
     },
     {
       icon: <MessageSquare className="h-12 w-12 text-teal-600" />,
-      title: "Natural Language Processing",
+      title: "Natural\u00A0Language\u00A0Processing",
       description: "NLP applications and chatbots built with Python for intelligent text and speech processing.",
       features: [
         "Text analysis",
@@ -271,20 +271,20 @@ const PythonDataAI: React.FC = () => {
     },
     {
       title: "Cost-Effective",
-      description: "Open-source ecosystem reduces development and licensing costs",
+      description: "Open-source ecosystem reduces development and licensing costs at scale",
       icon: <Award className="h-8 w-8 text-teal-600" />
     },
     {
       title: "Future-Proof",
-      description: "Python's growing ecosystem ensures long-term viability and support",
+      description: "Python's growing ecosystem ensures long-term viability and support for enterprises",
       icon: <Star className="h-8 w-8 text-teal-600" />
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Python Projects" },
+    { number: "100+", label: "Python Projects" },
     { number: "50+", label: "AI Models Deployed" },
-    { number: "95%", label: "Client Satisfaction" },
+    { number: "99%", label: "Client Satisfaction" },
     { number: "24/7", label: "Support Available" }
   ];
 
@@ -359,11 +359,11 @@ const PythonDataAI: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl p-6 shadow-lg border border-teal-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-start mb-4">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">{benefit.title}</h3>
-                  <p className="text-gray-600 text-center text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 text-left">{benefit.title}</h3>
+                  <p className="text-gray-600 text-left text-sm leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>

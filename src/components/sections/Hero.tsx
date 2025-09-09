@@ -269,7 +269,7 @@ const Hero: React.FC = () => {
             {/* Interactive Stats */}
             <div className="grid grid-cols-3 gap-4 pt-8">
               <div className="text-center group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                <div className="text-2xl font-bold text-teal-600 group-hover:text-teal-700 transition-colors">500+</div>
+                <div className="text-2xl font-bold text-teal-600 group-hover:text-teal-700 transition-colors">100+</div>
                 <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors">Projects Completed</div>
               </div>
               <div className="text-center group cursor-pointer transform hover:scale-105 transition-transform duration-300">
@@ -277,7 +277,7 @@ const Hero: React.FC = () => {
                 <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors">Expert Team</div>
               </div>
               <div className="text-center group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                <div className="text-2xl font-bold text-teal-600 group-hover:text-teal-700 transition-colors">98%</div>
+                <div className="text-2xl font-bold text-teal-600 group-hover:text-teal-700 transition-colors">99%</div>
                 <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors">Client Satisfaction</div>
               </div>
             </div>

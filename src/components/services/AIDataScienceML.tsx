@@ -252,10 +252,10 @@ const AIDataScienceML: React.FC = () => {
       {/* Platforms */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Platforms & tools</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">Platforms & tools</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             {platforms.map((p) => (
-              <div key={p.name} className="rounded-xl p-6 border border-gray-200 text-center">
+              <div key={p.name} className="rounded-xl p-6 border border-gray-200">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-teal-600 text-white mb-4">
                   <p.icon className="h-6 w-6" />
                 </div>

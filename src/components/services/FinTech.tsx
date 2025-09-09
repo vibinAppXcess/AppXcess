@@ -82,9 +82,7 @@ const FinTech: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Accelerate transactions with cutting-edge payment processing technologies that ensure security and speed.
               </p>
-              <a href="/Blog/FinTech-Trends-Innovations" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -95,9 +93,7 @@ const FinTech: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Create secure, user-friendly apps for modern financial services with advanced features and intuitive interfaces.
               </p>
-              <a href="/Blog/FinTech-AI-Big-Data" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -108,9 +104,7 @@ const FinTech: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Leverage blockchain to enhance security and transparency in FinTech operations with decentralized solutions.
               </p>
-              <a href="/Blog/FinTech-Blockchain-Beyond" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
             </div>
           </div>
         </div>
@@ -225,7 +219,7 @@ const FinTech: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/fintech-investment-financial-internet-technology-concept.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -242,7 +236,7 @@ const FinTech: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/341592e1-35df-4738-bd56-6ad74c0daf8c.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -259,7 +253,7 @@ const FinTech: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/3d-rendering-blockchain-technology.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

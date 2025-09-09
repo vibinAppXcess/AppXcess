@@ -73,7 +73,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Performance Monitoring & Optimization</h3>
               </div>
               <p className="text-gray-600">
-                Using proactive monitoring tools, we diagnose and resolve slowdowns, optimize system performance, and ensure uptime across your digital infrastructure.
+                Using proactive monitoring tools, we diagnose and resolve slowdowns, optimize system performance, and ensure uptime across your digital infrastructure and resilience.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Rapid Troubleshooting & Incident Response</h3>
               </div>
               <p className="text-gray-600">
-                When issues arise, our dedicated support team responds swiftly—diagnosing root causes, restoring services, and ensuring minimal disruption to your business.
+                When issues arise, our dedicated support team responds swiftly—diagnosing root causes, restoring services, and ensuring minimal disruption to your business and continuity.
               </p>
             </div>
           </div>
@@ -125,8 +125,8 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <Target className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proactive Approach</h3>
-              <p className="text-gray-600">
-                We catch and fix issues before they affect your users.
+              <p className="text-gray-600 text-left">
+                We catch and fix issues before they affect your users with monitoring, automation, alerts, and rapid response.
               </p>
             </div>
 
@@ -134,8 +134,8 @@ const ITSupportEnterpriseSystems: React.FC = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise-Aligned Practices</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Practices</h3>
+              <p className="text-gray-600 text-left">
                 We embed best practices for uptime, scalability, and compliance across your systems.
               </p>
             </div>
@@ -144,8 +144,8 @@ const ITSupportEnterpriseSystems: React.FC = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Skilled Cross-Functional Team</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cross-Functional Team</h3>
+              <p className="text-gray-600 text-left">
                 Our team combines DevOps, system engineers, cybersecurity, and monitoring experts for full-spectrum support.
               </p>
             </div>
@@ -154,8 +154,8 @@ const ITSupportEnterpriseSystems: React.FC = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost-Efficient, Flexible Models</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Flexible Models</h3>
+              <p className="text-gray-600 text-left">
                 From managed services to dedicated support, we tailor support models to fit your business size and needs.
               </p>
             </div>
@@ -178,7 +178,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <Heart className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Reliable Operations</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Maintenance and support that reduces downtime and preserves user satisfaction.
               </p>
             </div>
@@ -188,7 +188,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <Zap className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimized Systems</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Better system performance through fine-tuned monitoring, scaling, and automation.
               </p>
             </div>
@@ -198,8 +198,8 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Enhanced Security</h3>
-              <p className="text-gray-600">
-                Systems are protected, patched, and compliant at all times.
+              <p className="text-gray-600 text-left">
+                Systems are protected, patched, and compliant at all times, proactively monitored.
               </p>
             </div>
 
@@ -208,7 +208,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <TrendingUp className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Strategic Growth</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Upgrades and scalability built in, so systems evolve along with your business.
               </p>
             </div>
@@ -232,7 +232,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">24/7 Managed Services</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Round-the-clock monitoring, maintenance, and support for mission-critical systems.
+                Round-the-clock monitoring, maintenance, and support for mission-critical systems continuously.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-700">
@@ -314,9 +314,9 @@ const ITSupportEnterpriseSystems: React.FC = () => {
             <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <Server className="h-8 w-8 text-teal-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Enterprise Systems</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Systems</h3>
               </div>
-              <p className="text-gray-600 mb-4">ERP, CRM, HRIS, and custom enterprise applications</p>
+              <p className="text-gray-600 mb-4">ERP, CRM, HRIS, and custom enterprise applications at scale</p>
             </div>
 
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl">
@@ -324,7 +324,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 <Cloud className="h-8 w-8 text-blue-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">Cloud Platforms</h3>
               </div>
-              <p className="text-gray-600 mb-4">AWS, Azure, GCP, and hybrid cloud environments</p>
+              <p className="text-gray-600 mb-4">AWS, Azure, GCP, and hybrid cloud environments, securely scalable</p>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl">
@@ -338,7 +338,7 @@ const ITSupportEnterpriseSystems: React.FC = () => {
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
               <div className="flex items-center mb-4">
                 <Shield className="h-8 w-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Security & Compliance</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Security</h3>
               </div>
               <p className="text-gray-600 mb-4">Security frameworks, compliance standards, and audit management</p>
             </div>

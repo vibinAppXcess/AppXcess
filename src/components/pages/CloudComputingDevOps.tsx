@@ -79,7 +79,7 @@ const CloudComputingDevOps: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Cloud Governance & FinOps</h3>
               </div>
               <p className="text-gray-600">
-                Cost optimization, compliance automation, and risk management to maximize ROI.
+                Cost optimization, compliance automation, and proactive risk management to maximize ROI.
               </p>
             </div>
 
@@ -163,8 +163,8 @@ const CloudComputingDevOps: React.FC = () => {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Certified Cloud Engineers</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud Engineers</h3>
+              <p className="text-gray-600 text-left">
                 A dedicated team of Azure, AWS, GCP, and DevOps specialists with proven expertise.
               </p>
             </div>
@@ -174,8 +174,8 @@ const CloudComputingDevOps: React.FC = () => {
                 <Rocket className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Future-Ready Practices</h3>
-              <p className="text-gray-600">
-                Microservices, serverless, and containerized solutions designed for scale and agility.
+              <p className="text-gray-600 text-left">
+                Microservices, serverless, and containerized solutions designed for scale and high agility.
               </p>
             </div>
 
@@ -184,7 +184,7 @@ const CloudComputingDevOps: React.FC = () => {
                 <Shield className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Built-In Security</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Policy enforcement, compliance-as-code, and vulnerability scanning to protect your cloud assets.
               </p>
             </div>
@@ -194,7 +194,7 @@ const CloudComputingDevOps: React.FC = () => {
                 <Zap className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Faster Innovation</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Embedded DevOps and automation to reduce time-to-market and accelerate product delivery.
               </p>
             </div>
@@ -268,7 +268,7 @@ const CloudComputingDevOps: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">33% Cost Savings</h3>
               </div>
               <p className="text-gray-600 mb-2">
-                <strong>Logistics:</strong> Automated operations on AWS to cut manual overhead and service time.
+                <strong>Logistics:</strong> Automated operations on AWS to cut manual overhead and overall service time.
               </p>
             </div>
           </div>
@@ -310,7 +310,7 @@ const CloudComputingDevOps: React.FC = () => {
                 <Server className="h-8 w-8 text-blue-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">Containerization</h3>
               </div>
-              <p className="text-gray-600 mb-4">Docker, Kubernetes, OpenShift</p>
+              <p className="text-gray-600 mb-4">Docker, Kubernetes, OpenShift for container orchestration</p>
             </div>
 
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Video, BarChart3, Code, Users, CheckCircle, Play, TrendingUp } from 'lucide-react';
 
 const Media: React.FC = () => {
@@ -9,7 +10,7 @@ const Media: React.FC = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+          backgroundImage: "url('/src/assets/images/group-people-sitting-around-table-front-camera.jpg')",
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}></div>
@@ -23,10 +24,16 @@ const Media: React.FC = () => {
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 AppXcess empowers the media and entertainment industry by offering innovative IT solutions that drive efficiency and creativity.
               </p>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
-                Reach Out Now
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-5 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors shadow-lg text-center">
+                  More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/Contact/" className="border-2 border-white text-white px-5 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                  Contact Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
@@ -135,7 +142,7 @@ const Media: React.FC = () => {
 
       {/* Services Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx:auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Empowering Media Operations
@@ -150,39 +157,33 @@ const Media: React.FC = () => {
                <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                  <Video className="w-8 h-8 text-custom-teal" />
                </div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Creation & Management</h3>
+               <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Creation</h3>
                <p className="text-gray-600 mb-6 flex-grow">
                  Advanced tools for content creation, editing, and management with AI-powered automation and collaborative workflows.
                </p>
-              <a href="/Blog/Media-Content-AI" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
              </div>
 
              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
                  <BarChart3 className="w-8 h-8 text-custom-teal" />
                </div>
                <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
                <p className="text-gray-600 mb-6 flex-grow">
                  Data-driven analytics to understand audience behavior, optimize content performance, and maximize engagement.
                </p>
-              <a href="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
              </div>
 
              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
                  <Users className="w-8 h-8 text-custom-teal" />
                </div>
                <h3 className="text-2xl font-bold text-gray-900 mb-4">Audience Engagement</h3>
                <p className="text-gray-600 mb-6 flex-grow">
                  Personalized content recommendations and interactive features to enhance viewer engagement and retention.
                </p>
-              <a href="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
+              
              </div>
           </div>
         </div>
@@ -255,7 +256,7 @@ const Media: React.FC = () => {
                      <div className="grid md:grid-cols-3 gap-8">
              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
                <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                 backgroundImage: "url('/src/assets/images/artificial-intelligence-machine-learning-business-internet-technology-concept.jpg')"
                }}></div>
                <div className="p-6 flex flex-col flex-grow">
                  <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -272,14 +273,14 @@ const Media: React.FC = () => {
 
              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
                <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                 backgroundImage: "url('/src/assets/images/tech-savvy-professional-navigating-advanced-visual-display-multimedia-content-interactive-digital-data-wall.jpg')"
                }}></div>
                <div className="p-6 flex flex-col flex-grow">
                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                    The Rise of Immersive Media Experiences
                  </h3>
                  <p className="text-gray-600 mb-4 flex-grow">
-                   Explore the latest trends in virtual reality, augmented reality, and immersive storytelling that are reshaping media consumption.
+                   Explore the latest trends in virtual reality, augmented reality, and immersive storytelling that are reshaping media consumption. for modern audiences.
                  </p>
                 <a href="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
@@ -289,14 +290,14 @@ const Media: React.FC = () => {
 
              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
                <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                 backgroundImage: "url('/src/assets/images/wide-top-view-diverse-analyst-team-analyzing-financial-data-meticulous.jpg')"
                }}></div>
                <div className="p-6 flex flex-col flex-grow">
                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                    Data-Driven Strategies in Media Distribution
                  </h3>
                  <p className="text-gray-600 mb-4 flex-grow">
-                   Learn how data analytics and machine learning are optimizing content distribution and audience targeting strategies.
+                   Learn how data analytics and machine learning are optimizing content distribution and audience targeting strategies. for modern audiences.
                  </p>
                 <a href="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
@@ -310,7 +311,7 @@ const Media: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-custom-blue to-custom-teal text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+          backgroundImage: "url('/src/assets/images/group-people-sitting-around-table-front-camera.jpg')"
         }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -320,10 +321,10 @@ const Media: React.FC = () => {
             Empowering the industry with innovative solutions for global impact
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <Link to="/About" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               Know More About Us
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
               <Play className="w-5 h-5" />
               Watch Demo

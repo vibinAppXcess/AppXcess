@@ -61,7 +61,7 @@ const HRSystems: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Key Features of Our HR Systems</h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Recruitment & Onboarding', text: 'Simplify hiring with applicant tracking, automated workflows, and smooth onboarding processes that help new employees settle in faster.' },
+              { title: 'Recruitment & Onboarding', text: 'Simplify hiring with applicant tracking, automated workflows, and onboarding processes that help new employees settle in faster.' },
               { title: 'Payroll & Benefits Management', text: 'Ensure accurate and timely payroll processing while managing employee benefits with built-in compliance features.' },
               { title: 'Employee Self-Service Portal', text: 'Give employees the ability to manage their own profiles, apply for leave, and access HR documents anytime, anywhere.' },
               { title: 'Performance & Learning Management', text: 'Set clear goals, track performance, and promote professional growth with integrated training and learning modules.' },
@@ -93,9 +93,9 @@ const HRSystems: React.FC = () => {
                 { title: 'Increased Efficiency', text: 'Reduce manual HR processes and free up time for strategic initiatives. Automate routine tasks and streamline workflows to focus on what matters most.' },
                 { title: 'Enhanced Employee Experience', text: 'Provide employees with transparency, accessibility, and empowerment through self-service features. Create a positive workplace culture that attracts and retains top talent.' },
                 { title: 'Better Decision-Making', text: 'Leverage data-driven insights to optimize workforce planning and retention. Make informed decisions based on comprehensive HR analytics and reporting.' },
-                { title: 'Scalable & Flexible', text: 'Whether you have 50 employees or 50,000, our HR systems adapt as your business grows. Flexible architecture that scales with your organization.' },
-                { title: 'Seamless Integration', text: 'Connect HR with CRM, ERP, and other enterprise applications for a unified business ecosystem. Ensure all systems work together harmoniously.' },
-                { title: 'Compliance & Security', text: 'Stay aligned with labor laws, data protection regulations, and industry standards. Built-in compliance checks and enterprise-grade security features.' },
+                { title: 'Scalable & Flexible', text: 'Whether you have 50 employees or 50,000, our HR systems adapt as your business grows. Flexible architecture that scales with your organization for your needs.' },
+                { title: 'Seamless Integration', text: 'Connect HR with CRM, ERP, and other enterprise applications for a unified business ecosystem. Ensure all systems work together harmoniously for your needs.' },
+                { title: 'Compliance & Security', text: 'Stay aligned with labor laws, data protection regulations, and industry standards. Built-in compliance checks and enterprise-grade security features for your needs.' },
               ].map((step, i) => (
                 <div key={step.title} className={`relative md:flex md:items-center md:gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className="relative z-10 ml-10 md:ml-0 md:w-1/2">
@@ -140,35 +140,11 @@ const HRSystems: React.FC = () => {
                   <p className="mt-2 text-gray-700">{item.text}</p>
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className={`absolute -right-10 -bottom-10 h-40 w-40 rounded-full blur-2xl ${idx % 2 === 0 ? 'bg-custom-teal/10' : 'bg-custom-blue/10'}`} />
+                  <div className={`absolute -right-10 -bottom-10 h-40 w-40 rounded-full blur-2xl ${idx % 2 === 0 ? 'bg-custom-teal/10' : 'bg-custom-blue/10'}`}
+                  />
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <span className="inline-flex items-center gap-2 text-sm text-gray-600"><span className="h-2 w-2 rounded-full bg-custom-blue" /> Increased efficiency</span>
-            <span className="inline-flex items-center gap-2 text-sm text-gray-600"><span className="h-2 w-2 rounded-full bg-custom-teal" /> Better engagement</span>
-            <span className="inline-flex items-center gap-2 text-sm text-gray-600"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Smarter decisions</span>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA - split panel with brand colors */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-6 items-stretch">
-          <div className="rounded-2xl p-8 bg-custom-blue text-white">
-            <h3 className="text-2xl font-bold">Ready to transform your HR?</h3>
-            <p className="mt-2 text-teal-100">Talk to our HR experts and get a tailored solution roadmap.</p>
-            <a href="/Contact/" className="mt-6 inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an Expert</a>
-          </div>
-          <div className="rounded-2xl p-8 bg-white border border-custom-teal/30">
-            <h3 className="text-2xl font-bold text-custom-blue">Empower your workforce</h3>
-            <p className="mt-2 text-gray-700">From recruitment to retirement, we help you create a connected, agile, and people-first workplace.</p>
-            <div className="mt-6 flex gap-3">
-              <a href="/Contact/" className="btn-primary">Get Free Consultation</a>
-              <a href="/About/" className="btn-secondary">Learn More</a>
-            </div>
           </div>
         </div>
       </section>

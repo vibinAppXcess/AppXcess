@@ -45,7 +45,7 @@ const ComputerVisionNLP: React.FC = () => {
     },
     {
       icon: <MessageSquare className="h-12 w-12 text-teal-600" />,
-      title: "Natural Language Processing",
+      title: "Natural\u00A0Language\u00A0Processing",
       description: "Intelligent text and speech processing that understands and generates human language naturally.",
       features: [
         "Text analysis & sentiment",
@@ -57,7 +57,7 @@ const ComputerVisionNLP: React.FC = () => {
     {
       icon: <Brain className="h-12 w-12 text-teal-600" />,
       title: "Machine Learning Models",
-      description: "Custom ML models trained on your specific data to solve unique business challenges.",
+      description: "Custom ML models trained on your specific data to solve unique business challenges at scale.",
       features: [
         "Custom model training",
         "Predictive analytics",
@@ -68,7 +68,7 @@ const ComputerVisionNLP: React.FC = () => {
     {
       icon: <Zap className="h-12 w-12 text-teal-600" />,
       title: "AI-Powered Automation",
-      description: "Intelligent automation solutions that streamline processes and boost productivity.",
+      description: "Intelligent automation solutions that streamline processes and boost productivity for teams.",
       features: [
         "Process automation",
         "Workflow optimization",
@@ -79,7 +79,7 @@ const ComputerVisionNLP: React.FC = () => {
     {
       icon: <Users className="h-12 w-12 text-teal-600" />,
       title: "Personalized Experiences",
-      description: "AI-driven personalization that enhances user engagement and customer satisfaction.",
+      description: "AI-driven personalization that enhances user engagement and customer satisfaction across channels.",
       features: [
         "User behavior analysis",
         "Content personalization",
@@ -421,12 +421,12 @@ const ComputerVisionNLP: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="flex justify-center mb-4">
+              <div key={index} className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="flex justify-start mb-4">
                   {tech.icon}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{tech.name}</h3>
-                <p className="text-sm text-gray-600">{tech.description}</p>
+                <h3 className="font-bold text-gray-900 mb-2 text-left">{tech.name}</h3>
+                <p className="text-sm text-gray-600 text-left">{tech.description}</p>
               </div>
             ))}
           </div>

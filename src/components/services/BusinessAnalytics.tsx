@@ -42,7 +42,7 @@ const BusinessAnalytics: React.FC = () => {
   ];
 
   const outcomes = [
-    { icon: Gauge, title: 'Faster decisions', text: 'Real-time KPIs and trusted data speed up executive and frontline decisions.' },
+    { icon: Gauge, title: 'Faster decisions', text: 'Real-time KPIs and data speed up executive and frontline decisions.' },
     { icon: ShieldCheck, title: 'Data quality & governance', text: 'Standardized definitions, lineage, and controls for accuracy and compliance.' },
     { icon: Users, title: 'Adoption at scale', text: 'Change management and training to ensure analytics are used daily.' },
     { icon: Rocket, title: 'Time-to-value', text: 'Prebuilt accelerators and iterative delivery shorten the path to ROI.' }

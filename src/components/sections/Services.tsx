@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Bot, Code, Building2, Shield, Cloud, Users, TrendingUp, Lightbulb, Palette, Rocket } from 'lucide-react';
+import { Brain, Bot, Code, Building2, Shield, Cloud } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -53,6 +53,8 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* End-to-End Services visual removed as requested */}
       </div>
     </section>
   );

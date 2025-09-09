@@ -50,7 +50,7 @@ const AutomationAnywhere: React.FC = () => {
             <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Cloud className="h-8 w-8 text-teal-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Cloud-Native & Highly Scalable</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Cloud-Native & Scalable</h3>
               </div>
               <p className="text-gray-600 mb-4">
                 Automation Anywhere is built for the cloud, offering fast deployment with no infrastructure setup, 99.9% uptime, built-in disaster recovery, and automatic regulatory updates.
@@ -58,7 +58,7 @@ const AutomationAnywhere: React.FC = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-700">
                   <CheckCircle className="h-4 w-4 text-teal-600 mr-2" />
-                  Fast deployment with no infrastructure setup
+                  Deployment with no infrastructure setup
                 </li>
                 <li className="flex items-center text-gray-700">
                   <CheckCircle className="h-4 w-4 text-teal-600 mr-2" />
@@ -81,7 +81,7 @@ const AutomationAnywhere: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">AI-Infused Automation</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Advanced features—such as AI reasoning, Automator AI, and Agentic Process Automation—empower intelligent decision-making and automation orchestration. It transforms static workflows into context-aware, adaptive agents.
+                Advanced features—such as AI reasoning, Automator AI—empower intelligent decision-making and automation orchestration. It transforms static workflows into context-aware, adaptive agents.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-700">
@@ -147,7 +147,7 @@ const AutomationAnywhere: React.FC = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <Bot className="h-8 w-8 text-teal-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Bot Creator & Runner</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Creator & Runner</h3>
               </div>
               <p className="text-gray-600">
                 Design and run automations using a visual interface; execute both attended and unattended bots.
@@ -167,10 +167,10 @@ const AutomationAnywhere: React.FC = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <BarChart3 className="h-8 w-8 text-indigo-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Bot Insights & Analytics</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Insights</h3>
               </div>
               <p className="text-gray-600">
-                Dashboard that provides real-time performance metrics and ROI tracking.
+                Dashboard that provides real-time performance metrics and ROI tracking for key stakeholders.
               </p>
             </div>
 
@@ -180,7 +180,7 @@ const AutomationAnywhere: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Bot Store</h3>
               </div>
               <p className="text-gray-600">
-                Pre-built bots and automation templates for accelerated deployment.
+                Pre-built bots and automation templates for accelerated deployment for faster launches.
               </p>
             </div>
           </div>
@@ -190,15 +190,15 @@ const AutomationAnywhere: React.FC = () => {
       {/* Why Choose Automation Anywhere Through AppXcess */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
               Why Choose Automation Anywhere Through AppXcess?
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
                 <Zap className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid ROI</h3>
@@ -207,18 +207,18 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Cloud className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Sovereign Cloud Control</h3>
               <p className="text-gray-600">
-                Choose between fully managed cloud environments or hybrid models with on-prem options.
+                Choose between managed cloud environments or hybrid models with on-prem options.
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                 <Brain className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Autonomy</h3>
@@ -227,8 +227,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <Shield className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security, by Design</h3>
@@ -237,8 +237,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-pink-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">End-to-End Support</h3>
@@ -247,8 +247,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
                 <Target className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Solutions</h3>
@@ -316,8 +316,8 @@ const AutomationAnywhere: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Faster Implementation</h3>
@@ -326,8 +326,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Heart className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Improved Accuracy</h3>
@@ -336,8 +336,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                 <Clock className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Operations</h3>
@@ -346,8 +346,8 @@ const AutomationAnywhere: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-left p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable Growth</h3>

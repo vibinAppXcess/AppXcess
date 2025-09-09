@@ -89,7 +89,7 @@ const CloudSecurity: React.FC = () => {
               <div className="text-lg font-semibold text-gray-900 mb-2">AWS</div>
               <ul className="space-y-2 text-gray-700 text-sm">
                 <li className="flex items-start"><CheckCircle className="h-4 w-4 text-teal-600 mr-2 mt-0.5" /> Organizations, SCPs, Control Tower</li>
-                <li className="flex items-start"><CheckCircle className="h-4 w-4 text-teal-600 mr-2 mt-0.5" /> IAM Identity Center, KMS, GuardDuty, Security Hub</li>
+                <li className="flex items-start"><CheckCircle className="h-4 w-4 text-teal-600 mr-2 mt-0.5" /> IAM Identity Center, GuardDuty, Security Hub</li>
                 <li className="flex items-start"><CheckCircle className="h-4 w-4 text-teal-600 mr-2 mt-0.5" /> VPC endpoints, WAF, CloudTrail, Config</li>
               </ul>
             </div>

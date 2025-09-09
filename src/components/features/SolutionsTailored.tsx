@@ -1,28 +1,25 @@
 import React from 'react';
-import { Settings, Building2, Target, ArrowRight } from 'lucide-react';
+import endToEndServicesImg from '../../assets/images/end-to-end-services.jpg';
 
 const SolutionsTailored: React.FC = () => {
   const services = [
     {
       title: "Diverse Industry Solutions",
       subtitle: "Empowering businesses with innovation.",
-      description: "Complex systems and workflows overwhelm business teams, we simplify and expertly optimize critical processes.",
-      icon: <Building2 className="text-teal-600" size={32} />,
+      description: "We deliver specialized solutions tailored to your industry's unique challenges and regulatory requirements. Our deep domain expertise ensures compliance, efficiency, and competitive advantage across all sectors.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       title: "Engineering Excellence",
       subtitle: "Innovative tools to optimize processes.",
-      description: "Complex systems and workflows overwhelm business teams, we simplify and expertly optimize critical processes.",
-      icon: <Settings className="text-teal-600" size={32} />,
+      description: "Our engineering teams combine cutting-edge technologies with proven methodologies to build robust, scalable solutions. We deliver technical excellence that drives measurable business outcomes and sustainable growth.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       title: "End-to-End Services",
       subtitle: "Driving success with customized solutions.",
-      description: "Complex systems and workflows overwhelm business teams, we simplify and expertly optimize critical processes.",
-      icon: <Target className="text-teal-600" size={32} />,
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      description: "From initial consultation and strategy development to implementation, deployment, and ongoing support, we provide comprehensive services that cover every aspect of your digital transformation journey and business growth.",
+      image: endToEndServicesImg
     }
   ];
 
@@ -40,14 +37,14 @@ const SolutionsTailored: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
               className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col h-full"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden flex-shrink-0">
                 <img 
                   src={service.image} 
                   alt={service.title}
@@ -57,29 +54,21 @@ const SolutionsTailored: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-teal-100 p-2 rounded-lg group-hover:bg-teal-200 transition-colors duration-300">
-                    {service.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-teal-600 font-medium">
-                      {service.subtitle}
-                    </p>
-                  </div>
+              <div className="p-6 flex flex-col h-full">
+                <div className="mb-4 flex-shrink-0">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors duration-300 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-teal-600 font-medium">
+                    {service.subtitle}
+                  </p>
                 </div>
                 
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  {service.description}
-                </p>
-
-                <button className="mt-auto flex items-center space-x-2 text-teal-600 font-medium hover:text-teal-700 transition-colors duration-300 group-hover:translate-x-1">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300" />
-                </button>
+                <div className="flex-1">
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

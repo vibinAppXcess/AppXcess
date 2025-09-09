@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Factory, Cpu, BarChart3, Users, CheckCircle, Play } from 'lucide-react';
+import { ArrowRight, Factory, Cpu, BarChart3, CheckCircle, Play } from 'lucide-react';
 
 const Manufacturing: React.FC = () => {
   return (
@@ -18,16 +18,15 @@ const Manufacturing: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
-                Optimizing Supply Chains.<br />
-                <span className="text-teal-300 drop-shadow-lg">Empowering Manufacturing.</span>
+                Optimizing Supply Chains. <span className="text-teal-300 drop-shadow-lg">Empowering Manufacturing.</span>
               </h1>
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 Transforming industries with innovative solutions that drive efficiency, optimize operations, and scale manufacturing processes.
               </p>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+              <Link to="/Contact/" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors shadow-lg">
                 Learn More
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
@@ -73,13 +72,11 @@ const Manufacturing: React.FC = () => {
               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                 <Factory className="w-8 h-8 text-custom-teal" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart Manufacturing Solutions</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart Manufacturing</h3>
               <p className="text-gray-600 mb-6 flex-grow">
                 Leverage IoT and automation to optimize factory operations, improve productivity, and reduce operational costs.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -90,9 +87,7 @@ const Manufacturing: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Streamline logistics and optimize inventory management with intelligent data-driven solutions.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
+              
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -103,9 +98,7 @@ const Manufacturing: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Tailored and robust enterprise systems for seamless and efficient resource planning and management.
               </p>
-              <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </button>
+              
             </div>
           </div>
         </div>
@@ -142,10 +135,10 @@ const Manufacturing: React.FC = () => {
                 </div>
               </div>
               
-              <button className="mt-8 bg-custom-teal hover:bg-teal-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors">
+              <Link to="/About" className="mt-8 bg-custom-teal hover:bg-teal-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors">
                 More About Us
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
             
             <div className="bg-gradient-to-br from-custom-teal to-custom-blue rounded-2xl p-8 text-white">
@@ -191,7 +184,7 @@ const Manufacturing: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/close-up-anthropomorphic-robot-working-as-delivery-man.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -208,7 +201,7 @@ const Manufacturing: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/business-partnership-leader-gather-nurture-young-seedling-plant-with-esg-icons-symbolizing-corporate-unity-commitment-environmental-protection-natural-preservation-reliance.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -225,7 +218,7 @@ const Manufacturing: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/computer-software-website-traffic-analytics-data-computer-screen-snugly.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -256,10 +249,10 @@ const Manufacturing: React.FC = () => {
             Transform your manufacturing and supply chain processes with our innovative solutions designed for the modern industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <Link to="/Contact" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               Contact Us
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
               <Play className="w-5 h-5" />
               Watch Demo

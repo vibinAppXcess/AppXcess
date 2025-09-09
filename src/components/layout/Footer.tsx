@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
   ];
 
   const locations = [
-    "HQ - Malaysia",
-    "Tech Center - India", 
-    "Biz Dev Center - Australia"
+    { name: "HQ - Malaysia", url: "https://maps.app.goo.gl/MysZDAHc5DuZTzR16" },
+    { name: "Tech Center - India", url: "https://maps.app.goo.gl/W8byGv1e5fTS7ECy5" },
+    { name: "Biz Dev Center - Australia", url: "https://maps.app.goo.gl/S7x4e6CTuH1cREtW9" }
   ];
 
   const emails = [
@@ -102,8 +102,15 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Location</h3>
             <ul className="space-y-2">
               {locations.map((location, index) => (
-                <li key={index} className="text-gray-300">
-                  {location}
+                <li key={index}>
+                  <a 
+                    href={location.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                  >
+                    {location.name}
+                  </a>
                 </li>
               ))}
             </ul>

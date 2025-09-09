@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp } from 'lucide-react';
 
 const Retail: React.FC = () => {
@@ -23,10 +24,16 @@ const Retail: React.FC = () => {
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 Empowering Growth with Intelligent IT Solutions. AppXcess leverages innovative IT solutions to redefine retail operations.
               </p>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
-                Get Started Now
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg text-center">
+                  More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                  Contact Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
@@ -74,11 +81,8 @@ const Retail: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Personalized Experiences</h3>
               <p className="text-gray-600 mb-6 flex-grow">
-                Enhance customer engagement with data-driven insights and tailored recommendations for better shopping experiences.
+                Enhance customer engagement with data-driven insights and tailored recommendations for shopping experiences.
               </p>
-              <a href="/Blog/Retail-Scalable-Marketing" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -89,9 +93,6 @@ const Retail: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Leverage automation to optimize stock levels and reduce operational inefficiencies with smart inventory solutions.
               </p>
-              <a href="/Blog/Retail-Seamless-Integration" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
@@ -102,9 +103,6 @@ const Retail: React.FC = () => {
               <p className="text-gray-600 mb-6 flex-grow">
                 Unify online and offline retail operations for seamless and engaging customer experiences across all channels.
               </p>
-              <a href="/Blog/Retail-Digital-Transformation" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
           </div>
         </div>
@@ -125,7 +123,7 @@ const Retail: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-custom-teal rounded-lg flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="w-6 h-6 text-white" />
+                    <TrendingUp className="w-6 h-6 text:white" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Understanding Trends</h3>
@@ -148,7 +146,7 @@ const Retail: React.FC = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-custom-teal rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-custom-teal rounded-lg flex items:center justify-center flex-shrink-0">
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -204,7 +202,7 @@ const Retail: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/integrate-circuit-links-merge-concept.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -221,7 +219,7 @@ const Retail: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/digital-assets-finance-money-business-concept.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -238,7 +236,7 @@ const Retail: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')"
+                backgroundImage: "url('/src/assets/images/creative-monitor-tech-digitally-generated-desk.jpg')"
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -269,14 +267,14 @@ const Retail: React.FC = () => {
             Revolutionize your approach with customized solutions built for your retail needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-              Learn More
+            <Link to="/About" className="bg:white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+              Learn More About Us
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </button>
+            </Link>
+            <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+              Contact Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

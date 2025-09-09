@@ -157,7 +157,7 @@ const SoftwareCloud: React.FC = () => {
           <div className="text-center">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <div className="text-4xl font-bold text-teal-600 mb-2">500+</div>
+                <div className="text-4xl font-bold text-teal-600 mb-2">100+</div>
                 <div className="text-gray-600">Projects Delivered</div>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">

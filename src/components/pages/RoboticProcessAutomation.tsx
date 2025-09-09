@@ -98,7 +98,7 @@ const RoboticProcessAutomation: React.FC = () => {
                 <Zap className="h-8 w-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Accelerate Efficiency</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Bots work 24/7—fast, accurate, and tireless—speeding up operations and reducing cycle times.
               </p>
             </div>
@@ -108,8 +108,8 @@ const RoboticProcessAutomation: React.FC = () => {
                 <TrendingUp className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Reduce Costs & Errors</h3>
-              <p className="text-gray-600">
-                Automation dramatically lowers manual labor and minimizes mistakes in repetitive tasks.
+              <p className="text-gray-600 text-left">
+                Automation dramatically lowers manual labor and minimizes mistakes in repetitive tasks significantly.
               </p>
             </div>
 
@@ -117,8 +117,8 @@ const RoboticProcessAutomation: React.FC = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Settings className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Non-Intrusive Implementation</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Non Intrusive</h3>
+              <p className="text-gray-600 text-left">
                 RPA integrates with existing systems via the UI—no major changes to core infrastructure needed.
               </p>
             </div>
@@ -128,7 +128,7 @@ const RoboticProcessAutomation: React.FC = () => {
                 <Target className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalable & Resilient</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left">
                 Easily deploy more bots as demand grows, ensuring seamless business continuity and operational control.
               </p>
             </div>
@@ -169,7 +169,7 @@ const RoboticProcessAutomation: React.FC = () => {
             <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Workflow className="h-8 w-8 text-indigo-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Manufacturing & Logistics</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Manufacturing</h3>
               </div>
               <p className="text-gray-600">
                 Accelerate order processing, inventory updates, supplier communications.
@@ -250,7 +250,7 @@ const RoboticProcessAutomation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Bot Studio Development</h3>
               </div>
               <p className="text-gray-600">
-                We design intuitive, low-code bot workflows tailored to your operations.
+                We design intuitive, low-code bot workflows tailored to your operations for teams across departments.
               </p>
             </div>
 
@@ -260,7 +260,7 @@ const RoboticProcessAutomation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">Orchestration & Monitoring</h3>
               </div>
               <p className="text-gray-600">
-                Deploy bots at scale with dashboards that monitor performance, utilization, and ROI.
+                Deploy bots at scale with dashboards that monitor performance, utilization, and ROI with clear actionable insights.
               </p>
             </div>
 
@@ -287,7 +287,7 @@ const RoboticProcessAutomation: React.FC = () => {
             <div className="bg-gradient-to-br from-pink-50 to-red-50 p-8 rounded-xl border border-gray-200">
               <div className="flex items-center mb-4">
                 <Settings className="h-8 w-8 text-pink-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Managed Automation Services</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Managed Automation</h3>
               </div>
               <p className="text-gray-600">
                 AppXcess supports your bots beyond deployment—with maintenance, updates, scaling, and optimization.
@@ -317,8 +317,8 @@ const RoboticProcessAutomation: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-xl shadow-sm">
-              <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="p-8 bg-white rounded-xl shadow-sm">
+              <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mb-6">
                 <Zap className="h-10 w-10 text-teal-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Speed</h3>
@@ -327,23 +327,23 @@ const RoboticProcessAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white rounded-xl shadow-sm">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="p-8 bg-white rounded-xl shadow-sm">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <TrendingUp className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Savings</h3>
               <p className="text-lg text-gray-600">
-                Reduce operational costs by up to 70% through task automation.
+                Reduce operational costs by up to 70% through task automation at scale.
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white rounded-xl shadow-sm">
-              <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="p-8 bg-white rounded-xl shadow-sm">
+              <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
                 <Users className="h-10 w-10 text-indigo-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Transformation</h3>
               <p className="text-lg text-gray-600">
-                Enable staff to shift from mundane tasks to strategic, value-added work.
+                Enable staff to shift from mundane tasks to strategic, value-added work every day.
               </p>
             </div>
           </div>
