@@ -23,10 +23,16 @@ const Manufacturing: React.FC = () => {
               <p className="text-xl mb-8 text-white drop-shadow-lg font-medium">
                 Transforming industries with innovative solutions that drive efficiency, optimize operations, and scale manufacturing processes.
               </p>
-              <Link to="/Contact/" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors shadow-lg">
-                Learn More
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                  More About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/Contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                  Contact Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg">

@@ -210,7 +210,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Social Media</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=1600&auto=format&fit=crop" alt="Social community" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/network-miniature-figures-connected-by-lines-patterned-surface.jpg" alt="Social community" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Seamless Community</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Share photos, videos, and updates to connect seamlessly with your community.</p>
@@ -220,7 +220,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1551516594-56cb78394645?q=80&w=1600&auto=format&fit=crop" alt="Real-time interactions" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/friends-using-application-mobile-phone-by-connecting-with-smart-watch.jpg" alt="Real-time interactions" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Real-Time Interactions</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Foster real-time interactions through posts, comments, and live discussions.</p>
@@ -230,7 +230,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1485841890310-6a055c88698a?q=80&w=1600&auto=format&fit=crop" alt="Share videos" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/back-view-man-holding-smartphone.jpg" alt="Share videos" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Share Videos</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Create and share captivating video content for a global audience.</p>
@@ -240,53 +240,12 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop" alt="Professional connections" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/laptop-which-there-is-world-people-drawn.jpg" alt="Professional connections" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Connections</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Build and expand your professional network with meaningful connections.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Connect <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600&auto=format&fit=crop" alt="Group conversations" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4"></h4>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Group Conversations</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Join interest-based groups to participate in engaging conversations and activities.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Join Groups <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop" alt="Creative sharing" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Creative Sharing</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Capture and share creative content in a visually stunning platform.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Create <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="Trending stories" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Trending Stories</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Discover and share trending stories to stay connected with the latest buzz.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Explore Trends <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop" alt="Share moments" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Share Moments</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Post moments and updates effortlessly to share your story with friends.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Share <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -298,7 +257,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Content Management</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Easy publish" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/domain-links-seo-webinar-cyberspace-concept.jpg" alt="Easy publish" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Easy Publish</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Organize and publish content efficiently with easy-to-use management tools.</p>
@@ -308,7 +267,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Streamlined updates" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/lastest-version-fresh-updates-application-updates-concept.jpg" alt="Streamlined updates" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Streamlined Updates</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline website updates and manage pages with intuitive features.</p>
@@ -318,7 +277,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?q=80&w=1600&auto=format&fit=crop" alt="Advanced content tools" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/laptop-with-word-content-screen.jpg" alt="Advanced content tools" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Advanced Content Tools</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Efficiently handle content with advanced features tailored for modern websites.</p>
@@ -328,7 +287,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop" alt="Flexible CMS" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/customer-relationship-management-concept.jpg" alt="Flexible CMS" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Flexible CMS</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Create and manage multipurpose web pages with friendly interfaces and tools.</p>
@@ -345,7 +304,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Finance</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1554224155-3fdfc3f0f2c1?q=80&w=1600&auto=format&fit=crop" alt="Expense reports" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/jolly-business-partners-discussing-sales-development-meeting.jpg" alt="Expense reports" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">ExpenseManager</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Control and track business expenses with detailed analytics and reports.</p>
@@ -355,7 +314,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop" alt="Business ledger" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/learning-wall-digital-bargain-arm.jpg" alt="Business ledger" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Balance Log</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Handle income, expenses, and transactions with a business-focused ledger system.</p>
@@ -365,7 +324,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1600&auto=format&fit=crop" alt="Secure payment transfer" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/data-protection-shield-secured-permission-graphic-concept.jpg" alt="Secure payment transfer" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Safe Transfer</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Oversee payments and transactions securely for streamlined business finances.</p>
@@ -375,7 +334,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop" alt="Investment insights" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/man-with-shirt-tie-drawing-arrow.jpg" alt="Investment insights" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Profit Edge</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Empower business investment decisions with real-time insights and analytics.</p>
@@ -392,7 +351,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Integration</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1525186402429-b4ff38bedbec?q=80&w=1600&auto=format&fit=crop" alt="Customer service hub" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/business-meeting-abour-servers.jpg" alt="Customer service hub" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Service Hub</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Integrate customer service with AI-driven tools for enhanced engagement.</p>
@@ -402,7 +361,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop" alt="Web to app integration" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/website-hosting-with-man-holding-tablet.jpg" alt="Web to app integration" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">WebView Integrator</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Transform your website into a mobile app with seamless web integration.</p>
@@ -412,7 +371,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=1600&auto=format&fit=crop" alt="Chat platforms integration" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/variety-blank-speech-bubbles-dark-office-room.jpg" alt="Chat platforms integration" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Chat Hub</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Integrate chat platforms with CRM for unified customer communication.</p>
@@ -422,7 +381,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=1600&auto=format&fit=crop" alt="Mobile commerce link" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/e-commerce-online-shopping-digital-marketing-internet-business-technology-concept-virtual-screen.jpg" alt="Mobile commerce link" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Commerce Link</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Combine iOS capabilities with e-commerce for robust business functionality.</p>
@@ -439,7 +398,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">E-commerce and Sales</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop" alt="Marketplace management" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/market-research-consumer-information-needs-concept.jpg" alt="Marketplace management" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Manage Market</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Manage single and multi-vendor operations with POS and mobile features.</p>
@@ -449,7 +408,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop" alt="Workflow optimization" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/stock-market-graph-big-data-visualization-investment-graph-concept-3d-rendering.jpg" alt="Workflow optimization" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Trade Flow</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline admin, seller, and customer workflows for better efficiency.</p>
@@ -459,7 +418,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" alt="Vendor management" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/businessman-showing-franchise-system-mobile-device.jpg" alt="Vendor management" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Vendor Connect</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Optimize marketplace management with mobile-friendly tools and panels.</p>
@@ -469,52 +428,12 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1600&auto=format&fit=crop" alt="Retail POS and inventory" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/portrait-male-personal-shopper-working.jpg" alt="Retail POS and inventory" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Retail Manager</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Combine inventory, POS, and website management for retail growth.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Manage Retail <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1600&auto=format&fit=crop" alt="Shop view UX" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Shop View</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Enhance multi-vendor operations with modern design and usability.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    View Shop <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Fast ecommerce experience" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Trade Connect</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Offer a fast, seamless browsing and purchasing experience to users.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Connect Trade <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556767576-cfba3c50e706?q=80&w=1600&auto=format&fit=crop" alt="Inventory tracking warehouse" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Track Inventory</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Manage orders and inventory across branches with a unified solution.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Track <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1600&auto=format&fit=crop" alt="Scalable ecommerce" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Trade Core</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Scale online stores with a complete, user-friendly eCommerce app.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Scale <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -526,7 +445,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">HR Solutions</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop" alt="HR platform management" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/rag-doll-blue-circles.jpg" alt="HR platform management" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Work Manager</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline employee records, attendance, and payroll in one platform.</p>
@@ -536,7 +455,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1555421689-43cad7100754?q=80&w=1600&auto=format&fit=crop" alt="Time tracking dashboard" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/business-mans-pointing-glass-with-colorful-paper-notes-diverse-group-male-employees-formal-wear-using-stickers.jpg" alt="Time tracking dashboard" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Team Tracker</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Track employee hours and ensure productivity with seamless time tracking.</p>
@@ -546,7 +465,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop" alt="Branches and locations" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/scenery-designers-work.jpg" alt="Branches and locations" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Branch Link</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Manage HR operations across multiple branches with centralized tools.</p>
@@ -556,52 +475,12 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="Team collaboration" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/teamwork-business-concept.jpg" alt="Team collaboration" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Team Link</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Enhance team collaboration and productivity with HR-focused tools.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Link Team <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1600&auto=format&fit=crop" alt="HR management" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Staff Hub</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Optimize employee management with leave, attendance, and payroll.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Manage Staff <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop" alt="Performance analytics" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Performance Tracker</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Track and evaluate employee performance for data-driven decisions.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Track Performance <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1520975979650-16e5a362f42e?q=80&w=1600&auto=format&fit=crop" alt="ID verification" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Verify ID</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Ensure accurate attendance tracking with innovative photo verification.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Verify <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop" alt="Mobile HR platform" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">HR Link</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Unify HR processes with a mobile-friendly platform for seamless management.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Link HR <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -613,7 +492,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Industrial Solutions</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1581091012184-7af0fb1b91a7?q=80&w=1600&auto=format&fit=crop" alt="Factory operations" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/organic-agriculture-crop-environment-growing-concept.jpg" alt="Factory operations" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Plant Planner</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline plant operations and enhance productivity with real-time tools.</p>
@@ -623,7 +502,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1581092580485-1e7b3fda62d8?q=80&w=1600&auto=format&fit=crop" alt="Production flow" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/aerial-view-container-loading-unloading-sunset-top-view-containers-logistics-terminal-city-factory-train-railroad-sky-business-freight-transportation-containers-railway.jpg" alt="Production flow" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Production Flow</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline manufacturing processes and monitor workflows effectively.</p>
@@ -633,7 +512,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1556742504-16b0836cf73d?q=80&w=1600&auto=format&fit=crop" alt="POS in industry" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/logistics-means-transport-together-with-technological-futuristic-holograms.jpg" alt="POS in industry" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Smart POS</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Manage inventory, suppliers, and customer transactions seamlessly.</p>
@@ -643,52 +522,12 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt="Logistics trucks" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/automated-food-processing-facility-with-conveyor-belts-storage-solutions-peak-production-hours.jpg" alt="Logistics trucks" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Logistics Hub</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Unify transportation and delivery operations into one efficient platform.</p>
                   <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                     Manage Logistics <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09ea?q=80&w=1600&auto=format&fit=crop" alt="Operations coordination" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Operations Manager</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Combine ride-hailing, food, and parcel delivery for streamlined services.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Manage Operations <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1581093588401-7f8b7f6ba674?q=80&w=1600&auto=format&fit=crop" alt="Industrial commerce" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Trade Manager</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Support multi-vendor industrial commerce with integrated tools and apps.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Manage Trade <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1546948630-123c35b1c77b?q=80&w=1600&auto=format&fit=crop" alt="Dispatch operations" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Dispatch Control</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Manage deliveries for groceries, food, and pharmacy with all-in-one tools.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Control Dispatch <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1517959105821-eafc9f7b6d53?q=80&w=1600&auto=format&fit=crop" alt="Fleet vehicles" className="h-48 w-full object-cover" />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Fleet Control</h4>
-                  <p className="text-gray-600 mb-4 flex-grow">Track and manage fleets for industrial logistics and operations efficiently.</p>
-                  <button className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                    Control Fleet <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -700,7 +539,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mobility and Operation</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop" alt="Mobility tracking" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/woman-with-trendy-manicure-using-gps-search-right-way.jpg" alt="Mobility tracking" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Mobility Tracker</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline ride-sharing operations with real-time tracking and user-friendly tools.</p>
@@ -710,7 +549,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1600&auto=format&fit=crop" alt="Cargo containers" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/businessman-hand-press-button-web-link-sign-appears-connection-business-people-social-media.jpg" alt="Cargo containers" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Cargo Monitor</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Manage and optimize fleet operations with analytics and monitoring features.</p>
@@ -720,7 +559,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1532634896-26909d0d3d77?q=80&w=1600&auto=format&fit=crop" alt="Delivery planning" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/cheerful-client-courier-with-clipboard.jpg" alt="Delivery planning" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Delivery Planner</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Ensure timely and efficient order deliveries with smart coordination tools.</p>
@@ -730,7 +569,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1600&auto=format&fit=crop" alt="Client data on mobile" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/close-up-expert-using-tablet-inspect-solar-plant-machinery.jpg" alt="Client data on mobile" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Client Link</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Access and manage client data and interactions seamlessly on the go.</p>
@@ -747,7 +586,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Solutions</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1600&auto=format&fit=crop" alt="AI content creation" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/media-journalism-global-daily-news-content-concept.jpg" alt="AI content creation" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Content Designer</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Generate creative content and ideas with AI-powered tools for businesses.</p>
@@ -757,7 +596,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Visual enhancement" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/person-working-html-computer (1).jpg" alt="Visual enhancement" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Visual Enhancer</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Enhance visuals and create stunning images using advanced AI capabilities.</p>
@@ -767,7 +606,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1555421689-43cad7100754?q=80&w=1600&auto=format&fit=crop" alt="Chatbot UI" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/young-woman-using-mobile-phone-office.jpg" alt="Chatbot UI" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Response Assistant</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Streamline customer communication with intelligent AI-driven chat solutions.</p>
@@ -777,7 +616,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Coding with AI" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/videographer-using-editing-software-vr-glasses-design-montage-movie-production-edit-film-footage-with-visual-effects-computer-working-with-virtual-reality-goggles.jpg" alt="Coding with AI" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Code Assistant</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Boost development efficiency with AI-assisted coding and optimization tools.</p>
@@ -794,7 +633,7 @@ const Products: React.FC = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Security Solutions</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=1600&auto=format&fit=crop" alt="Website security" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/medium-shot-people-working-together.jpg" alt="Website security" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Secure Site</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Protect websites from threats with advanced monitoring and protection tools.</p>
@@ -804,7 +643,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1587202372775-98927b55a0d5?q=80&w=1600&auto=format&fit=crop" alt="Secure data center storage" className="h-48 w-full object-cover" loading="lazy" onError={(e)=>{(e.currentTarget as HTMLImageElement).src='/homepage.png';}} />
+                <img src="/src/assets/images/firewall-antivirus-alert-protection-security-caution-concept.jpg" alt="Secure data center storage" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Safe Storage</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Secure sensitive data with robust encryption and access control measures.</p>
@@ -814,7 +653,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop" alt="Access control" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/standard-quality-control-concept-m (1).jpg" alt="Access control" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Access Control</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Prevent unauthorized access and enhance system security with smart tools.</p>
@@ -824,7 +663,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-                <img src="https://images.unsplash.com/photo-1523289333742-be1143f6b766?q=80&w=1600&auto=format&fit=crop" alt="Secure transactions" className="h-48 w-full object-cover" />
+                <img src="/src/assets/images/close-up-hand-holding-illuminated-light.jpg" alt="Secure transactions" className="h-48 w-full object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Safe Transaction</h4>
                   <p className="text-gray-600 mb-4 flex-grow">Ensure safe and encrypted transactions for seamless business operations.</p>
