@@ -1,6 +1,7 @@
 import React from 'react';
 import { Building2, Users, TrendingUp, Globe, Database, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import powerPlatformImg from '../../assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg';
 
 const EnterpriseApps: React.FC = () => {
   const stats = [
@@ -227,7 +228,7 @@ const EnterpriseApps: React.FC = () => {
             <div className="bg-gradient-to-br from-teal-100 to-gray-100 rounded-3xl p-8">
               <div className="w-full h-80 rounded-2xl overflow-hidden">
                 <img 
-                  src="/src/assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg" 
+                  src={powerPlatformImg} 
                   alt="Microsoft Power Platform"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

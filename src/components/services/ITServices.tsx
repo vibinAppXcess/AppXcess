@@ -1,6 +1,11 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import dataAndAiImg from '../../assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg';
+import customSoftwareImg from '../../assets/images/html-system-websites-concept.jpg';
+import cloudInfrastructureImg from '../../assets/images/cloud-computing-technology-online-data-storage-business-network-concept.jpg';
+import enterpriseSystemsImg from '../../assets/images/enterprise-resource-planning-holographic-interface.jpg';
+import cybersecurityImg from '../../assets/images/standard-quality-control-concept-m.jpg';
 
 const ITServices: React.FC = () => {
   const services = [
@@ -8,37 +13,37 @@ const ITServices: React.FC = () => {
       title: "Data & AI Solutions",
       description: "Transform your business with intelligent data analytics, machine learning, and AI-powered automation. We help you unlock valuable insights from your data to drive strategic decisions and operational efficiency.",
       features: ["Data Engineering", "Machine Learning", "Predictive Analytics", "AI Automation"],
-      image: "/src/assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg"
+      image: dataAndAiImg
     },
     {
       title: "Process Automation",
       description: "Streamline your operations with intelligent automation solutions. From workflow optimization to robotic process automation, we eliminate manual tasks and boost productivity across your organization.",
       features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Integration Solutions"],
-      image: "/src/assets/images/automation-software-technology-process-system-business-concept.jpg"
+      image: 'https://appxcesstesting.s3.amazonaws.com/AppXcess_assets/automation-software-technology-process-system-business-concept.jpg'
     },
     {
       title: "Custom Software Development",
       description: "Build powerful, scalable applications tailored to your unique business requirements. Our expert developers create robust solutions using cutting-edge technologies, modern frameworks, and industry best practices.",
       features: ["Web Applications", "Mobile Apps", "API Development", "System Integration"],
-      image: "/src/assets/images/html-system-websites-concept.jpg"
+      image: customSoftwareImg
     },
     {
       title: "Cloud Infrastructure",
       description: "Leverage the power of cloud computing with our comprehensive cloud services. From migration to optimization, we ensure your infrastructure is secure, scalable, and cost-effective.",
       features: ["Cloud Migration", "Infrastructure Setup", "DevOps Implementation", "Cost Optimization"],
-      image: "/src/assets/images/cloud-computing-technology-online-data-storage-business-network-concept.jpg"
+      image: cloudInfrastructureImg
     },
     {
       title: "Enterprise Systems",
       description: "Implement and customize enterprise-grade applications including ERP, CRM, and business intelligence systems. We ensure seamless integration with your existing workflows.",
       features: ["ERP Implementation", "CRM Solutions", "Business Intelligence", "System Integration"],
-      image: "/src/assets/images/enterprise-resource-planning-holographic-interface.jpg"
+      image: enterpriseSystemsImg
     },
     {
       title: "Cybersecurity & Compliance",
       description: "Protect your digital assets with comprehensive security solutions. Our experts implement multi-layered security measures and ensure compliance with industry standards and regulations.",
       features: ["Security Assessment", "Compliance Management", "Threat Protection", "Security Training"],
-      image: "/src/assets/images/standard-quality-control-concept-m.jpg"
+      image: cybersecurityImg
     }
   ];
 
@@ -76,6 +81,10 @@ const ITServices: React.FC = () => {
                   src={service.image} 
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={600}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>

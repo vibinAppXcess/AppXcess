@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Leaf } from 'lucide-react';
+import controlRoomImg from '../../assets/images/workers-control-room.jpg';
 
 const EnergyUtilities: React.FC = () => {
   return (
@@ -309,7 +310,7 @@ const EnergyUtilities: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/workers-control-room.jpg')"
+                backgroundImage: `url(${controlRoomImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

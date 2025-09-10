@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp } from 'lucide-react';
+import integrateCircuitImg from '../../assets/images/integrate-circuit-links-merge-concept.jpg';
+import digitalAssetsImg from '../../assets/images/digital-assets-finance-money-business-concept.jpg';
+import creativeMonitorImg from '../../assets/images/creative-monitor-tech-digitally-generated-desk.jpg';
 
 const Retail: React.FC = () => {
   return (
@@ -202,7 +205,7 @@ const Retail: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/integrate-circuit-links-merge-concept.jpg')"
+                backgroundImage: `url(${integrateCircuitImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -219,7 +222,7 @@ const Retail: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/digital-assets-finance-money-business-concept.jpg')"
+                backgroundImage: `url(${digitalAssetsImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -236,7 +239,7 @@ const Retail: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/creative-monitor-tech-digitally-generated-desk.jpg')"
+                backgroundImage: `url(${creativeMonitorImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

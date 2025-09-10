@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Brain, LineChart, Database, Settings, Cpu, Eye, MessageSquare, Rocket, Shield, Cloud, Gauge } from 'lucide-react';
+import aiDataAnalyticsImg from '../../assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg';
+import dataAnalysisReportImg from '../../assets/images/data-analysis-marketing-business-report-concept.jpg';
+import bigDataStorageImg from '../../assets/images/big-data-information-storage-system-networking-concept.jpg';
+import globalDataNetworkImg from '../../assets/images/global-data-network-technology-visualization.jpg';
 
 const AIDataScienceML: React.FC = () => {
   const consultingCapabilities = [
@@ -7,29 +11,25 @@ const AIDataScienceML: React.FC = () => {
       title: 'Data strategy consulting',
       description:
         'Get a precise strategy to transform your data into business value, with a clear roadmap prioritizing high-impact initiatives and measurable outcomes. We assess data maturity, align with objectives, and design scalable data architectures.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop'
+      image: aiDataAnalyticsImg
     },
     {
       title: 'Data management',
       description:
         'Build a reliable data foundation that eliminates inconsistencies and ensures data quality. We design pipelines across diverse sources, implement robust transformations, and unify datasets with entity resolution and normalization.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop'
+      image: bigDataStorageImg
     },
     {
       title: 'Predictive modeling and refinement',
       description:
         'Transform historical data into accurate forecasts and decision support. From ensemble learning to deep architectures, we set up rigorous validation and continuous model improvement across business use cases.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop'
+      image: dataAnalysisReportImg
     },
     {
       title: 'AI and ML integration',
       description:
         'Optimize the data science lifecycle with automation—from preparation and exploration to deployment and monitoring. We evaluate AI readiness, identify high-impact use cases, and embed automation and governance end-to-end.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop'
+      image: globalDataNetworkImg
     }
   ];
 

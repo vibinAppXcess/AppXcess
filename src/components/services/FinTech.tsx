@@ -1,5 +1,8 @@
 import React from 'react';
 import { ArrowRight, CreditCard, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Zap } from 'lucide-react';
+import fintechConceptImg from '../../assets/images/fintech-investment-financial-internet-technology-concept.jpg';
+import aiBigDataImg from '../../assets/images/341592e1-35df-4738-bd56-6ad74c0daf8c.jpg';
+import blockchainTechImg from '../../assets/images/3d-rendering-blockchain-technology.jpg';
 
 const FinTech: React.FC = () => {
   return (
@@ -219,7 +222,7 @@ const FinTech: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/fintech-investment-financial-internet-technology-concept.jpg')"
+                backgroundImage: `url(${fintechConceptImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -236,7 +239,7 @@ const FinTech: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/341592e1-35df-4738-bd56-6ad74c0daf8c.jpg')"
+                backgroundImage: `url(${aiBigDataImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -253,7 +256,7 @@ const FinTech: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/3d-rendering-blockchain-technology.jpg')"
+                backgroundImage: `url(${blockchainTechImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

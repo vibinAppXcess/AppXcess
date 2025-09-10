@@ -6,20 +6,16 @@ import {
   Shield, 
   FileText, 
   TrendingUp, 
-  Globe, 
   MessageSquare, 
   Monitor, 
-  Clock, 
-  Zap,
   CheckCircle,
   ArrowRight,
-  Star,
   Award,
   BarChart3,
   Target,
-  Lightbulb,
-  Rocket
+  
 } from 'lucide-react';
+import aiAgentsHeroImg from '../../assets/images/man-robot-working-together-high-tech-office.jpg';
 
 const AIAgents: React.FC = () => {
   const aiAgents = [
@@ -84,7 +80,7 @@ const AIAgents: React.FC = () => {
       description: "Smooth transition from AI to human support when needed"
     },
     {
-      title: "Contextual understanding",
+      title: "Contextual",
       description: "Deep comprehension of conversation context and history"
     },
     {
@@ -96,17 +92,12 @@ const AIAgents: React.FC = () => {
       description: "Instant processing and insights from live data streams"
     },
     {
-      title: "Secure AI adoption framework strategy",
-      description: "Enterprise-grade security for AI implementation"
+      title: "Secure AI strategy",
+      description: "Enterprise-grade security and compliance for AI implementation"
     }
   ];
 
-  const achievements = [
-    { number: "10M+", label: "lines of codes" },
-    { number: "2400+", label: "projects completed" },
-    { number: "900+", label: "satisfied clients" },
-    { number: "16+", label: "countries served" }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -152,7 +143,7 @@ const AIAgents: React.FC = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 h-[420px] flex items-center justify-center overflow-hidden">
                 <img
-                  src="/src/assets/images/man-robot-working-together-high-tech-office.jpg"
+                  src={aiAgentsHeroImg}
                   alt="AI Agents Technology"
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                 />

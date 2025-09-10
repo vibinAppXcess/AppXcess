@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Wifi, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Zap, Cloud } from 'lucide-react';
+import telecomTowersImg from '../../assets/images/telecommunication-towers-sunset-with-stunning-city-skyline.jpg';
+import globalDataNetworkImg from '../../assets/images/global-data-network-technology-visualization.jpg';
+import bigDataStorageImg from '../../assets/images/big-data-information-storage-system-networking-concept.jpg';
+import businessReportImg from '../../assets/images/data-analysis-marketing-business-report-concept.jpg';
 
 const Telecommunications: React.FC = () => {
   return (
@@ -10,7 +14,7 @@ const Telecommunications: React.FC = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{
-          backgroundImage: "url('/src/assets/images/telecommunication-towers-sunset-with-stunning-city-skyline.jpg')",
+          backgroundImage: `url(${telecomTowersImg})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}></div>
@@ -274,7 +278,7 @@ const Telecommunications: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/global-data-network-technology-visualization.jpg')"
+                backgroundImage: `url(${globalDataNetworkImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -291,7 +295,7 @@ const Telecommunications: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/big-data-information-storage-system-networking-concept.jpg')"
+                backgroundImage: `url(${bigDataStorageImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -308,7 +312,7 @@ const Telecommunications: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow:hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/data-analysis-marketing-business-report-concept.jpg')"
+                backgroundImage: `url(${businessReportImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

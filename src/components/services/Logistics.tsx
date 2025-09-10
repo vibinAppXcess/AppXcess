@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Truck, MapPin, Clock, CheckCircle } from 'lucide-react';
+import industry40Img from '../../assets/images/industry-4-0-technology-concept-smart-factory-fourth-industrial-revolution.jpg';
+import smartTransportImg from '../../assets/images/smart-transport-technology-concept-future-car-traffic-newish-city-road.jpg';
+import vrWarehouseImg from '../../assets/images/future-virtual-reality-technology-innovative-vr-warehouse-management.jpg';
 
 const Logistics: React.FC = () => {
   return (
@@ -298,7 +301,7 @@ const Logistics: React.FC = () => {
                      <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/industry-4-0-technology-concept-smart-factory-fourth-industrial-revolution.jpg')"
+                backgroundImage: `url(${industry40Img})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -315,7 +318,7 @@ const Logistics: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/smart-transport-technology-concept-future-car-traffic-newish-city-road.jpg')"
+                backgroundImage: `url(${smartTransportImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -332,7 +335,7 @@ const Logistics: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/future-virtual-reality-technology-innovative-vr-warehouse-management.jpg')"
+                backgroundImage: `url(${vrWarehouseImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

@@ -7,28 +7,20 @@ import {
   Zap, 
   Users, 
   Shield, 
-  TrendingUp, 
   Globe, 
   BarChart3, 
   Target, 
-  Lightbulb, 
   Rocket,
   ArrowRight,
   CheckCircle,
-  Star,
-  Award,
   Cpu,
   Database,
   Monitor,
-  FileText,
-  Camera,
-  Mic,
-  Search,
-  Layers,
   Code,
   Settings,
   ShoppingBag
 } from 'lucide-react';
+import multimediaWallImg from '../../assets/images/tech-savvy-professional-navigating-advanced-visual-display-multimedia-content-interactive-digital-data-wall.jpg';
 
 const ComputerVisionNLP: React.FC = () => {
   const services = [
@@ -269,7 +261,7 @@ const ComputerVisionNLP: React.FC = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={multimediaWallImg}
                   alt="Computer Vision & NLP Technology"
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                 />

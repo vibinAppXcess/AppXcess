@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Zap, Home } from 'lucide-react';
+import { ArrowRight, Building, BarChart3, Users, TrendingUp, Shield, Activity, Home } from 'lucide-react';
+import arDailyOccupationImg from '../../assets/images/person-using-ar-technology-their-daily-occupation.jpg';
+import fiveGTechImg from '../../assets/images/5g-communication-technology-internet-network.jpg';
+import environmentProjectImg from '../../assets/images/colleagues-working-together-environment-project.jpg';
 
 const RealEstateConstruction: React.FC = () => {
   return (
@@ -273,7 +276,7 @@ const RealEstateConstruction: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/person-using-ar-technology-their-daily-occupation.jpg')"
+                backgroundImage: `url(${arDailyOccupationImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -290,7 +293,7 @@ const RealEstateConstruction: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/5g-communication-technology-internet-network.jpg')"
+                backgroundImage: `url(${fiveGTechImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -307,7 +310,7 @@ const RealEstateConstruction: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/colleagues-working-together-environment-project.jpg')"
+                backgroundImage: `url(${environmentProjectImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

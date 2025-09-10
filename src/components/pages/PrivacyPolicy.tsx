@@ -23,12 +23,7 @@ const PrivacyPolicy: React.FC = () => {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight">
-              <span className="block text-white">
-                Privacy
-              </span>
-              <span className="block text-white">
-                Policy
-              </span>
+              <span className="block text-white whitespace-nowrap">Privacy Policy</span>
             </h1>
             
             {/* Subtitle */}

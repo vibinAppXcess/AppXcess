@@ -132,7 +132,7 @@ export default function HorizontalScroll() {
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div
             className={`flex h-full w-[${totalCards * 100}vw]`}
-            style={{ x }}
+            style={{ x, willChange: "transform" }}
           >
             {cards.map((card, index) => (
               <div
@@ -147,6 +147,10 @@ export default function HorizontalScroll() {
                   src={card.image}
                   alt={card.title}
                   className="w-64 h-64 object-cover rounded-2xl shadow-xl mb-6"
+                  loading="lazy"
+                  decoding="async"
+                  width={500}
+                  height={500}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}

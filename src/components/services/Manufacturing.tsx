@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, Cpu, BarChart3, CheckCircle, Play } from 'lucide-react';
+import robotDeliveryImg from '../../assets/images/close-up-anthropomorphic-robot-working-as-delivery-man.jpg';
+import esgPlantImg from '../../assets/images/business-partnership-leader-gather-nurture-young-seedling-plant-with-esg-icons-symbolizing-corporate-unity-commitment-environmental-protection-natural-preservation-reliance.jpg';
+import analyticsScreenImg from '../../assets/images/computer-software-website-traffic-analytics-data-computer-screen-snugly.jpg';
 
 const Manufacturing: React.FC = () => {
   return (
@@ -190,7 +193,7 @@ const Manufacturing: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/close-up-anthropomorphic-robot-working-as-delivery-man.jpg')"
+                backgroundImage: `url(${robotDeliveryImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -207,7 +210,7 @@ const Manufacturing: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/business-partnership-leader-gather-nurture-young-seedling-plant-with-esg-icons-symbolizing-corporate-unity-commitment-environmental-protection-natural-preservation-reliance.jpg')"
+                backgroundImage: `url(${esgPlantImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -224,7 +227,7 @@ const Manufacturing: React.FC = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
               <div className="h-48 bg-cover bg-center" style={{
-                backgroundImage: "url('/src/assets/images/computer-software-website-traffic-analytics-data-computer-screen-snugly.jpg')"
+                backgroundImage: `url(${analyticsScreenImg})`
               }}></div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

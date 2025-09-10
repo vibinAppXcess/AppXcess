@@ -1,6 +1,9 @@
 import React from 'react';
 import { ArrowRight, Heart, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import doctorVirtualAppImg from '../../assets/images/doctor-using-virtual-application.jpg';
+import physicianSeminarImg from '../../assets/images/mature-medical-physician-explaining-treatment-nurses-healthcare-seminar-pointing-digital-monitor-clinic-herapist-discussing-with-colleagues-about-disease-medicine-professional.jpg';
+import teamworkConsultingImg from '../../assets/images/teamwork-consulting-doctors-with-patient-hospital-meeting-help-assistance-healthcare-documents-data-charts-woman-consultation-with-medical-workers-vaccine-information.jpg';
 
 const Healthcare: React.FC = () => {
   return (

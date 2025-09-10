@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Video, BarChart3, Code, Users, CheckCircle, Play, TrendingUp } from 'lucide-react';
+import groupPeopleImg from '../../assets/images/group-people-sitting-around-table-front-camera.jpg';
+import aiMlBusinessImg from '../../assets/images/artificial-intelligence-machine-learning-business-internet-technology-concept.jpg';
+import multimediaWallImg from '../../assets/images/tech-savvy-professional-navigating-advanced-visual-display-multimedia-content-interactive-digital-data-wall.jpg';
+import analystTeamImg from '../../assets/images/wide-top-view-diverse-analyst-team-analyzing-financial-data-meticulous.jpg';
 
 const Media: React.FC = () => {
   return (
@@ -10,7 +14,7 @@ const Media: React.FC = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{
-          backgroundImage: "url('/src/assets/images/group-people-sitting-around-table-front-camera.jpg')",
+          backgroundImage: `url(${groupPeopleImg})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}></div>
@@ -152,40 +156,40 @@ const Media: React.FC = () => {
             </p>
           </div>
           
-                     <div className="grid lg:grid-cols-3 gap-8">
-             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                 <Video className="w-8 h-8 text-custom-teal" />
-               </div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Creation</h3>
-               <p className="text-gray-600 mb-6 flex-grow">
-                 Advanced tools for content creation, editing, and management with AI-powered automation and collaborative workflows.
-               </p>
-              
-             </div>
+                 <div className="grid lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <Video className="w-8 h-8 text-custom-teal" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Creation</h3>
+              <p className="text-gray-600 mb-6 flex-grow">
+                Advanced tools for content creation, editing, and management with AI-powered automation and collaborative workflows.
+              </p>
+             
+            </div>
 
-             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
-                 <BarChart3 className="w-8 h-8 text-custom-teal" />
-               </div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
-               <p className="text-gray-600 mb-6 flex-grow">
-                 Data-driven analytics to understand audience behavior, optimize content performance, and maximize engagement.
-               </p>
-              
-             </div>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
+                <BarChart3 className="w-8 h-8 text-custom-teal" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
+              <p className="text-gray-600 mb-6 flex-grow">
+                Data-driven analytics to understand audience behavior, optimize content performance, and maximize engagement.
+              </p>
+             
+            </div>
 
-             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
-                 <Users className="w-8 h-8 text-custom-teal" />
-               </div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Audience Engagement</h3>
-               <p className="text-gray-600 mb-6 flex-grow">
-                 Personalized content recommendations and interactive features to enhance viewer engagement and retention.
-               </p>
-              
-             </div>
-          </div>
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
+                <Users className="w-8 h-8 text-custom-teal" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Audience Engagement</h3>
+              <p className="text-gray-600 mb-6 flex-grow">
+                Personalized content recommendations and interactive features to enhance viewer engagement and retention.
+              </p>
+             
+            </div>
+         </div>
         </div>
       </section>
 
@@ -253,65 +257,65 @@ const Media: React.FC = () => {
             </p>
           </div>
 
-                     <div className="grid md:grid-cols-3 gap-8">
-             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('/src/assets/images/artificial-intelligence-machine-learning-business-internet-technology-concept.jpg')"
-               }}></div>
-               <div className="p-6 flex flex-col flex-grow">
-                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                   Revolutionizing Content Creation with AI
-                 </h3>
-                 <p className="text-gray-600 mb-4 flex-grow">
-                   Discover how artificial intelligence is transforming content creation processes and enhancing creative workflows in the media industry.
-                 </p>
-                <a href="/Blog/Media-Content-AI" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                  Read More <ArrowRight className="w-4 h-4" />
-                </a>
-               </div>
-             </div>
+                 <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="h-48 bg-cover bg-center" style={{
+                backgroundImage: `url(${aiMlBusinessImg})`
+              }}></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Revolutionizing Content Creation with AI
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow">
+                  Discover how artificial intelligence is transforming content creation processes and enhancing creative workflows in the media industry.
+                </p>
+               <a href="/Blog/Media-Content-AI" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                 Read More <ArrowRight className="w-4 h-4" />
+               </a>
+              </div>
+            </div>
 
-             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('/src/assets/images/tech-savvy-professional-navigating-advanced-visual-display-multimedia-content-interactive-digital-data-wall.jpg')"
-               }}></div>
-               <div className="p-6 flex flex-col flex-grow">
-                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                   The Rise of Immersive Media Experiences
-                 </h3>
-                 <p className="text-gray-600 mb-4 flex-grow">
-                   Explore the latest trends in virtual reality, augmented reality, and immersive storytelling that are reshaping media consumption. for modern audiences.
-                 </p>
-                <a href="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                  Read More <ArrowRight className="w-4 h-4" />
-                </a>
-               </div>
-             </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="h-48 bg-cover bg-center" style={{
+                backgroundImage: `url(${multimediaWallImg})`
+              }}></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  The Rise of Immersive Media Experiences
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow">
+                  Explore the latest trends in virtual reality, augmented reality, and immersive storytelling that are reshaping media consumption. for modern audiences.
+                </p>
+               <a href="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                 Read More <ArrowRight className="w-4 h-4" />
+               </a>
+              </div>
+            </div>
 
-             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-               <div className="h-48 bg-cover bg-center" style={{
-                 backgroundImage: "url('/src/assets/images/wide-top-view-diverse-analyst-team-analyzing-financial-data-meticulous.jpg')"
-               }}></div>
-               <div className="p-6 flex flex-col flex-grow">
-                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                   Data-Driven Strategies in Media Distribution
-                 </h3>
-                 <p className="text-gray-600 mb-4 flex-grow">
-                   Learn how data analytics and machine learning are optimizing content distribution and audience targeting strategies. for modern audiences.
-                 </p>
-                <a href="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
-                  Read More <ArrowRight className="w-4 h-4" />
-                </a>
-               </div>
-             </div>
-          </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
+              <div className="h-48 bg-cover bg-center" style={{
+                backgroundImage: `url(${analystTeamImg})`
+              }}></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Data-Driven Strategies in Media Distribution
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow">
+                  Learn how data analytics and machine learning are optimizing content distribution and audience targeting strategies. for modern audiences.
+                </p>
+               <a href="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                 Read More <ArrowRight className="w-4 h-4" />
+               </a>
+              </div>
+            </div>
+         </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-custom-blue to-custom-teal text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{
-          backgroundImage: "url('/src/assets/images/group-people-sitting-around-table-front-camera.jpg')"
+          backgroundImage: `url(${groupPeopleImg})`
         }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">

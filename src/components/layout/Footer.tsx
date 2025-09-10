@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const services = [
     "Data & AI",
     "Automation & Workflow", 
-    "Software Development & Cloud",
+    "Software Development",
     "Enterprise Applications",
     "Cybersecurity & IT Security"
   ];
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                   case "Automation & Workflow":
                     href = "/Automation";
                     break;
-                  case "Software Development & Cloud":
+                  case "Software Development":
                     href = "/Software-Cloud";
                     break;
                   case "Enterprise Applications":
