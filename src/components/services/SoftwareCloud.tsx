@@ -323,11 +323,6 @@ const SoftwareCloud: React.FC = () => {
             <p className="text-teal-100 mb-8 max-w-3xl mx-auto">
               Unlock the future with AppXcess. Discover seamless development and innovation with our software and cloud solutions.
             </p>
-            <Link to="/Contact">
-              <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg">
-                Reach Out Now!
-              </button>
-            </Link>
           </div>
         </div>
       </section>

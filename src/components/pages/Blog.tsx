@@ -31,7 +31,7 @@ const Blog: React.FC = () => {
         setAllPosts(Array.isArray(allData) ? allData : []);
       } catch (err) {
         console.error('Error fetching posts:', err);
-        setError(err instanceof Error ? err.message : 'Failed to fetch posts');
+        setError('No blog posts available at the moment');
         // Set empty arrays on error
         setRecentPosts([]);
         setAllPosts([]);
@@ -170,7 +170,7 @@ const Blog: React.FC = () => {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <p className="text-red-600 mb-4">Error: {error}</p>
+          <p className="text-gray-500 text-lg mb-4">No blog found</p>
           <button 
             onClick={() => window.location.reload()} 
             className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700"

@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Global Presence</h3>
-                <p className="text-gray-600 text-sm">Malaysia - India - Australia - Singapore</p>
+                <p className="text-gray-600 text-sm">Malaysia - India - Australia - Singapore - USA</p>
               </div>
               
               <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-300 group">
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Expert Team</h3>
-                <p className="text-gray-600 text-sm">Dedicated professionals ready to help</p>
+                <p className="text-gray-600 text-sm">Dedicated professionals ready to help you</p>
               </div>
             </div>
           </div>
@@ -438,16 +438,6 @@ const Contact: React.FC = () => {
           <p className="text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
             Revolutionize your approach with customized solutions built for your needs. Let's discuss how we can help you achieve your goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-custom-teal px-12 py-6 rounded-xl text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
-              Get Started
-              <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="border-2 border-white/50 text-white px-12 py-6 rounded-xl text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-              <MessageSquare className="w-6 h-6" />
-              Learn More
-            </button>
-          </div>
         </div>
       </section>
     </div>

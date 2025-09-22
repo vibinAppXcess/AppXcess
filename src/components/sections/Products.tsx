@@ -80,13 +80,12 @@ const Products: React.FC = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <button className="group bg-white text-custom-teal px-12 py-6 rounded-xl text-xl font-bold flex items-center gap-4 transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-2xl">
+              <button 
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group bg-white text-custom-teal px-12 py-6 rounded-xl text-xl font-bold flex items-center gap-4 transition-all duration-300 hover:bg-gray-100 hover:scale-105 shadow-2xl"
+              >
                 <span>Explore Products</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-              </button>
-              <button className="group border-2 border-teal-600 text-teal-600 px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300 flex items-center gap-4 hover:bg-teal-600 hover:text-white hover:scale-105 backdrop-blur-sm">
-                <Play className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                <span>Watch Demo</span>
               </button>
             </div>
             
@@ -236,7 +235,7 @@ const Products: React.FC = () => {
       {/* Comprehensive Product Categories */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div id="portfolio" className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
               Complete Product
               <span className="block text-custom-teal">Portfolio</span>

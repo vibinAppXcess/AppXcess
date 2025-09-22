@@ -126,7 +126,7 @@ const Retail: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-custom-teal rounded-lg flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="w-6 h-6 text:white" />
+                    <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Understanding Trends</h3>
@@ -149,7 +149,7 @@ const Retail: React.FC = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-custom-teal rounded-lg flex items:center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-custom-teal rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -270,7 +270,7 @@ const Retail: React.FC = () => {
             Revolutionize your approach with customized solutions built for your retail needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/About" className="bg:white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <Link to="/About" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2">
               Learn More About Us
               <ArrowRight className="w-5 h-5" />
             </Link>

@@ -26,12 +26,6 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/Contact"
-                className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors inline-flex items-center justify-center"
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
         </div>
@@ -357,12 +351,6 @@ const LowCodeNoCodeDevelopment: React.FC = () => {
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              to="/Contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors inline-flex items-center justify-center"
-            >
-              Contact Us
             </Link>
           </div>
         </div>

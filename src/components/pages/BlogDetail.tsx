@@ -18,7 +18,7 @@ const BlogDetail: React.FC = () => {
         const post = await blogService.getPostBySlug(slug);
         setBlogPost(post);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to fetch blog post');
+        setError('Blog post not found');
       } finally {
         setLoading(false);
       }

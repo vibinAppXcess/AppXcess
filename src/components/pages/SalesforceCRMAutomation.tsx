@@ -154,19 +154,11 @@ const SalesforceCRMAutomation: React.FC = () => {
 
       {/* CTA - split panel with brand colors */}
       <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-6 items-stretch">
-          <div className="rounded-2xl p-8 bg-custom-blue text-white">
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl rounded-2xl p-8 bg-custom-blue text-white text-center">
             <h3 className="text-2xl font-bold">Ready to modernize CRM?</h3>
             <p className="mt-2 text-teal-100">Talk to our certified experts and get a tailored Salesforce roadmap.</p>
             <a href="/Contact/" className="mt-6 inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an Expert</a>
-          </div>
-          <div className="rounded-2xl p-8 bg-white border border-custom-teal/30">
-            <h3 className="text-2xl font-bold text-custom-blue">Automate with confidence</h3>
-            <p className="mt-2 text-gray-700">From quick wins to enterprise-wide programs, we help you reduce manual work and scale reliably.</p>
-            <div className="mt-6 flex gap-3">
-              <a href="/Contact/" className="btn-primary">Get Free Consultation</a>
-              <a href="/About/" className="btn-secondary">Learn More</a>
-            </div>
           </div>
         </div>
       </section>

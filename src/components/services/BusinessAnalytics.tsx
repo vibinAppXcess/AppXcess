@@ -66,7 +66,6 @@ const BusinessAnalytics: React.FC = () => {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a href="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an expert</a>
-                <a href="/AI-Data-Science-ML/" className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-700 transition-colors">Explore AI & ML</a>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">

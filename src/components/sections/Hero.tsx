@@ -76,8 +76,10 @@ const Hero: React.FC = () => {
     setActiveButton(buttonType);
     setTimeout(() => setActiveButton(null), 300);
     
-    if (buttonType === 'contact' || buttonType === 'learn') {
+    if (buttonType === 'contact') {
       navigate('/Contact');
+    } else if (buttonType === 'about') {
+      navigate('/About');
     }
   };
 
@@ -248,12 +250,12 @@ const Hero: React.FC = () => {
               <Button
                 variant="primary"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
-                className={activeButton === 'learn' ? 'scale-95' : ''}
-                onClick={() => handleButtonClick('learn')}
-                onMouseEnter={() => setActiveButton('learn')}
+                className={activeButton === 'about' ? 'scale-95' : ''}
+                onClick={() => handleButtonClick('about')}
+                onMouseEnter={() => setActiveButton('about')}
                 onMouseLeave={() => setActiveButton(null)}
               >
-                Learn More
+                About Us
               </Button>
               <Button
                 variant="outline"

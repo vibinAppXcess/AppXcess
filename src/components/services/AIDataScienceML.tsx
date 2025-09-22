@@ -100,9 +100,6 @@ const AIDataScienceML: React.FC = () => {
                 <a href="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
                   Talk to an expert
                 </a>
-                <a href="/Data-AI/" className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-700 transition-colors">
-                  Explore Data & AI
-                </a>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">

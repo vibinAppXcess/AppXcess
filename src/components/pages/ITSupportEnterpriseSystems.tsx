@@ -26,12 +26,6 @@ const ITSupportEnterpriseSystems: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/Contact"
-                className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors inline-flex items-center justify-center"
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
         </div>
@@ -368,13 +362,6 @@ const ITSupportEnterpriseSystems: React.FC = () => {
             Partner with <strong>AppXcess</strong> for reliable IT Support & Enterprise Systems that ensure your technology drives results—without disruptions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/Contact"
-              className="bg-white text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-            >
-              Contact Us Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
             <Link
               to="/Contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors inline-flex items-center justify-center"

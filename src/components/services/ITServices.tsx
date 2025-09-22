@@ -6,6 +6,7 @@ import customSoftwareImg from '../../assets/images/html-system-websites-concept.
 import cloudInfrastructureImg from '../../assets/images/cloud-computing-technology-online-data-storage-business-network-concept.jpg';
 import enterpriseSystemsImg from '../../assets/images/enterprise-resource-planning-holographic-interface.jpg';
 import cybersecurityImg from '../../assets/images/standard-quality-control-concept-m.jpg';
+import processAutomation from '../../assets/images/automation-software-technology-process-system-business-concept.jpg';
 
 const ITServices: React.FC = () => {
   const services = [
@@ -19,7 +20,7 @@ const ITServices: React.FC = () => {
       title: "Process Automation",
       description: "Streamline your operations with intelligent automation solutions. From workflow optimization to robotic process automation, we eliminate manual tasks and boost productivity across your organization.",
       features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Integration Solutions"],
-      image: 'https://appxcesstesting.s3.amazonaws.com/AppXcess_assets/automation-software-technology-process-system-business-concept.jpg'
+      image: processAutomation
     },
     {
       title: "Custom Software Development",

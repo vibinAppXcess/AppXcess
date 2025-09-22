@@ -169,7 +169,7 @@ const Media: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                 <BarChart3 className="w-8 h-8 text-custom-teal" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Insights</h3>
@@ -180,7 +180,7 @@ const Media: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items:center justify-center mb-6">
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-custom-teal" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Audience Engagement</h3>
@@ -217,10 +217,10 @@ const Media: React.FC = () => {
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                How does AppXcess ensure content security?
+                How does AppXcess ensure comprehensive content security?
               </h3>
               <p className="text-gray-600">
-                We implement advanced encryption and secure cloud platforms to safeguard intellectual property and sensitive content with enterprise-grade security measures.
+                We implement advanced encryption and secure cloud platforms to safeguard intellectual property and sensitive content with enterprise-grade security measures and comprehensive monitoring systems.
               </p>
             </div>
 

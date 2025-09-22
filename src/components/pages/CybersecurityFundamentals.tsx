@@ -29,13 +29,6 @@ const CybersecurityFundamentals: React.FC = () => {
                 Talk to Security Experts
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="#pillars"
-                className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors inline-flex items-center"
-              >
-                Explore the Pillars
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   Users, Target, CheckCircle, ArrowRight, Mail, MapPin, Phone, 
   Facebook, Instagram, Twitter, Linkedin, ChevronRight,
@@ -8,6 +9,7 @@ import {
 
 const Careers: React.FC = () => {
   const [activeBenefit, setActiveBenefit] = useState(0);
+  const navigate = useNavigate();
 
   const benefits = [
     { 
@@ -110,7 +112,10 @@ const Careers: React.FC = () => {
               Be a part of AppXcess, where innovation meets opportunity. Explore roles that shape the future of technology.
             </p>
             <div className="pt-8">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 group shadow-lg">
+              <button 
+                onClick={() => navigate('/Contact')}
+                className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-8 py-4 rounded-xl font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 group shadow-lg"
+              >
                 <span className="flex items-center space-x-2">
                   <span>Know More</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -142,7 +147,7 @@ const Careers: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cultureValues.map((value, index) => (
               <div key={index} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-6">
                   {React.cloneElement(value.icon, { className: "text-teal-600" })}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
