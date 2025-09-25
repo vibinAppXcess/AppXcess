@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Microsoft365PowerPlatform: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const Microsoft365PowerPlatform: React.FC = () => {
             <p className="mt-4 text-white/90 text-lg">Accelerate digital transformation with Microsoft 365 and Power Platform consulting from AppXcess.</p>
             <p className="mt-3 text-white/80">We help enterprises harness the full potential of Microsoft 365 and Power Platform to improve collaboration, boost productivity, and automate business workflows. From cloud migration to custom app development and workflow automation, our experts ensure your business runs smarter, faster, and more securely.</p>
             <div className="mt-8">
-              <a href="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-custom-teal/10 transition-colors">Get Started</a>
+              <Link to="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Get Started</Link>
             </div>
           </div>
         </div>
@@ -155,7 +156,7 @@ const Microsoft365PowerPlatform: React.FC = () => {
               <p className="mt-2 text-white/80">Modernize business systems, streamline processes, and achieve digital excellence with AppXcess.</p>
             </div>
             <div className="mt-6 md:mt-0">
-              <a href="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-custom-teal/10 transition-colors">Get Started Today</a>
+              <Link to="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Get Started Today</Link>
             </div>
           </div>
         </div>

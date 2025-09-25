@@ -13,12 +13,30 @@ const FAQ: React.FC = () => {
       answer:
         'AppXcess specializes in IT services and engineering including mobile application development, backend development, UI/UX design, DevOps solutions, quality assurance and testing, and support and maintenance.'
     },
-    { question: 'How can I get started with AppXcess?', answer: '' },
-    { question: 'Does AppXcess provide post-launch support?', answer: '' },
-    { question: 'Can AppXcess handle enterprise-level projects?', answer: '' },
-    { question: 'How do I join the AppXcess team?', answer: '' },
-    { question: 'Does AppXcess work with international clients?', answer: '' },
-    { question: 'What technologies does AppXcess use?', answer: '' }
+    { 
+      question: 'How can I get started with AppXcess?', 
+      answer: 'Getting started with AppXcess is simple! You can reach out to us through our contact form, schedule a consultation call, or email us directly. We\'ll discuss your project requirements, timeline, and budget to create a customized solution that meets your needs. Our team will guide you through every step of the process, from initial consultation to project completion.' 
+    },
+    { 
+      question: 'Does AppXcess provide post-launch support?', 
+      answer: 'Yes, absolutely! AppXcess provides comprehensive post-launch support and maintenance services. This includes bug fixes, performance monitoring, security updates, feature enhancements, and technical support. We offer flexible support packages ranging from basic maintenance to 24/7 dedicated support, ensuring your application continues to perform optimally long after launch.' 
+    },
+    { 
+      question: 'Can AppXcess handle enterprise-level projects?', 
+      answer: 'Definitely! AppXcess specializes in enterprise-level projects and has extensive experience working with large organizations. We have the expertise, resources, and scalable infrastructure to handle complex enterprise requirements including security compliance, integration with existing systems, high availability, and performance optimization. Our team follows enterprise-grade development practices and security standards.' 
+    },
+    { 
+      question: 'How do I join the AppXcess team?', 
+      answer: 'We\'re always looking for talented individuals to join our growing team! Visit our Careers page to view current job openings and submit your application. You can also send your resume directly to our HR team. We value diversity, innovation, and passion for technology. Join us in creating cutting-edge solutions and advancing your career in the tech industry.' 
+    },
+    { 
+      question: 'Does AppXcess work with international clients?', 
+      answer: 'Yes, AppXcess works with clients worldwide! We have experience serving international clients across different time zones and cultural contexts. Our team is equipped to handle global projects with flexible communication schedules, multi-language support, and understanding of international business requirements. We\'ve successfully delivered projects for clients in North America, Europe, Asia, and other regions.' 
+    },
+    { 
+      question: 'What technologies does AppXcess use?', 
+      answer: 'AppXcess uses a wide range of cutting-edge technologies including React, Node.js, Python, Java, .NET, AWS, Azure, Docker, Kubernetes, and more. We stay current with the latest frameworks and tools in mobile development (React Native, Flutter), web development (React, Vue.js, Angular), cloud platforms (AWS, Azure, GCP), AI/ML technologies, and DevOps tools. Our technology stack is chosen based on project requirements and best practices.' 
+    }
   ];
 
   const [faqs, setFaqs] = useState<{ question: string; answer: string; category?: string }[]>(defaultFaqs);

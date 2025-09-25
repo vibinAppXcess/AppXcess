@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -13,50 +13,35 @@ import {
   ArrowRight,
   Award,
   BarChart3,
-  Target,
   Zap, 
   Database, 
   Cloud, 
   Settings, 
   Workflow, 
-  Cpu, 
   Globe, 
   Lock, 
   Activity, 
-  Layers, 
   Bot, 
   Sparkles, 
   Server, 
-  Network, 
   Code2, 
   GitBranch, 
   Rocket,
-  PencilLine
+  Heart,
+  Star,
+  Building2,
+  CreditCard,
+  Camera,
+  UserCheck,
+  BookOpen,
+  Calendar
 } from 'lucide-react';
-import aiAgentsHeroImg from '../../assets/images/man-robot-working-together-high-tech-office.jpg';
 
-// TimelineContent Component
-const TimelineContent = ({ as: Component, animationNum, timelineRef, customVariants, className, children, ...props }) => {
-  return (
-    <motion.div
-      ref={timelineRef}
-      variants={customVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      custom={animationNum}
-      className={className}
-      {...props}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 // Parallax Components
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+const TextParallaxContent = ({ imgUrl, subheading, heading, children }: any) => {
   return (
     <div
       style={{
@@ -73,7 +58,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   );
 };
 
-const StickyImage = ({ imgUrl }) => {
+const StickyImage = ({ imgUrl }: any) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -106,7 +91,7 @@ const StickyImage = ({ imgUrl }) => {
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
+const OverlayCopy = ({ subheading, heading }: any) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -133,28 +118,6 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-const ExampleContent = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      Additional content explaining the above card here
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
-      </p>
-      <Link to="/Contact/" className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit inline-flex items-center gap-2">
-        Learn more <ArrowRight className="inline" />
-      </Link>
-    </div>
-  </div>
-);
 
 // Bouncy Cards Components
 const BouncyCardsFeatures = () => {
@@ -227,7 +190,7 @@ const BouncyCardsFeatures = () => {
   );
 };
 
-const BounceCard = ({ className, children }) => {
+const BounceCard = ({ className, children }: any) => {
   return (
     <motion.div
       whileHover={{ scale: 0.95, rotate: "-1deg" }}
@@ -238,167 +201,109 @@ const BounceCard = ({ className, children }) => {
   );
 };
 
-const CardTitle = ({ children }) => {
+const CardTitle = ({ children }: any) => {
   return (
     <h3 className="mx-auto text-center text-3xl font-semibold">{children}</h3>
   );
 };
 
 const AIAgents: React.FC = () => {
-  const aiAgents = [
+  // Carousel state for AI chatbot services
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  
+  // AI Chatbot Services Data
+  const aiChatbotServices = [
     {
-      icon: <Users className="h-12 w-12 text-teal-600" />,
-      title: "Customer Experience Agent",
-      description: "Revolutionary 24/7 customer support that goes beyond simple Q&A. Our CX Agent understands context, emotions, and intent to deliver personalized experiences that build lasting relationships. Integrated with your CRM, it provides real-time insights and seamless handoffs to human agents when needed.",
-      features: [
-        "Multi-channel support (chat, voice, email, social)",
-        "Emotional intelligence & sentiment analysis", 
-        "Proactive customer outreach",
-        "Real-time CRM integration",
-        "Conversation analytics & insights",
-        "Seamless human escalation"
-      ]
+      id: 1,
+      title: "AI Consulting",
+      description: "Custom AI implementation strategy and architecture to align with business goals and compliance requirements.",
+      number: "01"
     },
     {
-      icon: <Monitor className="h-12 w-12 text-teal-600" />,
-      title: "IT Operations Agent",
-      description: "Your intelligent IT guardian that never sleeps. This agent continuously monitors your infrastructure, predicts issues before they occur, and automatically resolves common problems. It learns from every incident, improving its response time and accuracy with each interaction.",
-      features: [
-        "Predictive incident management", 
-        "Automated root cause analysis", 
-        "Self-healing infrastructure",
-        "Performance optimization",
-        "Security threat detection",
-        "Integration with ITSM tools"
-      ]
+      id: 2,
+      title: "Research & Discovery",
+      description: "Define clear product vision and roadmap backed by market, user, and technical insights.",
+      number: "02"
     },
     {
-      icon: <Shield className="h-12 w-12 text-teal-600" />,
-      title: "Security Operations Agent",
-      description: "Advanced cybersecurity guardian that protects your organization 24/7. This agent monitors AI tool usage, detects anomalies, enforces security policies, and ensures compliance across all systems. It provides real-time threat intelligence and automated response capabilities.",
-      features: [
-        "AI tool monitoring & governance", 
-        "Real-time threat detection", 
-        "Automated incident response",
-        "Compliance management",
-        "Data privacy protection",
-        "Security policy enforcement"
-      ]
+      id: 3,
+      title: "Chatbot Design & Development",
+      description: "Custom-built AI chatbots and agents with enterprise-grade UX, integrations, and domain-specific capabilities.",
+      number: "03"
     },
     {
-      icon: <FileText className="h-12 w-12 text-teal-600" />,
-      title: "Document Intelligence Agent",
-      description: "Transform unstructured documents into actionable insights. This agent doesn't just read text—it understands context, extracts key information, validates data accuracy, and seamlessly integrates findings into your business workflows. Perfect for processing invoices, contracts, reports, and forms.",
-      features: [
-        "Advanced OCR & text extraction", 
-        "Intelligent data validation", 
-        "Workflow automation",
-        "Multi-format support",
-        "Error detection & correction",
-        "API integration capabilities"
-      ]
+      id: 4,
+      title: "Training Dataset Preparation",
+      description: "Curated, cleaned, and relevant datasets to ensure accurate and consistent model behavior.",
+      number: "04"
     },
     {
-      icon: <TrendingUp className="h-12 w-12 text-teal-600" />,
-      title: "Marketing Intelligence Agent",
-      description: "Your AI-powered marketing strategist that works around the clock. This agent analyzes market trends, optimizes campaigns in real-time, generates personalized content, and identifies new opportunities. It integrates with your marketing stack to deliver measurable ROI improvements.",
-      features: [
-        "Campaign optimization & A/B testing", 
-        "Content generation & personalization", 
-        "Lead scoring & qualification",
-        "Market trend analysis",
-        "ROI tracking & reporting",
-        "Multi-platform campaign management"
-      ]
+      id: 5,
+      title: "AI Agent Fine-tuning",
+      description: "Align AI models with your business knowledge repository, workflows, and compliance standards.",
+      number: "05"
     },
     {
-      icon: <Users className="h-12 w-12 text-teal-600" />,
-      title: "Human Resources Agent",
-      description: "Streamline HR operations with intelligent automation. This agent handles everything from recruitment screening to employee onboarding, performance reviews, and policy inquiries. It ensures consistent, fair, and efficient HR processes while maintaining the human touch where needed.",
-      features: [
-        "Automated recruitment screening", 
-        "Employee onboarding workflows", 
-        "Performance review assistance",
-        "HR policy guidance",
-        "Benefits administration",
-        "Employee sentiment analysis"
-      ]
+      id: 6,
+      title: "On-Premises & Cloud Infrastructure",
+      description: "Secure on-prem deployment for sensitive environments or flexible cloud setup for scale.",
+      number: "06"
     },
     {
-      icon: <Database className="h-12 w-12 text-teal-600" />,
-      title: "Data Analytics Agent",
-      description: "Transform raw data into actionable business insights. This agent continuously analyzes your data, identifies patterns, generates reports, and provides predictive analytics. It democratizes data access across your organization, enabling data-driven decision making at every level.",
-      features: [
-        "Automated report generation", 
-        "Predictive analytics & forecasting", 
-        "Anomaly detection",
-        "Natural language queries",
-        "Real-time dashboards",
-        "Data quality monitoring"
-      ]
+      id: 7,
+      title: "Chatbot Customization & Integration",
+      description: "Seamlessly integrate into existing systems (CRM, ERP, HRMS, ticketing, or custom apps).",
+      number: "07"
     },
     {
-      icon: <Workflow className="h-12 w-12 text-teal-600" />,
-      title: "Process Automation Agent",
-      description: "Orchestrate complex business processes with intelligent automation. This agent maps, optimizes, and automates end-to-end workflows across departments. It learns from process patterns, suggests improvements, and ensures consistent execution while maintaining audit trails.",
-      features: [
-        "End-to-end workflow automation", 
-        "Process optimization recommendations", 
-        "Exception handling",
-        "Audit trail maintenance",
-        "Cross-system integration",
-        "Performance monitoring"
-      ]
+      id: 8,
+      title: "Security Audits & Compliance",
+      description: "Robust testing against AI-specific vulnerabilities with full GDPR/HIPAA/SOC 2 coverage.",
+      number: "08"
     },
     {
-      icon: <MessageSquare className="h-12 w-12 text-teal-600" />,
-      title: "Sales Intelligence Agent",
-      description: "Accelerate sales performance with AI-powered insights and automation. This agent analyzes customer interactions, predicts buying behavior, suggests next best actions, and automates follow-ups. It integrates with your CRM to provide sales teams with the intelligence they need to close more deals.",
-      features: [
-        "Lead scoring & qualification", 
-        "Sales opportunity analysis", 
-        "Automated follow-up sequences",
-        "Customer behavior prediction",
-        "Sales performance insights",
-        "CRM data enrichment"
-      ]
+      id: 9,
+      title: "Quality Assurance",
+      description: "Rigorous validation to ensure accuracy, stability, and safe performance before launch.",
+      number: "09"
+    },
+    {
+      id: 10,
+      title: "Maintenance & Support",
+      description: "Ongoing monitoring, optimization, and updates to keep your chatbot workforce effective.",
+      number: "10"
     }
   ];
 
-  const capabilities = [
-    {
-      title: "Conversational AI",
-      description: "Advanced natural language processing for human-like interactions"
-    },
-    {
-      title: "LLM Firewall",
-      description: "Secure and controlled access to large language models"
-    },
-    {
-      title: "AI Governance",
-      description: "Comprehensive oversight and compliance management"
-    },
-    {
-      title: "Seamless escalation",
-      description: "Smooth transition from AI to human support when needed"
-    },
-    {
-      title: "Contextual",
-      description: "Deep comprehension of conversation context and history"
-    },
-    {
-      title: "Custom RAG",
-      description: "Tailored retrieval-augmented generation for your data"
-    },
-    {
-      title: "Real-time analysis",
-      description: "Instant processing and insights from live data streams"
-    },
-    {
-      title: "Secure AI strategy",
-      description: "Enterprise-grade security and compliance for AI implementation"
+  // Carousel navigation functions
+  const nextService = () => {
+    const maxIndex = aiChatbotServices.length - 5; // Maximum index to show last 5 services
+    if (currentServiceIndex < maxIndex) {
+      setCurrentServiceIndex((prev) => prev + 1);
     }
-  ];
+  };
+
+  const prevService = () => {
+    if (currentServiceIndex > 0) {
+      setCurrentServiceIndex((prev) => prev - 1);
+    }
+  };
+
+  // Check if navigation buttons should be disabled
+  const isPrevDisabled = currentServiceIndex === 0;
+  const isNextDisabled = currentServiceIndex >= aiChatbotServices.length - 5;
+
+  // Get current services to display (5 at a time)
+  const getCurrentServices = () => {
+    const services = [];
+    for (let i = 0; i < 5; i++) {
+      const index = (currentServiceIndex + i) % aiChatbotServices.length;
+      services.push(aiChatbotServices[index]);
+    }
+    return services;
+  };
+
+
 
   
 
@@ -679,6 +584,3355 @@ const AIAgents: React.FC = () => {
         </div>
       </section>
 
+      {/* Knowledge Repository Integration Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 mb-6">
+              <Database className="h-4 w-4 text-blue-300 mr-2" />
+              <span className="text-blue-200 text-sm font-medium">Knowledge Integration</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              Why Knowledge Repository<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Integration Matters
+              </span>
+            </h2>
+            <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              Organizations generate huge volumes of knowledge — documents, policies, case histories, customer records — but much of it sits unused. AppXcess AI Agents integrate directly with your knowledge repository to unlock this potential.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left Content - Benefits */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="space-y-8">
+                <div className="group relative">
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <Database className="h-6 w-6 text-white" />
+                      </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white mb-3">Centralize Access</h3>
+                          <p className="text-blue-100 leading-relaxed">Give every team member and AI Agent instant access to the same trusted source of truth. Eliminate information silos and ensure everyone works with the most current data.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative">
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <Brain className="h-6 w-6 text-white" />
+                      </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white mb-3">Contextualize Decisions</h3>
+                          <p className="text-blue-100 leading-relaxed">Surface relevant documents, policies, or customer data when needed. Enable smarter decision-making with AI-powered insights that connect the dots across your knowledge base.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative">
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <Zap className="h-6 w-6 text-white" />
+                      </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white mb-3">Accelerate Resolution</h3>
+                          <p className="text-blue-100 leading-relaxed">Reduce time spent searching across systems. AI Agents instantly surface relevant documents and provide contextual answers to complex queries.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative">
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <Shield className="h-6 w-6 text-white" />
+                      </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-white mb-3">Ensure Consistency</h3>
+                          <p className="text-blue-100 leading-relaxed">Minimize errors from outdated or siloed information. Maintain data integrity with automated synchronization and real-time updates across all systems.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Gartner Stats */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">Proven Results</h3>
+                <p className="text-blue-200">Industry-leading organizations see measurable improvements</p>
+              </div>
+
+              <div className="space-y-6">
+                <motion.div 
+                  className="group relative"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">25%</div>
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                        <TrendingUp className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Operational Efficiency</h4>
+                    <p className="text-blue-100 text-sm leading-relaxed">
+                      Organizations that integrate AI with knowledge repositories see a significant increase in operational efficiency
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="group relative"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">30%</div>
+                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Customer Satisfaction</h4>
+                    <p className="text-blue-100 text-sm leading-relaxed">
+                      AI-enabled customer support improves customer satisfaction (CSAT) scores significantly
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="group relative"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">20%+</div>
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                        <Star className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Customer Experience</h4>
+                    <p className="text-blue-100 text-sm leading-relaxed">
+                      Leveraging AI for knowledge-driven processes enhances customer experience scores
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236366f1' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content - Headline and CTA */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Key Features
+                  </h2>
+                  <p className="text-xl text-gray-300 leading-relaxed">
+                    Comprehensive AI capabilities designed to transform your business operations with intelligent automation and seamless integration.
+                  </p>
+                </div>
+                <div>
+                  <Link to="/Contact/" className="inline-block bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Start for free
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Right Content - Feature Cards Grid */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-2 gap-6"
+              >
+                {/* AI Agents */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mr-3">
+                      <Bot className="h-5 w-5 text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">AI Agents Automation</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Automate billing, scheduling, reporting, and more with intelligent AI agents.
+                  </p>
+                </motion.div>
+
+                {/* Knowledge Integration */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800 rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-3">
+                      <Database className="h-5 w-5 text-emerald-400" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">Knowledge Integration</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Embed organizational knowledge repositories for smarter decision-making.
+                  </p>
+                </motion.div>
+
+                {/* Human-in-the-Loop */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800 rounded-2xl p-6 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center mr-3">
+                      <Users className="h-5 w-5 text-orange-400" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">Human-in-the-Loop</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Smooth handoffs for complex or sensitive workflows with human oversight.
+                  </p>
+                </motion.div>
+
+                {/* Enterprise Security */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800 rounded-2xl p-6 border border-gray-500/20 hover:border-gray-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-gray-500/20 rounded-lg flex items-center justify-center mr-3">
+                      <Shield className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white">Enterprise Security</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    GDPR, HIPAA, SOC 2 ready with enterprise-grade security and compliance.
+                  </p>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Chatbot Development Services Section */}
+      <section className="py-24 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23018080' fill-opacity='0.08'%3E%3Cpath d='M30 30c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15zm15 0c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="text-custom-teal">INTELLIGENT CHATBOT SOLUTIONS</span><br />
+              <span className="text-gray-900">FOR YOUR BUSINESS SUCCESS</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Access a wide range of services under one roof thanks to AppXcess's rare combination of expertise.
+            </p>
+          </motion.div>
+
+          {/* Navigation Arrows */}
+          <div className="flex justify-end mb-8">
+            <div className="flex space-x-2">
+              <button 
+                onClick={prevService}
+                disabled={isPrevDisabled}
+                className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+                  isPrevDisabled 
+                    ? 'border-gray-300 text-gray-300 cursor-not-allowed' 
+                    : 'border-custom-teal/40 text-custom-teal hover:border-custom-teal hover:bg-custom-teal/10 hover:shadow-md'
+                }`}
+              >
+                <ArrowRight className="h-4 w-4 rotate-180" />
+              </button>
+              <button 
+                onClick={nextService}
+                disabled={isNextDisabled}
+                className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+                  isNextDisabled 
+                    ? 'border-gray-300 text-gray-300 cursor-not-allowed' 
+                    : 'border-custom-teal/40 text-custom-teal hover:border-custom-teal hover:bg-custom-teal/10 hover:shadow-md'
+                }`}
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {getCurrentServices().map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="text-gray-400 text-sm font-medium mb-4">{service.number}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {service.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Types of AI Agents We Deliver Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Enhanced Background Motion Graphics */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Floating AI particles */}
+          <motion.div
+            className="absolute top-20 left-10 w-4 h-4 bg-custom-teal/20 rounded-full"
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.5, 1],
+              opacity: [0.3, 0.8, 0.3]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-20 w-3 h-3 bg-blue-500/20 rounded-full"
+            animate={{
+              y: [0, 40, 0],
+              x: [0, -25, 0],
+              scale: [1, 0.5, 1],
+              opacity: [0.2, 0.9, 0.2]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-1/4 w-5 h-5 bg-purple-500/20 rounded-full"
+            animate={{
+              y: [0, -35, 0],
+              x: [0, 15, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.4, 0.7, 0.4]
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute top-60 right-1/3 w-6 h-6 bg-green-500/20 rounded-full"
+            animate={{
+              y: [0, 25, 0],
+              x: [0, -20, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3
+            }}
+          />
+          
+          {/* Animated geometric shapes */}
+          <motion.div
+            className="absolute top-32 left-1/3 w-8 h-8 border-2 border-custom-teal/30 rounded-lg"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-32 right-1/4 w-10 h-10 border-2 border-blue-500/30 rounded-full"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.2, 0.5, 0.2]
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 2
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.span 
+                className="text-custom-teal"
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  background: "linear-gradient(90deg, #14b8a6, #0d9488, #14b8a6)",
+                  backgroundSize: "200% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
+                Types of AI Agents
+              </motion.span><br />
+              <span className="text-gray-900">We Deliver</span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              AppXcess develops a wide variety of AI Agents tailored to different enterprise use cases and industries.
+            </motion.p>
+          </motion.div>
+
+          {/* Interactive AI Agents Ecosystem */}
+          <div className="relative">
+            {/* AI Agent Types Layout - Left and Right Components */}
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+              {/* Left Component - First 4 Agents */}
+              <div className="w-full lg:w-1/2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Process Automation Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                    whileHover={{ y: -5, scale: 1.02 }}
+                  >
+                    <motion.div 
+                      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col relative overflow-hidden"
+                      whileHover={{ 
+                        boxShadow: "0 25px 50px -12px rgba(20, 184, 166, 0.25)" 
+                      }}
+                    >
+                      {/* Animated background gradient on hover */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-custom-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                      />
+                      
+                      <motion.div 
+                        className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors relative z-10"
+                        whileHover={{ 
+                          scale: 1.1,
+                          rotate: 5
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          animate={{
+                            rotate: [0, 10, 0],
+                            scale: [1, 1.05, 1]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                        <Settings className="w-6 h-6 text-custom-teal" />
+                        </motion.div>
+                      </motion.div>
+                      
+                      <motion.h3 
+                        className="text-lg font-bold text-gray-900 mb-3 relative z-10"
+                        whileHover={{ 
+                          color: "#14b8a6"
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        Process Automation Agents
+                      </motion.h3>
+                      
+                      <motion.p 
+                        className="text-gray-600 text-sm leading-relaxed flex-grow relative z-10"
+                        whileHover={{ 
+                          color: "#374151"
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        Handle complex, multi-step workflows like billing reconciliation, claims processing, or compliance reporting.
+                      </motion.p>
+                      
+                      {/* Floating particles on hover */}
+                      <motion.div
+                        className="absolute top-2 right-2 w-2 h-2 bg-custom-teal/30 rounded-full opacity-0 group-hover:opacity-100"
+                        animate={{
+                          y: [0, -10, 0],
+                          opacity: [0, 0.6, 0]
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.5
+                        }}
+                      />
+                      <motion.div
+                        className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-blue-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                        animate={{
+                          y: [0, -8, 0],
+                          opacity: [0, 0.4, 0]
+                        }}
+                        transition={{
+                          duration: 1.8,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.8
+                        }}
+                      />
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Customer Support Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                    whileHover={{ y: -5, scale: 1.02 }}
+                  >
+                    <motion.div 
+                      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col relative overflow-hidden"
+                      whileHover={{ 
+                        boxShadow: "0 25px 50px -12px rgba(20, 184, 166, 0.25)" 
+                      }}
+                    >
+                      {/* Animated background gradient on hover */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                      />
+                      
+                      <motion.div 
+                        className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors relative z-10"
+                        whileHover={{ 
+                          scale: 1.1,
+                          rotate: -5
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          animate={{
+                            y: [0, -2, 0],
+                            scale: [1, 1.05, 1]
+                          }}
+                          transition={{
+                            duration: 2.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                        <MessageSquare className="w-6 h-6 text-custom-teal" />
+                        </motion.div>
+                      </motion.div>
+                      
+                      <motion.h3 
+                        className="text-lg font-bold text-gray-900 mb-3 relative z-10"
+                        whileHover={{ 
+                          color: "#14b8a6"
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        Customer Support Agents
+                      </motion.h3>
+                      
+                      <motion.p 
+                        className="text-gray-600 text-sm leading-relaxed flex-grow relative z-10"
+                        whileHover={{ 
+                          color: "#374151"
+                        }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        Deliver instant, accurate responses across web, mobile, and voice channels — reducing wait times and agent workloads.
+                      </motion.p>
+                      
+                      {/* Floating particles on hover */}
+                      <motion.div
+                        className="absolute top-3 right-3 w-2 h-2 bg-blue-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                        animate={{
+                          y: [0, -12, 0],
+                          opacity: [0, 0.7, 0]
+                        }}
+                        transition={{
+                          duration: 1.6,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.3
+                        }}
+                      />
+                      <motion.div
+                        className="absolute bottom-3 left-3 w-1.5 h-1.5 bg-custom-teal/30 rounded-full opacity-0 group-hover:opacity-100"
+                        animate={{
+                          y: [0, -6, 0],
+                          opacity: [0, 0.5, 0]
+                        }}
+                        transition={{
+                          duration: 1.9,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.6
+                        }}
+                      />
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Knowledge Assistants */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <BookOpen className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Knowledge Assistants</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Tap into enterprise knowledge repositories to answer policy, HR, or compliance-related queries instantly with advanced natural language processing capabilities.
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Industry-Specific Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <Building2 className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Industry-Specific Agents</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Fine-tuned for verticals like healthcare, banking, e-commerce, and education with domain-aware capabilities and specialized industry expertise and deep understanding.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Enhanced Central Hub with Connection Lines */}
+              <motion.div 
+                className="relative mx-auto w-80 h-80 mb-16 lg:mb-0"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                {/* Animated Connection Lines */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Left side connections */}
+                  <motion.div
+                    className="absolute top-1/2 left-0 w-32 h-0.5 bg-gradient-to-r from-custom-teal/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.6, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.5
+                    }}
+                  />
+                  <motion.div
+                    className="absolute top-1/4 left-0 w-24 h-0.5 bg-gradient-to-r from-blue-500/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.5, 0]
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 2
+                    }}
+                  />
+                  <motion.div
+                    className="absolute top-3/4 left-0 w-28 h-0.5 bg-gradient-to-r from-purple-500/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.4, 0]
+                    }}
+                    transition={{
+                      duration: 2.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.8
+                    }}
+                  />
+                  
+                  {/* Right side connections */}
+                  <motion.div
+                    className="absolute top-1/2 right-0 w-32 h-0.5 bg-gradient-to-l from-custom-teal/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.6, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 2.5
+                    }}
+                  />
+                  <motion.div
+                    className="absolute top-1/4 right-0 w-24 h-0.5 bg-gradient-to-l from-green-500/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.5, 0]
+                    }}
+                    transition={{
+                      duration: 2.3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 3
+                    }}
+                  />
+                  <motion.div
+                    className="absolute top-3/4 right-0 w-28 h-0.5 bg-gradient-to-l from-orange-500/30 to-transparent"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 0.4, 0]
+                    }}
+                    transition={{
+                      duration: 2.1,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 2.8
+                    }}
+                  />
+                </motion.div>
+
+                {/* Enhanced Central Hub */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-custom-teal to-custom-blue rounded-full shadow-2xl flex items-center justify-center"
+                      animate={{
+                        boxShadow: "0 25px 50px -12px rgba(20, 184, 166, 0.4)"
+                      }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {/* Pulsing rings */}
+                  <motion.div
+                    className="absolute inset-0 border-2 border-white/20 rounded-full"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.3, 0.1, 0.3]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 border border-white/10 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    animate={{
+                      scale: [1, 1.4, 1],
+                      opacity: [0.2, 0.05, 0.2],
+                      boxShadow: [
+                        "0 0 20px rgba(255,255,255,0.3)",
+                        "0 0 40px rgba(255,255,255,0.6)",
+                        "0 0 20px rgba(255,255,255,0.3)"
+                      ]
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5
+                    }}
+                  />
+                  
+                  <div className="text-center text-white relative z-10">
+                    <motion.div 
+                      className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                      animate={{
+                        rotate: [0, 360],
+                        scale: [1, 1.1, 1]
+                      }}
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                    >
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.8, 1, 0.8]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <Bot className="w-8 h-8 text-white" />
+                      </motion.div>
+                    </motion.div>
+                    <motion.h3 
+                      className="text-2xl font-bold mb-2"
+                      animate={{
+                        textShadow: "0 0 20px rgba(255,255,255,0.3)"
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      AI AGENTS
+                    </motion.h3>
+                    <motion.p 
+                      className="text-sm opacity-90"
+                      animate={{
+                        opacity: [0.7, 1, 0.7]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 1
+                      }}
+                    >
+                      Enterprise Hub
+                    </motion.p>
+                </div>
+                </motion.div>
+              </motion.div>
+
+              {/* Right Component - Second 4 Agents */}
+              <div className="w-full lg:w-1/2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Transactional Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <CreditCard className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Transactional Agents</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Automate purchases, bookings, account actions, and financial transactions securely.
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Virtual Workforce Assistants */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <Users className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Virtual Workforce Assistants</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Support employees with task management, scheduling, and proactive reminders across enterprise systems.
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Multimodal Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <Camera className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Multimodal Agents</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Interact via text, voice, or image inputs to deliver richer and more interactive user experiences with seamless multi-channel communication capabilities.
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Human Collaboration Agents */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full flex flex-col">
+                      <div className="w-12 h-12 bg-custom-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-custom-teal/20 transition-colors">
+                        <UserCheck className="w-6 h-6 text-custom-teal" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">Human Collaboration Agents</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Work alongside employees, preparing context, extracting customer data, and ensuring smooth human-in-the-loop handoffs.
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Floating geometric shapes */}
+          <motion.div
+            className="absolute top-20 left-10 w-20 h-20 bg-custom-teal/10 rounded-full"
+            animate={{
+              y: [0, -20, 0],
+              x: [0, 10, 0],
+              rotate: [0, 180, 360],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-20 w-16 h-16 bg-blue-500/10 rounded-lg"
+            animate={{
+              y: [0, 30, 0],
+              x: [0, -15, 0],
+              rotate: [0, -90, 0],
+              scale: [1, 0.8, 1]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-1/4 w-12 h-12 bg-purple-500/10 rounded-full"
+            animate={{
+              y: [0, -25, 0],
+              x: [0, 20, 0],
+              rotate: [0, 360, 0],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-1/3 w-14 h-14 bg-green-500/10 rounded-lg"
+            animate={{
+              y: [0, 20, 0],
+              x: [0, -10, 0],
+              rotate: [0, -180, 0],
+              scale: [1, 0.9, 1]
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3
+            }}
+          />
+          
+          {/* Particle system */}
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-custom-teal/20 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0, 1, 0],
+                scale: [0, 1, 0]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.span 
+                className="text-custom-teal"
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  background: 'linear-gradient(90deg, #14b8a6, #06b6d4, #8b5cf6, #14b8a6)',
+                  backgroundSize: '200% 100%',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                Real-World
+              </motion.span>
+              <br />
+              <motion.span 
+                className="text-gray-900"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                Use Cases
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              Discover how AI Agents transform business operations across different industries and use cases.
+            </motion.p>
+          </motion.div>
+
+          {/* Use Cases Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Billing Automation */}
+            <motion.div
+              initial={{ opacity: 0, x: -50, rotateY: -15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-custom-teal/30 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-custom-teal/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Billing Automation Motion Graphic Diagram */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {/* Data Flow Animation */}
+                  <motion.div
+                    className="absolute top-4 left-4 w-8 h-8 bg-custom-teal/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      x: [0, 200, 0],
+                      y: [0, 20, 0],
+                      rotate: [0, 360, 0]
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <FileText className="w-4 h-4 text-custom-teal" />
+                  </motion.div>
+                  
+                  {/* CRM/ERP Connection Lines */}
+                  <motion.div
+                    className="absolute top-8 left-12 w-32 h-0.5 bg-custom-teal/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 0.5
+                    }}
+                  />
+                  
+                  {/* Reconciliation Process */}
+                  <motion.div
+                    className="absolute top-12 right-8 w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.3, 1],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <CheckCircle className="w-3 h-3 text-green-600" />
+                  </motion.div>
+                  
+                  {/* Anomaly Detection */}
+                  <motion.div
+                    className="absolute bottom-8 left-8 w-4 h-4 bg-red-500/20 rounded-full"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1
+                    }}
+                  />
+                  
+                  {/* Money Flow Animation */}
+                  <motion.div
+                    className="absolute bottom-4 right-4 text-2xl"
+                    animate={{
+                      y: [0, -10, 0],
+                      rotate: [0, 10, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    💰
+                  </motion.div>
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-custom-teal to-teal-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg relative overflow-hidden"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {/* Pulsing ring effect */}
+                      <motion.div
+                        className="absolute inset-0 rounded-2xl border-2 border-white/30"
+                        animate={{
+                          scale: [1, 1.5, 1],
+                          opacity: [0.5, 0, 0.5]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+                      <CreditCard className="w-8 h-8 text-white relative z-10" />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Billing Automation</h3>
+                      <div className="flex items-center text-custom-teal">
+                        <Activity className="w-4 h-4 mr-2" />
+                        <span className="text-sm font-medium">Finance & Accounting</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-6">
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20, scale: 0.8 }}
+                      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 0.4 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        className="relative"
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          className="absolute inset-0 bg-custom-teal/20 rounded-full"
+                          animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0.3, 0, 0.3]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        />
+                        <CheckCircle className="w-5 h-5 text-custom-teal mr-3 mt-1 flex-shrink-0 relative z-10" />
+                      </motion.div>
+                      <motion.p 
+                        className="text-gray-700"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.6 }}
+                        viewport={{ once: true }}
+                      >
+                        AI Agent extracts billing details from the knowledge base and reconciles with CRM/ERP
+                      </motion.p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20, scale: 0.8 }}
+                      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        className="relative"
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          className="absolute inset-0 bg-custom-teal/20 rounded-full"
+                          animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0.3, 0, 0.3]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 0.5
+                          }}
+                        />
+                        <CheckCircle className="w-5 h-5 text-custom-teal mr-3 mt-1 flex-shrink-0 relative z-10" />
+                      </motion.div>
+                      <motion.p 
+                        className="text-gray-700"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.8 }}
+                        viewport={{ once: true }}
+                      >
+                        Flags anomalies and routes exceptions to human finance staff
+                      </motion.p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20, scale: 0.8 }}
+                      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        className="relative"
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          className="absolute inset-0 bg-custom-teal/20 rounded-full"
+                          animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0.3, 0, 0.3]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            delay: 1
+                          }}
+                        />
+                        <CheckCircle className="w-5 h-5 text-custom-teal mr-3 mt-1 flex-shrink-0 relative z-10" />
+                      </motion.div>
+                      <motion.p 
+                        className="text-gray-700"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 1 }}
+                        viewport={{ once: true }}
+                      >
+                        Benefit: Faster month-end closing, reduced revenue leakage
+                      </motion.p>
+                    </motion.div>
+                  </div>
+                  
+                  <motion.div 
+                    className="bg-gradient-to-r from-custom-teal/10 to-blue-500/10 rounded-lg p-4 border-l-4 border-custom-teal relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {/* Animated background pattern */}
+                    <motion.div
+                      className="absolute inset-0 opacity-5"
+                      animate={{
+                        backgroundPosition: ['0% 0%', '100% 100%']
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        repeatType: 'reverse'
+                      }}
+                      style={{
+                        backgroundImage: 'linear-gradient(45deg, transparent 25%, rgba(20, 184, 166, 0.1) 25%, rgba(20, 184, 166, 0.1) 50%, transparent 50%, transparent 75%, rgba(20, 184, 166, 0.1) 75%)',
+                        backgroundSize: '20px 20px'
+                      }}
+                    />
+                    
+                    <motion.p 
+                      className="text-sm font-medium text-custom-teal mb-1 relative z-10"
+                      animate={{
+                        textShadow: ['0 0 0px rgba(20, 184, 166, 0.5)', '0 0 10px rgba(20, 184, 166, 0.5)', '0 0 0px rgba(20, 184, 166, 0.5)']
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      Key Impact
+                    </motion.p>
+                    <motion.p 
+                      className="text-gray-700 text-sm relative z-10"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.4, delay: 1.2 }}
+                      viewport={{ once: true }}
+                    >
+                      Automated reconciliation reduces manual errors by 95% and speeds up financial processes
+                    </motion.p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Scheduling Optimization */}
+            <motion.div
+              initial={{ opacity: 0, x: 50, rotateY: 15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-custom-teal/30 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-custom-teal/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Scheduling Optimization Motion Graphic Diagram */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {/* Calendar Grid Animation */}
+                  <motion.div
+                    className="absolute top-4 left-4 w-16 h-12 border border-blue-500/30 rounded"
+                    animate={{
+                      scale: [1, 1.05, 1],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    {/* Calendar dots */}
+                    {[...Array(12)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 bg-blue-500/50 rounded-full"
+                        style={{
+                          left: `${(i % 4) * 25 + 12}%`,
+                          top: `${Math.floor(i / 4) * 30 + 20}%`,
+                        }}
+                        animate={{
+                          opacity: [0, 1, 0],
+                          scale: [0, 1, 0]
+                        }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          delay: i * 0.1
+                        }}
+                      />
+                    ))}
+                  </motion.div>
+                  
+                  {/* Time Slots Animation */}
+                  <motion.div
+                    className="absolute top-8 right-8 w-20 h-2 bg-green-500/20 rounded-full"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: 0.5
+                    }}
+                  />
+                  
+                  {/* Availability Indicator */}
+                  <motion.div
+                    className="absolute bottom-8 left-8 w-6 h-6 bg-green-500/30 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <motion.div
+                      className="w-2 h-2 bg-green-600 rounded-full"
+                      animate={{
+                        opacity: [0, 1, 0]
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity
+                      }}
+                    />
+                  </motion.div>
+                  
+                  {/* Optimization Arrows */}
+                  <motion.div
+                    className="absolute bottom-4 right-4 text-blue-600"
+                    animate={{
+                      x: [0, 10, 0],
+                      y: [0, -5, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    ⚡
+                  </motion.div>
+                  
+                  {/* Connection Lines */}
+                  <motion.div
+                    className="absolute top-16 left-8 w-24 h-0.5 bg-blue-500/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1
+                    }}
+                  />
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg"
+                      whileHover={{ scale: 1.1, rotate: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Calendar className="w-8 h-8 text-white" />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Scheduling Optimization</h3>
+                      <div className="flex items-center text-blue-600">
+                        <Activity className="w-4 h-4 mr-2" />
+                        <span className="text-sm font-medium">Operations & Logistics</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-6">
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">AI Agent intelligently analyzes calendars, availability, and past booking trends</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Suggests optimal slots and handles rescheduling automatically</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Benefit: Improves utilization rates and reduces no-shows</p>
+                    </motion.div>
+                  </div>
+                  
+                  <motion.div 
+                    className="bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-lg p-4 border-l-4 border-blue-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-sm font-medium text-blue-600 mb-1">Key Impact</p>
+                    <p className="text-gray-700 text-sm">Intelligent scheduling increases resource utilization by 40% and reduces scheduling conflicts</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Account & Customer Data Extraction */}
+            <motion.div
+              initial={{ opacity: 0, x: -50, rotateY: -15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-custom-teal/30 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-custom-teal/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Data Extraction Motion Graphic Diagram */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {/* Multiple Data Sources */}
+                  <motion.div
+                    className="absolute top-4 left-4 w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 360, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Database className="w-3 h-3 text-purple-600" />
+                  </motion.div>
+                  
+                  <motion.div
+                    className="absolute top-4 right-8 w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, -360, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5
+                    }}
+                  >
+                    <Users className="w-3 h-3 text-blue-600" />
+                  </motion.div>
+                  
+                  <motion.div
+                    className="absolute top-8 left-8 w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                  >
+                    <FileText className="w-3 h-3 text-green-600" />
+                  </motion.div>
+                  
+                  {/* Data Flow Lines */}
+                  <motion.div
+                    className="absolute top-6 left-12 w-16 h-0.5 bg-purple-500/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 0.5
+                    }}
+                  />
+                  
+                  <motion.div
+                    className="absolute top-6 right-14 w-12 h-0.5 bg-blue-500/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1
+                    }}
+                  />
+                  
+                  {/* Central Processing Hub */}
+                  <motion.div
+                    className="absolute top-12 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 360, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <motion.div
+                      className="w-3 h-3 bg-white rounded-full"
+                      animate={{
+                        scale: [1, 0.5, 1]
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity
+                      }}
+                    />
+                  </motion.div>
+                  
+                  {/* Output Profile */}
+                  <motion.div
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-8 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg border border-purple-500/30"
+                    animate={{
+                      y: [0, -5, 0],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <motion.div
+                      className="absolute inset-1 bg-white/50 rounded"
+                      animate={{
+                        opacity: [0, 1, 0]
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity
+                      }}
+                    />
+                  </motion.div>
+                  
+                  {/* Data Points */}
+                  {[...Array(8)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-1 h-1 bg-purple-500/50 rounded-full"
+                      style={{
+                        left: `${20 + (i % 4) * 20}%`,
+                        top: `${30 + Math.floor(i / 4) * 20}%`,
+                      }}
+                      animate={{
+                        opacity: [0, 1, 0],
+                        scale: [0, 1, 0]
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        delay: i * 0.2
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Database className="w-8 h-8 text-white" />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Account & Customer Data Extraction</h3>
+                      <div className="flex items-center text-purple-600">
+                        <Activity className="w-4 h-4 mr-2" />
+                        <span className="text-sm font-medium">Data Management</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-6">
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">AI Agent pulls customer details from multiple sources (CRM, knowledge base, ticketing)</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Prepares consolidated profiles for sales or support teams</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.2 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Benefit: Saves manual lookup time, improves personalization</p>
+                    </motion.div>
+                  </div>
+                  
+                  <motion.div 
+                    className="bg-gradient-to-r from-purple-500/10 to-purple-600/10 rounded-lg p-4 border-l-4 border-purple-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-sm font-medium text-purple-600 mb-1">Key Impact</p>
+                    <p className="text-gray-700 text-sm">Automated data extraction reduces manual research time by 80% and improves customer insights</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Human-in-the-Loop Escalation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50, rotateY: 15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-custom-teal/30 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-custom-teal/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileHover={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Human-in-the-Loop Motion Graphic Diagram */}
+                <div className="absolute inset-0 overflow-hidden">
+                  {/* AI Agent Processing */}
+                  <motion.div
+                    className="absolute top-4 left-4 w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 180, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Bot className="w-4 h-4 text-green-600" />
+                  </motion.div>
+                  
+                  {/* Question Processing */}
+                  <motion.div
+                    className="absolute top-8 right-8 w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <MessageSquare className="w-3 h-3 text-blue-600" />
+                  </motion.div>
+                  
+                  {/* Decision Flow */}
+                  <motion.div
+                    className="absolute top-12 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-500/20 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.3, 1],
+                      rotate: [0, 360, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <motion.div
+                      className="w-2 h-2 bg-yellow-600 rounded-full"
+                      animate={{
+                        opacity: [0, 1, 0]
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity
+                      }}
+                    />
+                  </motion.div>
+                  
+                  {/* Human Escalation Path */}
+                  <motion.div
+                    className="absolute bottom-8 left-8 w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center"
+                    animate={{
+                      y: [0, -5, 0],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Users className="w-4 h-4 text-orange-600" />
+                  </motion.div>
+                  
+                  {/* Connection Lines */}
+                  <motion.div
+                    className="absolute top-8 left-12 w-16 h-0.5 bg-green-500/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 0.5
+                    }}
+                  />
+                  
+                  <motion.div
+                    className="absolute top-16 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-yellow-500/30"
+                    animate={{
+                      scaleY: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1
+                    }}
+                  />
+                  
+                  <motion.div
+                    className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-orange-500/30"
+                    animate={{
+                      scaleX: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: 1.5
+                    }}
+                  />
+                  
+                  {/* Success Indicators */}
+                  <motion.div
+                    className="absolute bottom-4 right-4 w-4 h-4 bg-green-500/30 rounded-full flex items-center justify-center"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: 2
+                    }}
+                  >
+                    <CheckCircle className="w-2 h-2 text-green-600" />
+                  </motion.div>
+                  
+                  {/* Flow Arrows */}
+                  <motion.div
+                    className="absolute top-6 left-1/2 transform -translate-x-1/2 text-green-600"
+                    animate={{
+                      x: [0, 5, 0],
+                      y: [0, -3, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    ↓
+                  </motion.div>
+                  
+                  <motion.div
+                    className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-orange-600"
+                    animate={{
+                      x: [0, -5, 0],
+                      y: [0, 3, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                  >
+                    ↑
+                  </motion.div>
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg"
+                      whileHover={{ scale: 1.1, rotate: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Users className="w-8 h-8 text-white" />
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Human-in-the-Loop Escalation</h3>
+                      <div className="flex items-center text-green-600">
+                        <Activity className="w-4 h-4 mr-2" />
+                        <span className="text-sm font-medium">Customer Service</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-6">
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">AI Agent handles FAQs, routine tasks, and structured queries</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.2 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Escalates edge cases to human staff with context-rich summaries</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 1.4 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Benefit: Smooth transitions, reduced agent handle time, improved customer experience</p>
+                    </motion.div>
+                  </div>
+                  
+                  <motion.div 
+                    className="bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-lg p-4 border-l-4 border-green-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.6 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-sm font-medium text-green-600 mb-1">Key Impact</p>
+                    <p className="text-gray-700 text-sm">Intelligent escalation reduces response time by 60% and improves customer satisfaction scores</p>
+                  </motion.div>
+              </div>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Animated Stats Section */}
+          <motion.div 
+            className="bg-gradient-to-r from-custom-teal to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden"
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+          >
+            {/* Multiple animated background patterns */}
+            <motion.div
+              className="absolute inset-0 opacity-10"
+              animate={{
+                backgroundPosition: ['0% 0%', '100% 100%'],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: 'reverse',
+              }}
+              style={{
+                backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)',
+                backgroundSize: '50px 50px',
+              }}
+            />
+            
+            {/* Floating geometric shapes */}
+            <motion.div
+              className="absolute top-4 right-4 w-8 h-8 border-2 border-white/20 rounded-full"
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.2, 1]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+            <motion.div
+              className="absolute bottom-4 left-4 w-6 h-6 border-2 border-white/20 rounded-lg"
+              animate={{
+                rotate: [0, -360],
+                scale: [1, 0.8, 1]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear",
+                delay: 1
+              }}
+            />
+            
+            {/* Animated gradient overlay */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
+              animate={{
+                x: ['-100%', '100%']
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            <div className="relative z-10">
+              <motion.div 
+                className="text-center mb-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                viewport={{ once: true }}
+              >
+                <motion.h3 
+                  className="text-3xl font-bold mb-4"
+                  animate={{
+                    textShadow: ['0 0 0px rgba(255, 255, 255, 0.5)', '0 0 20px rgba(255, 255, 255, 0.5)', '0 0 0px rgba(255, 255, 255, 0.5)']
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  Proven Results Across Industries
+                </motion.h3>
+                <motion.p 
+                  className="text-xl opacity-90"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 0.9 }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                  viewport={{ once: true }}
+                >
+                  AI Agents deliver measurable business impact
+                </motion.p>
+              </motion.div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div 
+                  className="text-center relative"
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  {/* Pulsing ring around the number */}
+                  <motion.div
+                    className="absolute inset-0 border-2 border-white/30 rounded-full"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 0, 0.5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <motion.div 
+                    className="text-4xl font-bold mb-2 relative z-10"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      textShadow: ['0 0 0px rgba(255, 255, 255, 0.5)', '0 0 15px rgba(255, 255, 255, 0.8)', '0 0 0px rgba(255, 255, 255, 0.5)']
+                    }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    95%
+                  </motion.div>
+                  <motion.p 
+                    className="text-lg opacity-90"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 0.9 }}
+                    transition={{ duration: 0.4, delay: 1.4 }}
+                    viewport={{ once: true }}
+                  >
+                    Reduction in Manual Errors
+                  </motion.p>
+                </motion.div>
+                
+                <motion.div 
+                  className="text-center relative"
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  {/* Pulsing ring around the number */}
+                  <motion.div
+                    className="absolute inset-0 border-2 border-white/30 rounded-full"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 0, 0.5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5
+                    }}
+                  />
+                  <motion.div 
+                    className="text-4xl font-bold mb-2 relative z-10"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      textShadow: ['0 0 0px rgba(255, 255, 255, 0.5)', '0 0 15px rgba(255, 255, 255, 0.8)', '0 0 0px rgba(255, 255, 255, 0.5)']
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                  >
+                    80%
+                  </motion.div>
+                  <motion.p 
+                    className="text-lg opacity-90"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 0.9 }}
+                    transition={{ duration: 0.4, delay: 1.6 }}
+                    viewport={{ once: true }}
+                  >
+                    Time Savings in Data Tasks
+                  </motion.p>
+                </motion.div>
+                
+                <motion.div 
+                  className="text-center relative"
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 1.6 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  {/* Pulsing ring around the number */}
+                  <motion.div
+                    className="absolute inset-0 border-2 border-white/30 rounded-full"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 0, 0.5]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1
+                    }}
+                  />
+                  <motion.div 
+                    className="text-4xl font-bold mb-2 relative z-10"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      textShadow: ['0 0 0px rgba(255, 255, 255, 0.5)', '0 0 15px rgba(255, 255, 255, 0.8)', '0 0 0px rgba(255, 255, 255, 0.5)']
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                  >
+                    60%
+                  </motion.div>
+                  <motion.p 
+                    className="text-lg opacity-90"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 0.9 }}
+                    transition={{ duration: 0.4, delay: 1.8 }}
+                    viewport={{ once: true }}
+                  >
+                    Faster Response Times
+                  </motion.p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Real-Time ROI Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Floating ROI particles */}
+          <motion.div
+            className="absolute top-20 left-10 w-6 h-6 bg-green-500/20 rounded-full"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.8, 0.3]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-20 w-4 h-4 bg-blue-500/20 rounded-full"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -25, 0],
+              scale: [1, 0.7, 1],
+              opacity: [0.2, 0.9, 0.2]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-1/4 w-5 h-5 bg-purple-500/20 rounded-full"
+            animate={{
+              y: [0, -35, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.4, 0.7, 0.4]
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          
+          {/* Animated ROI charts */}
+          <motion.div
+            className="absolute top-32 left-1/3 w-12 h-12 border-2 border-green-500/30 rounded-lg"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-32 right-1/4 w-16 h-16 border-2 border-blue-500/30 rounded-full"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.2, 0.5, 0.2]
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 2
+            }}
+          />
+          
+          {/* Data flow lines */}
+          <motion.div
+            className="absolute top-1/2 left-0 w-32 h-0.5 bg-gradient-to-r from-green-500/30 to-transparent"
+            animate={{
+              scaleX: [0, 1, 0],
+              opacity: [0, 0.6, 0]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-0 w-24 h-0.5 bg-gradient-to-l from-blue-500/30 to-transparent"
+            animate={{
+              scaleX: [0, 1, 0],
+              opacity: [0, 0.5, 0]
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.span 
+                className="text-white"
+                animate={{
+                  textShadow: [
+                    "0 0 0px rgba(255,255,255,0)",
+                    "0 0 20px rgba(255,255,255,0.3)",
+                    "0 0 0px rgba(255,255,255,0)"
+                  ]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                Real-Time ROI
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              AppXcess AI Agents deliver measurable outcomes that drive business growth and operational excellence.
+            </motion.p>
+          </motion.div>
+
+          {/* ROI Metrics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* 40% Reduction in Manual Tasks */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-green-500/50 transition-all duration-300 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Animated percentage */}
+                <motion.div 
+                  className="text-6xl font-bold text-green-400 mb-4 relative z-10"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    color: ["#4ade80", "#22c55e", "#4ade80"]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  40%
+                </motion.div>
+                
+                <motion.h3 
+                  className="text-xl font-bold text-white mb-3 relative z-10"
+                  whileHover={{ color: "#4ade80" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Reduction in Manual Tasks
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-gray-300 text-sm leading-relaxed relative z-10"
+                  whileHover={{ color: "#e5e7eb" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Automated workflows eliminate repetitive manual processes, freeing up for strategic work.
+                </motion.p>
+                
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-green-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                  animate={{
+                    y: [0, -15, 0],
+                    opacity: [0, 0.8, 0]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* 25% Faster Resolution Times */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-500/50 transition-all duration-300 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Animated percentage */}
+                <motion.div 
+                  className="text-6xl font-bold text-blue-400 mb-4 relative z-10"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    color: ["#60a5fa", "#3b82f6", "#60a5fa"]
+                  }}
+                  transition={{
+                    duration: 2.2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  25%
+                </motion.div>
+                
+                <motion.h3 
+                  className="text-xl font-bold text-white mb-3 relative z-10"
+                  whileHover={{ color: "#60a5fa" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Faster Resolution Times
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-gray-300 text-sm leading-relaxed relative z-10"
+                  whileHover={{ color: "#e5e7eb" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Knowledge repository integration enables instant access to solutions and best practices.
+                </motion.p>
+                
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-blue-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                  animate={{
+                    y: [0, -12, 0],
+                    opacity: [0, 0.7, 0]
+                  }}
+                  transition={{
+                    duration: 1.6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.3
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* 30% Boost in CSAT Scores */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Animated percentage */}
+                <motion.div 
+                  className="text-6xl font-bold text-purple-400 mb-4 relative z-10"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    color: ["#a78bfa", "#8b5cf6", "#a78bfa"]
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  30%
+                </motion.div>
+                
+                <motion.h3 
+                  className="text-xl font-bold text-white mb-3 relative z-10"
+                  whileHover={{ color: "#a78bfa" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Significant Boost in CSAT Scores
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-gray-300 text-sm leading-relaxed relative z-10"
+                  whileHover={{ color: "#e5e7eb" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Faster and more accurate responses lead to significantly improved customer satisfaction.
+                </motion.p>
+                
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-purple-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                  animate={{
+                    y: [0, -10, 0],
+                    opacity: [0, 0.6, 0]
+                  }}
+                  transition={{
+                    duration: 1.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.7
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* 20% Improvement in Productivity */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <motion.div 
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-orange-500/50 transition-all duration-300 h-full relative overflow-hidden"
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                />
+                
+                {/* Animated percentage */}
+                <motion.div 
+                  className="text-6xl font-bold text-orange-400 mb-4 relative z-10"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    color: ["#fb923c", "#f97316", "#fb923c"]
+                  }}
+                  transition={{
+                    duration: 2.8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  20%
+                </motion.div>
+                
+                <motion.h3 
+                  className="text-xl font-bold text-white mb-3 relative z-10"
+                  whileHover={{ color: "#fb923c" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Improvement in Productivity
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-gray-300 text-sm leading-relaxed relative z-10"
+                  whileHover={{ color: "#e5e7eb" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Reduced cognitive load allows employees to focus on high-value, strategic activities.
+                </motion.p>
+                
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-orange-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                  animate={{
+                    y: [0, -8, 0],
+                    opacity: [0, 0.5, 0]
+                  }}
+                  transition={{
+                    duration: 1.9,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.9
+                  }}
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Benefits of AppXcess AI Agents Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        {/* Enhanced Background Motion Graphics */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Floating benefit particles */}
+          <motion.div
+            className="absolute top-20 left-10 w-6 h-6 bg-custom-teal/20 rounded-full"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.8, 0.3]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-20 w-4 h-4 bg-blue-500/20 rounded-full"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, -25, 0],
+              scale: [1, 0.7, 1],
+              opacity: [0.2, 0.9, 0.2]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          <motion.div
+            className="absolute bottom-40 left-1/4 w-5 h-5 bg-purple-500/20 rounded-full"
+            animate={{
+              y: [0, -35, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.4, 0.7, 0.4]
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute top-60 right-1/3 w-6 h-6 bg-green-500/20 rounded-full"
+            animate={{
+              y: [0, 25, 0],
+              x: [0, -20, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3
+            }}
+          />
+          
+          {/* Animated geometric shapes */}
+          <motion.div
+            className="absolute top-32 left-1/3 w-8 h-8 border-2 border-custom-teal/30 rounded-lg"
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3]
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-32 right-1/4 w-10 h-10 border-2 border-blue-500/30 rounded-full"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.2, 0.5, 0.2]
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 2
+            }}
+          />
+          
+          {/* Data flow lines */}
+          <motion.div
+            className="absolute top-1/2 left-0 w-32 h-0.5 bg-gradient-to-r from-custom-teal/30 to-transparent"
+            animate={{
+              scaleX: [0, 1, 0],
+              opacity: [0, 0.6, 0]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-0 w-24 h-0.5 bg-gradient-to-l from-blue-500/30 to-transparent"
+            animate={{
+              scaleX: [0, 1, 0],
+              opacity: [0, 0.5, 0]
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          
+          {/* Floating benefit icons */}
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
+            animate={{
+              y: [0, -20, 0],
+              rotate: [0, 5, 0, -5, 0],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <Zap className="w-6 h-6 text-custom-teal" />
+          </motion.div>
+          
+          <motion.div
+            className="absolute bottom-1/3 right-1/3 w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
+            animate={{
+              y: [0, 15, 0],
+              rotate: [0, -3, 0, 3, 0],
+              scale: [1, 0.9, 1]
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          >
+            <Shield className="w-6 h-6 text-blue-500" />
+          </motion.div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.span 
+                className="text-custom-teal"
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  background: "linear-gradient(90deg, #14b8a6, #0d9488, #14b8a6)",
+                  backgroundSize: "200% 100%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
+                Benefits of AppXcess AI Agents
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Unlock tangible value across your enterprise with AI-driven automation and knowledge integration.
+            </motion.p>
+          </motion.div>
+
+          {/* Modern Benefits Layout - Hero Card + Grid */}
+          <div className="space-y-12">
+            {/* Hero Benefit Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-custom-teal/10 via-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 border border-custom-teal/20 relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.1),transparent_50%)]"></div>
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center w-16 h-16 bg-custom-teal/20 rounded-2xl mb-6 mx-auto">
+                    <Zap className="w-8 h-8 text-custom-teal" />
+                  </div>
+                  
+                  <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6">
+                    Transform Your Business Operations
+                  </h3>
+                  
+                  <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-8">
+                    Our AI Agents deliver measurable results across efficiency, customer satisfaction, and operational excellence. 
+                    Experience the power of intelligent automation that works seamlessly with your existing systems.
+                  </p>
+                  
+                  {/* Key Metrics */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-custom-teal mb-2">40%</div>
+                      <div className="text-sm text-gray-600">Reduction in Manual Effort</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-500 mb-2">30%</div>
+                      <div className="text-sm text-gray-600">Increase in CSAT Scores</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-500 mb-2">20%</div>
+                      <div className="text-sm text-gray-600">Boost in Productivity</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  </motion.div>
+                  
+            {/* Benefits Grid - 3 columns on desktop, responsive on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {/* 1. Accelerate Operational Efficiency */}
+                  <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-custom-teal/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-custom-teal/10 rounded-xl flex items-center justify-center group-hover:bg-custom-teal/20 transition-colors">
+                      <Zap className="w-6 h-6 text-custom-teal" />
+                    </div>
+                    <div className="w-8 h-8 bg-custom-teal/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-custom-teal">1</span>
+                    </div>
+                </div>
+                
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-custom-teal transition-colors">
+                    Accelerate Operational Efficiency
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-custom-teal mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Automate repetitive workflows like billing, scheduling, and reporting</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-custom-teal mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Free up employee time for strategic tasks</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-custom-teal mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Up to 40% reduction in manual effort</p>
+                    </div>
+                  </div>
+                </div>
+                </motion.div>
+                
+              {/* 2. Improve Customer Satisfaction (CSAT) */}
+                  <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-500/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                      <Users className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-blue-500">2</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-500 transition-colors">
+                    Improve Customer Satisfaction
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Provide instant, accurate responses across channels</p>
+                </div>
+                
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Reduce wait times and ensure consistent answers</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">30% increase in CSAT scores</p>
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+            {/* 3. Enhance Customer Experience */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-500/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                      <Heart className="w-6 h-6 text-purple-500" />
+                    </div>
+                    <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-purple-500">3</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-500 transition-colors">
+                  Enhance Customer Experience
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Deliver context-aware assistance with knowledge integration</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Personalize interactions based on behavior and insights</p>
+                </div>
+                
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">20% improvement in CX metrics</p>
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+            {/* 4. Empower Employees */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-500/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                      <UserCheck className="w-6 h-6 text-green-500" />
+                    </div>
+                    <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-green-500">4</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-green-500 transition-colors">
+                  Empower Employees
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Virtual assistants help manage tasks, schedules, and reminders</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Human-in-the-loop handoffs reduce cognitive load and errors</p>
+                </div>
+                
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">20% boost in employee productivity</p>
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+            {/* 5. Ensure Data Security & Compliance */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-500/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                      <Shield className="w-6 h-6 text-red-500" />
+                    </div>
+                    <div className="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-red-500">5</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-500 transition-colors">
+                  Ensure Data Security & Compliance
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">GDPR, HIPAA, and SOC 2 compliant AI Agents</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Maintain control over sensitive workflows and data</p>
+                </div>
+                
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-red-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Peace of mind for regulated industries</p>
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+            {/* 6. Seamless System Integration */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+                className="group"
+              >
+                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-500/30 h-full relative overflow-hidden">
+                  {/* Icon and Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
+                      <Settings className="w-6 h-6 text-indigo-500" />
+                    </div>
+                    <div className="w-8 h-8 bg-indigo-500/20 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-indigo-500">6</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-indigo-500 transition-colors">
+                  Seamless System Integration
+                  </h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-indigo-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Integrates with CRMs, ERPs, HRMS, and enterprise systems</p>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-indigo-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Access real-time information without switching platforms</p>
+                </div>
+                
+                    <div className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-indigo-500 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-600">Faster decision-making and reduced errors</p>
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+                </div>
+          </div>
+        </div>
+      </section>
+
       {/* System Integration Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -728,11 +3982,7 @@ const AIAgents: React.FC = () => {
                 <motion.div 
                   className="w-20 h-20 bg-gradient-to-br from-teal-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl relative overflow-hidden"
                   animate={{
-                    boxShadow: [
-                      "0 0 30px rgba(20, 184, 166, 0.3)",
-                      "0 0 50px rgba(20, 184, 166, 0.6)",
-                      "0 0 30px rgba(20, 184, 166, 0.3)"
-                    ]
+                    boxShadow: "0 0 50px rgba(20, 184, 166, 0.6)"
                   }}
                   transition={{
                     duration: 3,
@@ -821,11 +4071,7 @@ const AIAgents: React.FC = () => {
                   <motion.div
                     className={`w-16 h-16 bg-${system.color}-500 rounded-xl flex items-center justify-center shadow-lg mb-2 relative overflow-hidden`}
                     animate={{ 
-                      boxShadow: [
-                        `0 0 20px rgba(59, 130, 246, 0.3)`,
-                        `0 0 40px rgba(59, 130, 246, 0.6)`,
-                        `0 0 20px rgba(59, 130, 246, 0.3)`
-                      ],
+                      boxShadow: "0 0 40px rgba(59, 130, 246, 0.6)",
                       scale: [1, 1.05, 1]
                     }}
                     transition={{ 
@@ -927,7 +4173,7 @@ const AIAgents: React.FC = () => {
                       animate={{ pathLength: 1, opacity: 1 }}
                       transition={{ delay: 1 + index * 0.2, duration: 1 }}
                     >
-                      <motion.animate
+                      <animate
                         attributeName="stroke-dashoffset"
                         values="0;-24;0"
                         dur="2s"
@@ -948,7 +4194,7 @@ const AIAgents: React.FC = () => {
                       animate={{ pathLength: 1, opacity: 1 }}
                       transition={{ delay: 1.2 + index * 0.2, duration: 1 }}
                     >
-                      <motion.animate
+                      <animate
                         attributeName="stroke-dashoffset"
                         values="0;-12;0"
                         dur="1.5s"
@@ -1036,7 +4282,7 @@ const AIAgents: React.FC = () => {
                     animate={{ pathLength: 1, opacity: 1 }}
                     transition={{ delay: 2 + index * 0.3, duration: 1.5 }}
                   >
-                    <motion.animate
+                    <animate
                       attributeName="stroke-dashoffset"
                       values="0;-12;0"
                       dur="4s"
@@ -1750,7 +4996,7 @@ const AIAgents: React.FC = () => {
           </div>
 
           {/* CUSTOMIZATION Section */}
-          <section className="py-20 bg-white">
+          <section className="py-20 bg-white" style={{ display: 'none' }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div 
                 className="text-center mb-16"
@@ -1792,7 +5038,7 @@ const AIAgents: React.FC = () => {
                       <motion.div 
                           className="w-24 h-24 bg-white border-2 border-[#1E3B8B] rounded-xl p-2 shadow-lg flex flex-col items-center justify-center"
                           initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 1, 1, 1, 1, 0.7, 1],
                             scale: [0.8, 1, 1.05, 1, 1, 1, 1],
                             borderColor: ["#1E3B8B", "#1E3B8B", "#FF0101", "#FF0101", "#FF0101", "#1E3B8B", "#1E3B8B"]
@@ -1803,6 +5049,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-8 h-8 mb-2"
@@ -1845,7 +5092,7 @@ const AIAgents: React.FC = () => {
                       <motion.div 
                           className="flex-1 flex items-center justify-center"
                           initial={{ opacity: 0, scaleX: 0 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 1, 1, 1, 0, 0],
                             scaleX: [0, 0, 1, 1, 1, 0, 0]
                           }}
@@ -1855,6 +5102,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-full h-0.5 bg-[#FF0101] relative"
@@ -1887,7 +5135,7 @@ const AIAgents: React.FC = () => {
                       <motion.div 
                           className="w-24 h-24 bg-white border-2 border-[#1E3B8B] rounded-xl p-2 shadow-lg flex flex-col items-center justify-center"
                           initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 1, 1, 1, 1, 0.7, 1],
                             scale: [0.8, 0.8, 1, 1.05, 1, 1, 1, 1],
                             borderColor: ["#1E3B8B", "#1E3B8B", "#1E3B8B", "#FF0101", "#FF0101", "#FF0101", "#1E3B8B", "#1E3B8B"]
@@ -1898,6 +5146,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-8 h-8 mb-2"
@@ -1940,7 +5189,7 @@ const AIAgents: React.FC = () => {
                         <motion.div
                           className="flex-1 flex items-center justify-center"
                           initial={{ opacity: 0, scaleX: 0 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 0, 1, 1, 1, 0, 0],
                             scaleX: [0, 0, 0, 1, 1, 1, 0, 0]
                           }}
@@ -1950,6 +5199,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-full h-0.5 bg-[#FF0101] relative"
@@ -1982,7 +5232,7 @@ const AIAgents: React.FC = () => {
                         <motion.div 
                           className="w-24 h-24 bg-white border-2 border-[#1E3B8B] rounded-xl p-2 shadow-lg flex flex-col items-center justify-center"
                           initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 0, 1, 1, 1, 1, 0.7, 1],
                             scale: [0.8, 0.8, 0.8, 1, 1.05, 1, 1, 1, 1],
                             borderColor: ["#1E3B8B", "#1E3B8B", "#1E3B8B", "#1E3B8B", "#FF0101", "#FF0101", "#FF0101", "#1E3B8B", "#1E3B8B"]
@@ -1993,6 +5243,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-8 h-8 mb-2"
@@ -2035,7 +5286,7 @@ const AIAgents: React.FC = () => {
                         <motion.div
                           className="flex-1 flex items-center justify-center"
                           initial={{ opacity: 0, scaleX: 0 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 0, 0, 1, 1, 1, 0, 0],
                             scaleX: [0, 0, 0, 0, 1, 1, 1, 0, 0]
                           }}
@@ -2045,6 +5296,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-full h-0.5 bg-[#FF0101] relative"
@@ -2077,7 +5329,7 @@ const AIAgents: React.FC = () => {
                         <motion.div 
                           className="w-24 h-24 bg-white border-2 border-[#1E3B8B] rounded-xl p-2 shadow-lg flex flex-col items-center justify-center"
                           initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ 
+                          whileInView={{ 
                             opacity: [0, 0, 0, 0, 1, 1, 1, 1, 0.7, 1],
                             scale: [0.8, 0.8, 0.8, 0.8, 1, 1.05, 1, 1, 1, 1],
                             borderColor: ["#1E3B8B", "#1E3B8B", "#1E3B8B", "#1E3B8B", "#1E3B8B", "#FF0101", "#FF0101", "#FF0101", "#1E3B8B", "#1E3B8B"]
@@ -2088,6 +5340,7 @@ const AIAgents: React.FC = () => {
                             ease: "easeInOut",
                             times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1]
                           }}
+                          viewport={{ once: true }}
                         >
                           <motion.div
                             className="w-8 h-8 mb-2"
@@ -2686,344 +5939,6 @@ const AIAgents: React.FC = () => {
       <BouncyCardsFeatures />
 
 
-      {/* End-to-End Workflow Automation Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto p-4">
-          <article className="max-w-5xl mx-auto py-10 text-center space-y-2 px-8">
-            <motion.h1
-              className="md:text-5xl sm:text-4xl text-3xl font-medium"
-              initial={{ y: -20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 0, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              End-to-End Workflow Automation
-            </motion.h1>
-            <motion.p
-              className="text-gray-600 sm:text-base text-sm sm:w-[70%] w-full mx-auto"
-              initial={{ y: -20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              From simple tasks to complex business processes, our AI agents orchestrate complete workflows with intelligent decision-making
-            </motion.p>
-          </article>
-          
-          <div className="grid grid-cols-12 gap-4">
-            {/* Process Orchestration Steps */}
-            <motion.div
-              className="lg:col-span-5 sm:col-span-6 col-span-12 relative w-full rounded-xl overflow-hidden border border-neutral-200 bg-white"
-              initial={{ y: -20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 0, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              
-              <div className="p-6 space-y-4 min-h-[400px] flex flex-col justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Intelligent Process Orchestration</h3>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        step: "1",
-                        title: "Process Discovery & Mapping",
-                        description: "AI agents analyze your existing workflows, identify bottlenecks, and map optimal process flows across all systems.",
-                        details: "Comprehensive analysis of current processes, stakeholder interviews, and data flow mapping to create a complete picture of your operations.",
-                        features: ["Workflow Analysis", "Bottleneck Identification", "Stakeholder Mapping"],
-                        color: "teal"
-                      },
-                      {
-                        step: "2", 
-                        title: "Intelligent Automation Design",
-                        description: "Design custom automation workflows that adapt to your business rules, exceptions, and changing requirements.",
-                        details: "Create intelligent automation blueprints that handle complex business logic, exception scenarios, and dynamic rule changes.",
-                        features: ["Custom Workflows", "Exception Handling", "Rule Engine"],
-                        color: "blue"
-                      },
-                      {
-                        step: "3",
-                        title: "Seamless Integration", 
-                        description: "Connect all your systems, databases, and applications for unified data flow and process execution.",
-                        details: "Establish secure, real-time connections between all your business systems for seamless data synchronization and process orchestration.",
-                        features: ["API Integration", "Real-time Sync", "Security Protocols"],
-                        color: "purple"
-                      },
-                      {
-                        step: "4",
-                        title: "Continuous Optimization",
-                        description: "AI agents continuously monitor, learn, and optimize processes for maximum efficiency and performance.",
-                        details: "Ongoing monitoring and machine learning algorithms that identify improvement opportunities and automatically optimize workflows.",
-                        features: ["Performance Monitoring", "ML Optimization", "Predictive Analytics"],
-                        color: "green"
-                      }
-                    ].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex items-start gap-4"
-                        initial={{ x: -30, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 1.8 + i * 0.2, duration: 0.6 }}
-                      >
-                        <motion.div 
-                          className={`w-8 h-8 bg-${item.color}-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1`}
-                          whileHover={{ scale: 1.2, rotate: 360 }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <span className={`text-${item.color}-600 font-bold text-sm`}>{item.step}</span>
-                        </motion.div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                          <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-                          <p className="text-gray-500 text-xs">{item.details}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-              </div>
-
-                <article className="mt-6 p-4 bg-white/80 backdrop-blur-sm rounded-lg border border-white/20">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Process Orchestration
-            </h3>
-                  <p className="text-sm text-gray-600">
-                    AI-powered workflow automation that adapts to your business needs
-                  </p>
-                </article>
-                    </div>
-            </motion.div>
-
-
-            {/* AI Integration Benefits */}
-            <motion.div
-              className="lg:col-span-3 sm:col-span-6 col-span-12 border rounded-lg p-4 group border-neutral-200"
-              initial={{ y: -20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <motion.h1
-                className="text-4xl font-semibold"
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.6, duration: 0.5 }}
-              >
-                AI Integration Benefits
-              </motion.h1>
-              <motion.p
-                className="text-sm"
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.8, duration: 0.5 }}
-              >
-                Transform your business operations with intelligent automation
-              </motion.p>
-              
-              <div className="space-y-4 mt-6">
-                {[
-                  {
-                    icon: <Zap className="h-6 w-6 text-yellow-500" />,
-                    title: "Lightning Fast Processing",
-                    description: "Reduce processing time by up to 90% with AI-powered automation",
-                    color: "yellow"
-                  },
-                  {
-                    icon: <Shield className="h-6 w-6 text-green-500" />,
-                    title: "Enhanced Security",
-                    description: "Advanced security protocols and compliance monitoring built-in",
-                    color: "green"
-                  },
-                  {
-                    icon: <TrendingUp className="h-6 w-6 text-blue-500" />,
-                    title: "Scalable Growth",
-                    description: "Automatically scale operations as your business grows",
-                    color: "blue"
-                  },
-                  {
-                    icon: <Target className="h-6 w-6 text-purple-500" />,
-                    title: "Precision Accuracy",
-                    description: "99.9% accuracy rate in automated decision-making processes",
-                    color: "purple"
-                  }
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 hover:shadow-lg transition-all duration-300"
-                    initial={{ x: -30, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{
-                      delay: 2.0 + i * 0.2,
-                      duration: 0.6,
-                      type: "spring",
-                      stiffness: 100,
-                    }}
-                    whileHover={{ 
-                      scale: 1.02,
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    <motion.div 
-                      className="flex-shrink-0 p-2 rounded-lg bg-white shadow-sm"
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {item.icon}
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                      <p className="text-sm text-gray-600">{item.description}</p>
-                        </div>
-                  </motion.div>
-                ))}
-                      </div>
-            </motion.div>
-
-            {/* Implementation Timeline */}
-            <motion.div
-              className="lg:col-span-4 sm:col-span-6 col-span-12 border rounded-lg p-4 group border-neutral-200"
-              initial={{ y: -20, opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-              transition={{ delay: 1.0, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <motion.h1
-                className="text-4xl font-semibold"
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.8, duration: 0.5 }}
-              >
-                Implementation Timeline
-              </motion.h1>
-              <motion.p
-                className="text-sm"
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 2.0, duration: 0.5 }}
-              >
-                From consultation to full deployment in record time
-              </motion.p>
-              
-              <div className="space-y-4 mt-6">
-                {[
-                  {
-                    week: "Week 1-2",
-                    title: "Discovery & Analysis",
-                    description: "Comprehensive assessment of your current processes and requirements",
-                    status: "Planning",
-                    color: "blue"
-                  },
-                  {
-                    week: "Week 3-4",
-                    title: "Design & Architecture",
-                    description: "Custom AI agent design tailored to your specific business needs",
-                    status: "Design",
-                    color: "purple"
-                  },
-                  {
-                    week: "Week 5-6",
-                    title: "Development & Testing",
-                    description: "Rigorous development and testing of your AI automation solution",
-                    status: "Development",
-                    color: "green"
-                  },
-                  {
-                    week: "Week 7-8",
-                    title: "Deployment & Training",
-                    description: "Seamless deployment and comprehensive team training",
-                    status: "Deployment",
-                    color: "orange"
-                  }
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    className="relative p-4 rounded-xl bg-gradient-to-r from-gray-50 to-white border border-gray-200 hover:shadow-lg transition-all duration-300"
-                    initial={{ x: -30, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{
-                      delay: 2.2 + i * 0.2,
-                      duration: 0.6,
-                      type: "spring",
-                      stiffness: 100,
-                    }}
-                    whileHover={{ 
-                      scale: 1.02,
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                            item.color === "blue" ? "bg-blue-100 text-blue-700" :
-                            item.color === "purple" ? "bg-purple-100 text-purple-700" :
-                            item.color === "green" ? "bg-green-100 text-green-700" :
-                            "bg-orange-100 text-orange-700"
-                          }`}>
-                            {item.week}
-                          </span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            item.color === "blue" ? "bg-blue-50 text-blue-600" :
-                            item.color === "purple" ? "bg-purple-50 text-purple-600" :
-                            item.color === "green" ? "bg-green-50 text-green-600" :
-                            "bg-orange-50 text-orange-600"
-                          }`}>
-                            {item.status}
-                          </span>
-                    </div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                        <p className="text-sm text-gray-600">{item.description}</p>
-                  </div>
-                      <motion.div 
-                        className={`w-3 h-3 rounded-full ${
-                          item.color === "blue" ? "bg-blue-500" :
-                          item.color === "purple" ? "bg-purple-500" :
-                          item.color === "green" ? "bg-green-500" :
-                          "bg-orange-500"
-                        }`}
-                        whileHover={{ scale: 1.5 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </div>
-                    {i < 3 && (
-                      <div className={`absolute -bottom-2 left-6 w-0.5 h-4 ${
-                        item.color === "blue" ? "bg-blue-200" :
-                        item.color === "purple" ? "bg-purple-200" :
-                        item.color === "green" ? "bg-green-200" :
-                        "bg-orange-200"
-                      }`} />
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-            </div>
-
-
-          <motion.div 
-            className="bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl p-8 text-white mt-16"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            whileHover={{ 
-              scale: 1.02,
-              transition: { duration: 0.3 }
-            }}
-          >
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Automate Your Workflows?</h3>
-              <p className="text-lg mb-6">Let our AI experts analyze your processes and design the perfect automation solution for your business</p>
-              <Link
-                to="/Contact/"
-                className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
-              >
-                Start Your Automation Journey
-                <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
-          </motion.div>
-        </div>
-      </section>
 
 
 
@@ -3078,50 +5993,8 @@ const AIAgents: React.FC = () => {
           </div>
         </TextParallaxContent>
 
-        <TextParallaxContent
-          imgUrl="/src/assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg"
-          subheading="Enterprise Ready"
-          heading="Transform Your Operations"
-        >
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-            <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-              Purpose-Built Solutions
-            </h2>
-            <div className="col-span-1 md:col-span-8">
-              <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-                From Customer Experience Agents to Security Operations, our AI agents are purpose-built for every business function. 
-                Each agent is designed to understand your specific industry requirements and deliver measurable results.
-              </p>
-              <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-                Whether you need IT Operations automation, Document Intelligence, or Marketing Intelligence, 
-                our agents integrate seamlessly with your existing systems to deliver exceptional experiences.
-              </p>
-              <Link to="/Contact/" className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit inline-flex items-center gap-2">
-                Get Custom Solution <ArrowRight className="inline" />
-              </Link>
-            </div>
-          </div>
-        </TextParallaxContent>
       </div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Consult with us Now
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Ready to transform your business with AI Agents? Let's discuss your needs and build the perfect solution.
-          </p>
-          <Link
-            to="/Contact/"
-            className="bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-teal-700 transition-colors inline-flex items-center gap-2"
-          >
-            Get Started Today
-            <ArrowRight className="h-5 w-5" />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };

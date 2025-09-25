@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BarChart3, PieChart, LineChart, Database, Layers, Cog, Gauge, ShieldCheck, Users, Rocket } from 'lucide-react';
 
 const BusinessAnalytics: React.FC = () => {
@@ -65,7 +66,7 @@ const BusinessAnalytics: React.FC = () => {
                 Turn siloed data into an insights engine—dashboards, predictive models, and governed data that drive confident decisions.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an expert</a>
+                <Link to="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an expert</Link>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -120,7 +121,7 @@ const BusinessAnalytics: React.FC = () => {
           <p className="mt-3 text-teal-100">
             We’ll align KPIs, data models, and dashboards to your business goals—then enable your teams to use them daily.
           </p>
-          <a href="/Contact/" className="inline-block mt-6 bg-white text-teal-700 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Get in touch</a>
+          <Link to="/Contact/" className="inline-block mt-6 bg-white text-teal-700 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Get in touch</Link>
         </div>
       </section>
     </div>

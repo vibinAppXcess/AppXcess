@@ -28,7 +28,7 @@ const ProductionBlog2: React.FC = () => {
       </section>
 
       <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-6 text-center">
           <div className="bg-white rounded-2xl p-6 shadow border border-gray-100"><Gauge className="w-8 h-8 text-custom-teal mx-auto mb-3"/><div className="font-semibold">Efficiency</div></div>
           <div className="bg-white rounded-2xl p-6 shadow border border-gray-100"><Battery className="w-8 h-8 text-custom-teal mx-auto mb-3"/><div className="font-semibold">Renewables</div></div>
           <div className="bg-white rounded-2xl p-6 shadow border border-gray-100"><Recycle className="w-8 h-8 text-custom-teal mx-auto mb-3"/><div className="font-semibold">Circularity</div></div>

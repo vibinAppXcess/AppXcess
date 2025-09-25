@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BusinessTools: React.FC = () => {
   return (
@@ -18,9 +19,9 @@ const BusinessTools: React.FC = () => {
               Smart business tools that simplify workflows, enhance collaboration, and improve decision-making for modern organizations.
             </p>
             <div className="mt-8">
-              <a href="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+              <Link to="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
                 Get Free Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </div>

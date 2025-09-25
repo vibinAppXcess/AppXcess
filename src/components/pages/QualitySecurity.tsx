@@ -144,7 +144,7 @@ const QualitySecurity: React.FC = () => {
                   ]
                 },
                 {
-                  title: 'Rigorous testing',
+                  title: '4. Rigorous testing',
                   items: [
                     'Shift-left testing; build test cases in parallel with development.',
                     'Automate tests and integrate into CI/CD; manage data and environments.',
@@ -152,14 +152,14 @@ const QualitySecurity: React.FC = () => {
                   ]
                 },
                 {
-                  title: '4. Delivery',
+                  title: '5. Delivery',
                   items: [
                     'Provide test result report with progress, validation, and effort.',
                     'Deliver comprehensive documentation, guides, and tutorials.'
                   ]
                 },
                 {
-                  title: '5. Maintenance',
+                  title: '6. Maintenance',
                   items: [
                     'Evolve via CI/CD; full-scale regression for changes.',
                     'Optimize cloud resources; follow ITSM/ITIL.',

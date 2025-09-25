@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SAPEnterpriseApplications: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const SAPEnterpriseApplications: React.FC = () => {
             <p className="mt-4 text-white/90 text-lg">Streamline operations, optimize processes, and drive growth with SAP and enterprise application solutions.</p>
             <p className="mt-3 text-white/80">At AppXcess, we implement, customize, and optimize SAP and enterprise-grade applications to create connected, intelligent systems across finance, supply chain, HR, and customer experience.</p>
             <div className="mt-8">
-              <a href="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-custom-teal/10 transition-colors">Talk to an Expert</a>
+              <Link to="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Talk to an Expert</Link>
             </div>
           </div>
         </div>
@@ -96,7 +97,7 @@ const SAPEnterpriseApplications: React.FC = () => {
               <p className="mt-2 text-white/80">Unlock efficiency, scalability, and real-time insights with AppXcess.</p>
             </div>
             <div className="mt-6 md:mt-0">
-              <a href="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-custom-teal/10 transition-colors">Get Started</a>
+              <Link to="/Contact/" className="inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Get Started</Link>
             </div>
           </div>
         </div>

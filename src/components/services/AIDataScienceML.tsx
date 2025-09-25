@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, LineChart, Database, Settings, Cpu, Eye, MessageSquare, Rocket, Shield, Cloud, Gauge } from 'lucide-react';
 import aiDataAnalyticsImg from '../../assets/images/ai-artificial-intelligence-data-analytics-professional-monitors-aidriven-analytics-dashboards-evaluate-web-traffic-customer-engagement-real-time.jpg';
 import dataAnalysisReportImg from '../../assets/images/data-analysis-marketing-business-report-concept.jpg';
@@ -97,9 +98,9 @@ const AIDataScienceML: React.FC = () => {
                 Turn complex data into actionable insights with predictive models and GenAI—built with strong data foundations and robust MLOps.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+                <Link to="/Contact/" className="bg-white text-teal-700 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
                   Talk to an expert
-                </a>
+                </Link>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -194,7 +195,7 @@ const AIDataScienceML: React.FC = () => {
                     <li>Monitoring and retraining strategy</li>
                     <li>Security and governance built-in</li>
                   </ul>
-                  <a href="/Contact/" className="inline-block mt-6 bg-teal-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-teal-700">Discuss your use case</a>
+                  <Link to="/Contact/" className="inline-block mt-6 bg-teal-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-teal-700">Discuss your use case</Link>
                 </div>
               </div>
             </div>
@@ -271,9 +272,9 @@ const AIDataScienceML: React.FC = () => {
           <p className="mt-3 text-teal-100">
             Let’s align your data strategy, stand up pipelines, and deploy models that drive outcomes.
           </p>
-          <a href="/Contact/" className="inline-block mt-6 bg-white text-teal-700 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+          <Link to="/Contact/" className="inline-block mt-6 bg-white text-teal-700 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">
             Get started
-          </a>
+          </Link>
         </div>
       </section>
     </div>

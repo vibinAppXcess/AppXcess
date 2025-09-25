@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, Users, Zap, Globe, Lock, TrendingUp, CheckCircle, Star, Code, Cloud, Smartphone, Database, Server } from 'lucide-react';
+import { Zap, Lock, CheckCircle, Code, Cloud, Smartphone, Server } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const SoftwareCloud: React.FC = () => {
@@ -96,12 +96,9 @@ const SoftwareCloud: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                             <button className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-700">
+                             <Link to="/Contact/" className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-700">
                  <span>Start Building</span>
-               </button>
-               <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-600 hover:text-white">
-                 <span>Learn More</span>
-               </button>
+               </Link>
               </div>
             </div>
           
@@ -180,12 +177,12 @@ const SoftwareCloud: React.FC = () => {
                 Discover how AppXcess can transform your business with cutting-edge software development and cloud solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                 <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-all duration-300">
+                                 <Link to="/Contact/" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-all duration-300">
                    Get Started Today
-                 </button>
-                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-all duration-300">
+                 </Link>
+                 <Link to="/Contact/" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-all duration-300">
                    Schedule Demo
-                 </button>
+                 </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CreditCard, BarChart3, Smartphone, Users, CheckCircle, Play, TrendingUp, Shield, Activity, Zap } from 'lucide-react';
 import fintechConceptImg from '../../assets/images/fintech-investment-financial-internet-technology-concept.jpg';
 import aiBigDataImg from '../../assets/images/341592e1-35df-4738-bd56-6ad74c0daf8c.jpg';
@@ -27,14 +28,14 @@ const FinTech: React.FC = () => {
                 Empowering the financial industry with secure, scalable, and user-centric technologies that drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                <Link to="/Contact/" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
                   Learn More
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+                </Link>
+                <Link to="/Contact/" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
                   Contact Us
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -287,14 +288,14 @@ const FinTech: React.FC = () => {
             From innovative solutions to seamless implementation—your transformation starts here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <Link to="/Contact/" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               Contact Us
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
+            </Link>
+            <Link to="/Contact/" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
               <Play className="w-5 h-5" />
               Watch Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>

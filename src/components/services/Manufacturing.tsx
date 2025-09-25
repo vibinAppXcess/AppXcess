@@ -27,7 +27,7 @@ const Manufacturing: React.FC = () => {
                 Transforming industries with innovative solutions that drive efficiency, optimize operations, and scale manufacturing processes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors shadow-lg">
+                <Link to="/About" className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors shadow-lg">
                   More About Us
                   <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -144,7 +144,7 @@ const Manufacturing: React.FC = () => {
                 </div>
               </div>
               
-              <Link to="/About" className="mt-8 bg-custom-teal hover:bg-teal-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-2 transition-colors">
+              <Link to="/About" className="mt-8 bg-custom-teal hover:bg-teal-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center gap-2 transition-colors">
                 More About Us
                 <ArrowRight className="w-5 h-5" />
               </Link>
