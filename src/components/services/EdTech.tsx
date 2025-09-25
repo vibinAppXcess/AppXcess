@@ -166,10 +166,10 @@ const EdTech: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="w-full mt-6 bg-gradient-to-r from-custom-teal to-custom-blue text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3">
+                <Link to="/Contact" className="w-full mt-6 bg-gradient-to-r from-custom-teal to-custom-blue text-white py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3">
                   <Play className="w-5 h-5" />
                   Launch Demo
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -193,10 +193,6 @@ const EdTech: React.FC = () => {
             <Link to="/Contact" className="bg-white text-custom-teal px-12 py-6 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
               Start Free Trial
               <ArrowRight className="w-6 h-6" />
-            </Link>
-            <Link to="/Contact" className="border-2 border-white/50 text-white px-12 py-6 rounded-lg text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-              <GraduationCap className="w-6 h-6" />
-              Schedule Demo
             </Link>
           </div>
         </div>

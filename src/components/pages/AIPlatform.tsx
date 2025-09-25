@@ -352,19 +352,6 @@ const AIPlatform: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" className="px-8 py-4 rounded-xl shadow-lg">
-                Start Free Trial
-              </Button>
-              <Button variant="secondary" className="px-8 py-4 rounded-xl shadow-lg">
-                Contact Sales
-              </Button>
-            </div>
-            <p className="text-sm text-gray-500 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
-            </p>
-          </div>
         </div>
       </section>
     </div>

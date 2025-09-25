@@ -180,9 +180,6 @@ const SoftwareCloud: React.FC = () => {
                                  <Link to="/Contact/" className="bg-white text-teal-600 px-8 py-3 rounded-lg font-medium hover:bg-teal-50 transition-all duration-300">
                    Get Started Today
                  </Link>
-                 <Link to="/Contact/" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-teal-600 transition-all duration-300">
-                   Schedule Demo
-                 </Link>
               </div>
             </div>
           </div>

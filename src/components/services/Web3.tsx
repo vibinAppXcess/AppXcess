@@ -198,9 +198,6 @@ const Web3: React.FC = () => {
                 <button className="bg-white text-teal-600 px-8 py-4 rounded-xl font-semibold hover:bg-teal-50 transition-all duration-300 text-lg">
                   Get Started Today
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300 text-lg">
-                  Schedule Demo
-                </button>
               </div>
             </div>
           </div>

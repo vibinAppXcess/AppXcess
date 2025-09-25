@@ -24,14 +24,10 @@ const Ecommerce: React.FC = () => {
                 Transform your business with cutting-edge ecommerce solutions that drive growth, enhance customer experiences, and scale operations seamlessly.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
-                <button className="bg-white text-custom-teal px-10 py-5 rounded-lg text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
+                <Link to="/Contact" className="bg-white text-custom-teal px-10 py-5 rounded-lg text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
                   Launch Your Store
                   <ArrowRight className="w-6 h-6" />
-                </button>
-                <button className="border-2 border-white/50 text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-                  <Play className="w-6 h-6" />
-                  Watch Demo
-                </button>
+                </Link>
               </div>
             </div>
             <div className="lg:col-span-2">
@@ -183,9 +179,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Responsive design optimized for mobile devices, ensuring seamless shopping experiences across all platforms.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
 
@@ -198,9 +191,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Enterprise-grade security with multiple payment gateways, fraud protection, and PCI compliance.
                 </p>
-                <div className="flex items-center text-custom-blue font-semibold group-hover:gap-3 transition-all">
-                  Security Details <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
 
@@ -213,9 +203,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Advanced inventory tracking, automated reordering, and real-time stock management across multiple locations.
                 </p>
-                <div className="flex items-center text-teal-600 font-semibold group-hover:gap-3 transition-all">
-                  Explore Features <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
 
@@ -228,9 +215,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Seamless integration with major shipping carriers, real-time tracking, and automated fulfillment processes.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 transition-all">
-                  Shipping Options <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
 
@@ -243,9 +227,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Multiple payment methods including credit cards, digital wallets, and buy-now-pay-later options.
                 </p>
-                <div className="flex items-center text-custom-teal font-semibold group-hover:gap-3 transition-all">
-                  Payment Methods <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
 
@@ -258,9 +239,6 @@ const Ecommerce: React.FC = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Comprehensive analytics and reporting tools to track performance, identify opportunities, and optimize growth.
                 </p>
-                <div className="flex items-center text-teal-700 font-semibold group-hover:gap-3 transition-all">
-                  View Analytics <ArrowRight className="w-5 h-5" />
-                </div>
               </div>
             </div>
           </div>
@@ -283,17 +261,9 @@ const Ecommerce: React.FC = () => {
             Join thousands of successful businesses that have transformed their online presence with our cutting-edge ecommerce solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link to="/Contact">
-              <button className="bg-white text-custom-teal px-12 py-6 rounded-full text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
-                Start Building Now
-                <ArrowRight className="w-6 h-6" />
-              </button>
-            </Link>
-            <Link to="/Contact">
-              <button className="border-2 border-white/50 text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-                <ShoppingCart className="w-6 h-6" />
-                Free Consultation
-              </button>
+            <Link to="/Contact" className="bg-white text-custom-teal px-10 py-5 rounded-lg text-xl font-semibold flex items-center gap-3 transition-all hover:scale-105 shadow-xl">
+              Start Building Now
+              <ArrowRight className="w-6 h-6" />
             </Link>
           </div>
         </div>

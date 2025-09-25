@@ -269,9 +269,9 @@ const Media: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Discover how artificial intelligence is transforming content creation processes and enhancing creative workflows in the media industry.
                 </p>
-               <a href="/Blog/Media-Content-AI" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+               <Link to="/Blog/Media-Content-AI" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                  Read More <ArrowRight className="w-4 h-4" />
-               </a>
+               </Link>
               </div>
             </div>
 
@@ -286,9 +286,9 @@ const Media: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore the latest trends in virtual reality, augmented reality, and immersive storytelling that are reshaping media consumption. for modern audiences.
                 </p>
-               <a href="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+               <Link to="/Blog/Media-Immersive-Experiences" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                  Read More <ArrowRight className="w-4 h-4" />
-               </a>
+               </Link>
               </div>
             </div>
 
@@ -303,9 +303,9 @@ const Media: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Learn how data analytics and machine learning are optimizing content distribution and audience targeting strategies. for modern audiences.
                 </p>
-               <a href="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+               <Link to="/Blog/Media-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                  Read More <ArrowRight className="w-4 h-4" />
-               </a>
+               </Link>
               </div>
             </div>
          </div>
@@ -329,10 +329,6 @@ const Media: React.FC = () => {
               Know More About Us
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </button>
           </div>
         </div>
       </section>

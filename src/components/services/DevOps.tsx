@@ -504,13 +504,6 @@ const DevOps: React.FC = () => {
               Start Your Journey
               <ArrowRight className="ml-3 w-6 h-6" />
             </Link>
-            <Link
-              to="/Contact/"
-              className="inline-flex items-center px-12 py-6 border-2 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-teal-600 transition-all text-lg"
-            >
-              Schedule Demo
-              <Play className="ml-3 w-6 h-6" />
-            </Link>
           </div>
         </div>
       </section>

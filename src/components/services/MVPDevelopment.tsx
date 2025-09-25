@@ -33,10 +33,6 @@ const MVPDevelopment: React.FC = () => {
                   Get Started Now
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <button className="inline-flex items-center px-8 py-4 border-2 border-teal-600 text-teal-600 font-semibold rounded-xl hover:bg-teal-600 hover:text-white transition-colors">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </button>
               </div>
             </div>
             

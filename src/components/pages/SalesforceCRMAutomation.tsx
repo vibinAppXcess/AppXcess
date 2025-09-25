@@ -159,7 +159,7 @@ const SalesforceCRMAutomation: React.FC = () => {
           <div className="w-full max-w-4xl rounded-2xl p-8 bg-custom-blue text-white text-center">
             <h3 className="text-2xl font-bold">Ready to modernize CRM?</h3>
             <p className="mt-2 text-teal-100">Talk to our certified experts and get a tailored Salesforce roadmap.</p>
-            <a href="/Contact/" className="mt-6 inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an Expert</a>
+            <Link to="/Contact/" className="mt-6 inline-block bg-white text-custom-blue px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors">Speak to an Expert</Link>
           </div>
         </div>
       </section>

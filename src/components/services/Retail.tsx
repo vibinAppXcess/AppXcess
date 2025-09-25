@@ -214,9 +214,9 @@ const Retail: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Discover how seamless integration between online and offline retail channels can drive business success and customer satisfaction.
                 </p>
-                <a href="/Blog/Retail-Seamless-Integration" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Retail-Seamless-Integration" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -231,9 +231,9 @@ const Retail: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Learn how digital transformation strategies can provide competitive advantages in the modern retail landscape.
                 </p>
-                <a href="/Blog/Retail-Digital-Transformation" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Retail-Digital-Transformation" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -248,9 +248,9 @@ const Retail: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore strategies for building scalable digital marketing approaches that grow with your retail business.
                 </p>
-                <a href="/Blog/Retail-Scalable-Marketing" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Retail-Scalable-Marketing" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

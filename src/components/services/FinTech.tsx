@@ -232,9 +232,9 @@ const FinTech: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore the latest trends and innovations shaping the future of financial technology and digital banking.
                 </p>
-                <a href="/Blog/FinTech-Trends-Innovations" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/FinTech-Trends-Innovations" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -249,9 +249,9 @@ const FinTech: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Discover how artificial intelligence and big data are revolutionizing financial services and decision-making.
                 </p>
-                <a href="/Blog/FinTech-AI-Big-Data" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/FinTech-AI-Big-Data" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -266,9 +266,9 @@ const FinTech: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore the broader applications of blockchain technology in financial services and beyond.
                 </p>
-                <a href="/Blog/FinTech-Blockchain-Beyond" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/FinTech-Blockchain-Beyond" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -291,10 +291,6 @@ const FinTech: React.FC = () => {
             <Link to="/Contact/" className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               Contact Us
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link to="/Contact/" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
             </Link>
           </div>
         </div>

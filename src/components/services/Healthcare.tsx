@@ -217,9 +217,9 @@ const Healthcare: React.FC = () => {
                <p className="text-gray-600 mb-4 flex-grow">
                  Advancements in AI and analytics are reshaping healthcare delivery and patient care outcomes.
                </p>
-               <a href="/Blog/Healthcare-Technology-Trends" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+               <Link to="/Blog/Healthcare-Technology-Trends" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                  Read More <ArrowRight className="w-4 h-4" />
-               </a>
+               </Link>
              </div>
             </div>
 
@@ -234,9 +234,9 @@ const Healthcare: React.FC = () => {
                <p className="text-gray-600 mb-4 flex-grow">
                  Overcome challenges with tailored IT strategies designed specifically for healthcare environments.
                </p>
-               <a href="/Blog/Healthcare-Operational-Excellence" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+               <Link to="/Blog/Healthcare-Operational-Excellence" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                  Read More <ArrowRight className="w-4 h-4" />
-               </a>
+               </Link>
              </div>
             </div>
 
@@ -251,9 +251,9 @@ const Healthcare: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Advanced analytics improve outcomes and efficiency across healthcare operations and patient care.
                 </p>
-                <a href="/Blog/Healthcare-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Healthcare-Data-Driven" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -276,10 +276,6 @@ const Healthcare: React.FC = () => {
             <button className="bg-white text-custom-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               Get Started Today
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-custom-teal transition-colors flex items-center justify-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
             </button>
           </div>
         </div>

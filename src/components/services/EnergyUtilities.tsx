@@ -302,9 +302,9 @@ const EnergyUtilities: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Explore how information technology is transforming energy management and distribution systems.
                 </p>
-                <a href="/Blog/Energy-Utilities-Transformation" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Energy-Utilities-Transformation" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -319,9 +319,9 @@ const EnergyUtilities: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Discover how smart metering technology is revolutionizing utility monitoring and customer engagement.
                 </p>
-                <a href="/Blog/Energy-Utilities-Smart-Meters" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Energy-Utilities-Smart-Meters" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -336,9 +336,9 @@ const EnergyUtilities: React.FC = () => {
                 <p className="text-gray-600 mb-4 flex-grow">
                   Learn how technology is enabling seamless integration of renewable energy sources into existing grids.
                 </p>
-                <a href="/Blog/Energy-Utilities-Renewables" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
+                <Link to="/Blog/Energy-Utilities-Renewables" className="text-custom-teal font-semibold flex items-center gap-2 hover:gap-3 transition-all self-start">
                   Read More <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
