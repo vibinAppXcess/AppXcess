@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'http://35.172.227.215:8000/api';
 
 export interface BlogPost {
   id: number;

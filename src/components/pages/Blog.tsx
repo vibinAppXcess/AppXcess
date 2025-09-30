@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ChevronLeft, ChevronRight, Search, Filter, X, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Search, Filter, X } from 'lucide-react';
 import { blogService, BlogPost } from '../../services/blogService';
 
 const Blog: React.FC = () => {
@@ -59,33 +59,37 @@ const Blog: React.FC = () => {
   // Filter recent posts
   const filteredRecentPosts = useMemo(() => {
     if (!recentPosts || !Array.isArray(recentPosts)) return [];
-    return recentPosts.filter(post => {
-      const matchesSearch = searchTerm === '' || 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.author.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      const matchesTags = selectedTags.length === 0 || 
-        selectedTags.some(tag => post.tags && post.tags.some(postTag => postTag === tag));
-      
-      return matchesSearch && matchesTags;
-    });
+    return recentPosts
+      .filter(post => {
+        const matchesSearch = searchTerm === '' || 
+          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.author.toLowerCase().includes(searchTerm.toLowerCase());
+        
+        const matchesTags = selectedTags.length === 0 || 
+          selectedTags.some(tag => post.tags && post.tags.some(postTag => postTag === tag));
+        
+        return matchesSearch && matchesTags;
+      })
+      .sort((a, b) => b.id - a.id); // Sort by ID in descending order (highest first)
   }, [recentPosts, searchTerm, selectedTags]);
 
   // Filter all posts
   const filteredAllPosts = useMemo(() => {
     if (!allPosts || !Array.isArray(allPosts)) return [];
-    return allPosts.filter(post => {
-      const matchesSearch = searchTerm === '' || 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.author.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      const matchesTags = selectedTags.length === 0 || 
-        selectedTags.some(tag => post.tags && post.tags.some(postTag => postTag === tag));
-      
-      return matchesSearch && matchesTags;
-    });
+    return allPosts
+      .filter(post => {
+        const matchesSearch = searchTerm === '' || 
+          post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          post.author.toLowerCase().includes(searchTerm.toLowerCase());
+        
+        const matchesTags = selectedTags.length === 0 || 
+          selectedTags.some(tag => post.tags && post.tags.some(postTag => postTag === tag));
+        
+        return matchesSearch && matchesTags;
+      })
+      .sort((a, b) => b.id - a.id); // Sort by ID in descending order (highest first)
   }, [allPosts, searchTerm, selectedTags]);
 
   // Reset to first page when filters/search change
@@ -118,11 +122,11 @@ const Blog: React.FC = () => {
   const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => (
     <Link to={`/Blog/${post.slug}`} className="group h-full">
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
-        <div className="aspect-video overflow-hidden">
+        <div className="aspect-video overflow-hidden bg-gray-100">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain transition-transform duration-300"
           />
         </div>
         <div className="p-6 flex flex-col flex-grow">

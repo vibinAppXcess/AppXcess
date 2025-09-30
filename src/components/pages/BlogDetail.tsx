@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { blogService, BlogPost } from '../../services/blogService';
-import { ArrowLeft, Calendar, User, Tag, Share2, BookOpen } from 'lucide-react';
+import { Calendar, User, Share2, BookOpen } from 'lucide-react';
 
 const BlogDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -59,9 +59,9 @@ const BlogDetail: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-custom-blue via-custom-teal to-teal-600 text-white">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=600&fit=crop&crop=center')"
+            backgroundImage: `url('${blogPost.image}')`
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-custom-blue/60 via-custom-teal/50 to-teal-600/60"></div>
@@ -131,14 +131,16 @@ const BlogDetail: React.FC = () => {
                            <p className="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
                              {para.trim()}
                            </p>
-                           {images[idx] && (
-                             <img
-                               src={images[idx]}
-                               alt={`Section image ${idx + 1}`}
-                               className="w-full h-64 md:h-80 object-cover rounded-xl mt-6 shadow-sm"
-                               loading="lazy"
-                             />
-                           )}
+                          {images[idx] && (
+                            <div className="w-full h-64 md:h-80 bg-gray-100 rounded-xl mt-6 shadow-sm flex items-center justify-center overflow-hidden">
+                              <img
+                                src={images[idx]}
+                                alt={`Section image ${idx + 1}`}
+                                className="max-w-full max-h-full object-contain"
+                                loading="lazy"
+                              />
+                            </div>
+                          )}
                          </div>
                        ));
                      })()}

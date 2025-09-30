@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Lock, Eye, FileText, CheckCircle, Calendar, ArrowRight, Users, Database, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy: React.FC = () => {
   return (
@@ -223,13 +224,10 @@ const PrivacyPolicy: React.FC = () => {
                 If you have any questions about this Privacy Policy or our data practices, please don't hesitate to contact us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3">
+                <Link to="/Contact" className="bg-white text-indigo-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3">
                   <ArrowRight className="w-5 h-5" />
                   Contact Us
-                </button>
-                <button className="border-2 border-white/50 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-all">
-                  Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -299,14 +297,10 @@ const PrivacyPolicy: React.FC = () => {
             Your privacy is our priority. We're committed to protecting your data and maintaining transparency in all our practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-custom-teal px-12 py-6 rounded-xl text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
+            <Link to="/Contact" className="bg-white text-custom-teal px-12 py-6 rounded-xl text-xl font-semibold hover:bg-gray-100 transition-all flex items-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105">
               Contact Us
               <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="border-2 border-white/50 text-white px-12 py-6 rounded-xl text-xl font-semibold hover:bg-white hover:text-custom-teal transition-all flex items-center gap-3 backdrop-blur-sm">
-              <Shield className="w-6 h-6" />
-              Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Users, CheckCircle, ChevronDown, ChevronUp, Bot, Workflow, Settings, Clock, TrendingUp } from 'lucide-react';
 
 const Automation: React.FC = () => {
@@ -120,13 +121,10 @@ const Automation: React.FC = () => {
                 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                     <button className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-700">
-                     <span>Explore Solutions</span>
-                   </button>
-                   <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-600 hover:text-white">
-                     <span>Learn More</span>
-                   </button>
-              </div>
+                  <Link to="/Contact" className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-teal-700 inline-block text-center">
+                    <span>Explore Solutions</span>
+                  </Link>
+                </div>
             </div>
               
               {/* Quick Stats */}
